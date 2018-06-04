@@ -13,7 +13,6 @@ describe('Email compliance Report', () => {
 
   it('it checks snapshot with no set logo', () => {
     const component = renderer.create(userCompliance(completeCompliance));
-    console.log(component);
     const userComplianceJson = component.toJSON();
     expect(userComplianceJson).toMatchSnapshot();
   });
