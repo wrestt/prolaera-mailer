@@ -11,6 +11,11 @@ class Header extends React.Component {
       height = 47
     } = this.props;
 
+    var imageStyles = {
+      height: '47px',
+      width: '300px'
+    };
+
     // TODO: Image size need to be caluclated here
     return (
       <Box className={'header'} align="center" width="100%" style={{ backgroundColor: '#F7F7F7' }}>
@@ -18,7 +23,7 @@ class Header extends React.Component {
           <table align="center" cellSpacing={0} style={{ padding: '15px', maxWidth: '584px' }}>
             <tr align="left">
               <td width="292px">
-                <Image alt="logo" src={src} width={width} height={height} />
+                <Image alt="logo" style={imageStyles} src={src} width={width} height={height} />
               </td>
               <td width="252px" style={{ textAlign: 'center' }}>
                 <a href={link}> {text} → </a>
