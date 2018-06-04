@@ -1,7 +1,7 @@
 import React from 'react';
 import { Item } from 'react-html-email';
 import ComplianceRows from './complianceRows';
-import ComplianceHeader from './ComplianceHeader';
+import ComplianceHeader from './complianceHeader';
 
 class ComplianceReport extends React.Component {
   render() {

@@ -12,7 +12,12 @@ class ComplianceRows extends React.Component {
     return (
       <table className={'report'}>
         {categories.map((category, index) => (
-          <CategoryRow category={category} index={index} {...this.props} />
+          <CategoryRow
+            category={category}
+            index={index}
+            key={index}
+            {...this.props}
+          />
         ))}
         <YearRow {...this.props} />
         <TotalRow {...this.props} />

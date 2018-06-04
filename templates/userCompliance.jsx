@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Email, renderEmail } from 'react-html-email';
-import Footer from '../componetents/footer';
-import Header from '../componetents/header';
-import ComplianceReports from '../componetents/compliance/complianceReports';
+import Footer from '../components/footer';
+import Header from '../components/header';
+import ComplianceReports from '../components/compliance/complianceReports';
 
 const css = `
 @media 
@@ -33,7 +33,7 @@ only screen and (max-width: 600px),
 		white-space: nowrap;
 	}`.trim();
 
-const email = (completeCompliance, logoUrl= ) => {
+const email = (completeCompliance, logoUrl) => {
   return renderEmail(
     <Email title="Compliance Report" headCSS={css}>
       <Header src={logoUrl} text="View My Compliance" />

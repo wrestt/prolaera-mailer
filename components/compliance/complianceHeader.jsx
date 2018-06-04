@@ -1,11 +1,11 @@
 import React from 'react';
 import { CycleDates, PrettyDate } from '../../lib/dateHelpers';
 
-class ComplianceReport extends React.Component {
+class ComplianceHeader extends React.Component {
   render() {
     const {
       flatCompliance: { cycle_date, issue_date, expiration_date },
-      regulator: { cycle }
+      regulator: { cycle, name }
     } = this.props;
     return (
       <div>
@@ -17,7 +17,7 @@ class ComplianceReport extends React.Component {
           }}
         >
           {' '}
-          {regulator.name}
+          {name}
         </div>
         <div style={{ textAlign: 'center', lineHeight: '25px' }}>
           <strong>Reporting Period: </strong>{' '}
@@ -32,4 +32,4 @@ class ComplianceReport extends React.Component {
   }
 }
 
-export default ComplianceReport;
+export default ComplianceHeader;

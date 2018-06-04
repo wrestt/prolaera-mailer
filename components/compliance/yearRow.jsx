@@ -8,7 +8,7 @@ class YearRow extends React.Component {
       !regulator.cycle_limiter.annual ||
       !regulator.cycle_limiter.annual.hours
     )
-      return;
+      return null;
     const hoursEarned = compliance.total;
     const hoursRequired = regulator.cycle_limiter.annual.hours;
     const hoursRemaining =

@@ -1,9 +1,10 @@
 import React from 'react';
 import ComplianceBox from './complianceBox';
+import categoryName from '../../lib/categoryName';
 
 class CategoryRow extends React.Component {
   render() {
-    const { flatCompliance, regulator, reportIndex } = this.props;
+    const { flatCompliance, regulator, reportIndex, category } = this.props;
     const hoursEarned = flatCompliance.applied[category];
     const hoursRequired = regulator.cycle_limiter.min[category]
       ? regulator.cycle_limiter.min[category]
@@ -13,7 +14,7 @@ class CategoryRow extends React.Component {
         ? hoursRequired - hoursEarned
         : 0;
     return (
-      <div key={index}>
+      <div>
         <tr>
           <td
             style={{
