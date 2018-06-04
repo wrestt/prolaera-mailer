@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Email, renderEmail } from 'react-html-email';
+import { Email } from 'react-html-email';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import ComplianceReports from '../components/compliance/complianceReports';
@@ -33,14 +33,12 @@ only screen and (max-width: 600px),
 		white-space: nowrap;
 	}`.trim();
 
-const email = (completeCompliance, logoUrl) => {
-  return renderEmail(
-    <Email title="Compliance Report" headCSS={css}>
-      <Header src={logoUrl} text="View My Compliance" />
-      <ComplianceReports {...completeCompliance} />
-      <Footer />
-    </Email>
-  );
-};
+const email = (completeCompliance, logoUrl) => (
+  <Email title="Compliance Report" headCSS={css}>
+    <Header src={logoUrl} text="View My Compliance" />
+    <ComplianceReports {...completeCompliance} />
+    <Footer />
+  </Email>
+);
 
 export default email;

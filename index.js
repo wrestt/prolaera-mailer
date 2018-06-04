@@ -1,9 +1,17 @@
-import email from './template';
+import * as React from 'react';
+import { renderEmail } from 'react-html-email';
+import userComplaince from './templates/userCompliance';
 
-const build = completeCompliance => {
-  const logoUrl =
-    'https://gallery.mailchimp.com/eb930e30a15249a18d658c183/images/8913446e-ebf0-42fc-9518-3422589d5ed8.png';
-  return email(logoUrl, completeCompliance);
+const handler = (event, context) => {
+  const { body } = event;
+  switch (body.template) {
+    case 'userComplaince':
+      const email = renderEmail(userComplaince(body.completeCompliance, body.logoUrl));
+      return context.succed(email);
+    default:
+      context.fail('Invaild Template');
+      break;
+  }
 };
 
-export default build;
+export default handler;
