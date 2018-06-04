@@ -2,9 +2,8 @@ import userCompliance from '../userCompliance';
 import completeCompliance from './completeCompliance';
 import fs from 'fs';
 
-const logoUrl =
-  'https://gallery.mailchimp.com/eb930e30a15249a18d658c183/images/8913446e-ebf0-42fc-9518-3422589d5ed8.png';
 describe('Email compliance Report', () => {
+  const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
   it('it returns an emails html', async () => {
     const emailHtml = userCompliance(completeCompliance, logoUrl);
     expect(emailHtml).toBeDefined();

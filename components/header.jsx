@@ -4,30 +4,21 @@ import { Box, Image, Item } from 'react-html-email';
 class Header extends React.Component {
   render() {
     const {
-      link = 'http://app.prolaera.com',
-      text = 'prolaera.com'
+      link = 'https://app.prolaera.com',
+      text = 'prolaera.com',
+      src = 'https://assets.prolaera.com/prolaeraLogo_fullText.png',
+      width = 200,
+      height = 47
     } = this.props;
+
+    // TODO: Image size need to be caluclated here
     return (
-      <Box
-        className={'header'}
-        align="center"
-        width="100%"
-        style={{ backgroundColor: '#F7F7F7' }}
-      >
+      <Box className={'header'} align="center" width="100%" style={{ backgroundColor: '#F7F7F7' }}>
         <Item align="center">
-          <table
-            align="center"
-            cellSpacing={0}
-            style={{ padding: '15px', maxWidth: '584px' }}
-          >
+          <table align="center" cellSpacing={0} style={{ padding: '15px', maxWidth: '584px' }}>
             <tr align="left">
               <td width="292px">
-                <Image
-                  alt="react"
-                  src={this.props.src}
-                  width={200}
-                  height={47}
-                />
+                <Image alt="logo" src={src} width={width} height={height} />
               </td>
               <td width="252px" style={{ textAlign: 'center' }}>
                 <a href={link}> {text} → </a>
