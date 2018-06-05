@@ -1,5 +1,69 @@
-// TODO: Build out testing for different logos that properly handles logos with different sizes
+// TODO: Build out simple testing for different urls and text in the header
+import React from 'react';
+import fs from 'fs';
+import { renderEmail } from 'react-html-email';
+import Header from '../header';
+import renderer from 'react-test-renderer';
 
-// TODO: Build out simple testing for differnt urls and text in the header
+describe('Email with custom header link', () => {
+  const linkUrl = 'https://www.google.com/';
+  const linkText = 'View My Compliance';
+  const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
+  const imageLinks = [
+    'http://assets.prolaera.com/uif-sm.png',
+    'http://assets.prolaera.com/ua-lg.png',
+    'http://assets.prolaera.com/KRS-lg.png',
+    'http://assets.prolaera.com/indinero-lg.png'
+  ];
+  it('it returns the header html', async () => {
+    const emailHtml = renderer.create(<Header link={linkUrl} text={linkText} />);
+    expect(emailHtml).toBeDefined();
+  });
+  // Use to save html to a file to make building easier
+  it('it writes an html file with custom link url and text', async () => {
+    let imageUrl = getImageLink(imageLinks);
+    const emailHtml = renderEmail(<Header src={imageUrl} link={linkUrl} text={linkText} />);
+    const saved = await writeFile(emailHtml);
+    expect(saved).toEqual(true);
+  });
+  it('it checks snapshot with custom link url and text', () => {
+    const component = renderer.create(<Header link={linkUrl} text={linkText} />);
+    let headerJson = component.toJSON();
+    expect(headerJson).toMatchSnapshot();
+  });
+  it('component JSON includes link URL', () => {
+    const component = renderer.create(<Header link={linkUrl} text={linkText} />);
+    let headerString = JSON.stringify(component.toJSON());
+    let containsUrl = headerString.includes(linkUrl);
+    expect(containsUrl).toEqual(true);
+  });
+  it('component JSON includes link text', () => {
+    const component = renderer.create(<Header link={linkUrl} text={linkText} />);
+    let headerString = JSON.stringify(component.toJSON());
+    let containsLinkText = headerString.includes(linkText);
+    expect(containsLinkText).toEqual(true);
+  });
+  //Image formatting tests
+
+  it('image resizes properly', () => {});
+});
+
+function getImageLink(imageArray) {
+  return imageArray[Math.floor(Math.random() * Math.floor(imageArray.length))];
+}
+
+async function writeFile(emailHtml) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(`${__dirname}/test.html`, emailHtml, err => {
+      if (err) {
+        console.log(err);
+        reject(err);
+      }
+      resolve(true);
+    });
+  });
+}
+
+// TODO: Build out testing for different logos that properly handles logos with different sizes
 
 // TODO: Build out testing for applying style to the header for mobile device. Centering logo and url herf.
