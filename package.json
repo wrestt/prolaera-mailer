@@ -9,10 +9,13 @@
     "test": "node_modules/.bin/jest --runInBand"
   },
   "dependencies": {
+    "gm": "^1.23.1",
     "moment": "^2.22.2",
+    "probe-image-size": "^4.0.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-html-email": "^3.0.0"
+    "react-html-email": "^3.0.0",
+    "request": "^2.87.0"
   },
   "devDependencies": {
     "babel-jest": "^23.0.1",

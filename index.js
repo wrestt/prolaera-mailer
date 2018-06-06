@@ -2,7 +2,7 @@ import * as React from 'react';
 import { renderEmail } from 'react-html-email';
 import userComplaince from './templates/userCompliance';
 
-const handler = (event, context) => {
+const handler = async (event, context) => {
   const { body } = event;
   switch (body.template) {
     case 'userComplaince':

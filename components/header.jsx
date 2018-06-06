@@ -2,6 +2,10 @@ import React from 'react';
 import { Box, Image, Item } from 'react-html-email';
 
 class Header extends React.Component {
+  componentDidMount() {
+    console.log('Mounted');
+  }
+
   render() {
     const {
       link = 'https://app.prolaera.com',

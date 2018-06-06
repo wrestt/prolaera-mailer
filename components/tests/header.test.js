@@ -1,3 +1,6 @@
+var gm = require('gm');
+var request = require('request');
+var probe = require('probe-image-size');
 // TODO: Build out simple testing for different urls and text in the header
 import React from 'react';
 import fs from 'fs';
@@ -13,18 +16,28 @@ describe('Email with custom header link', () => {
     'http://assets.prolaera.com/uif-sm.png',
     'http://assets.prolaera.com/ua-lg.png',
     'http://assets.prolaera.com/KRS-lg.png',
-    'http://assets.prolaera.com/indinero-lg.png'
+    'http://assets.prolaera.com/indinero-lg.png',
+    'http://assets.prolaera.com/HPG-lg.png',
+    'http://assets.prolaera.com/MRZ-lg.png',
+    'http://assets.prolaera.com/NHHCo-lg.png',
+    'http://assets.prolaera.com/a-lign-lg.png'
   ];
+  const imageUrl = getImageLink(imageLinks);
   it('it returns the header html', async () => {
     const emailHtml = renderer.create(<Header link={linkUrl} text={linkText} />);
     expect(emailHtml).toBeDefined();
   });
   // Use to save html to a file to make building easier
   it('it writes an html file with custom link url and text', async () => {
-    let imageUrl = getImageLink(imageLinks);
     const emailHtml = renderEmail(<Header src={imageUrl} link={linkUrl} text={linkText} />);
     const saved = await writeFile(emailHtml);
     expect(saved).toEqual(true);
+  });
+  //Use probe to pull image data from URL
+  it('it pulls image data from image url ', async () => {
+    const saved = await probe('https://assets.prolaera.com/prolaeraLogo_fullText.png');
+    console.log(saved);
+    expect(saved.width).toEqual(6927);
   });
   it('it checks snapshot with custom link url and text', () => {
     const component = renderer.create(<Header link={linkUrl} text={linkText} />);
@@ -43,15 +56,17 @@ describe('Email with custom header link', () => {
     let containsLinkText = headerString.includes(linkText);
     expect(containsLinkText).toEqual(true);
   });
-  //Image formatting tests
-
-  it('image resizes properly', () => {});
 });
 
 function getImageLink(imageArray) {
   return imageArray[Math.floor(Math.random() * Math.floor(imageArray.length))];
 }
-
+function getImageDimensions() {
+  console.log('About to probe!');
+  probe('https://assets.prolaera.com/prolaeraLogo_fullText.png').then(result => {
+    console.log(result);
+  });
+}
 async function writeFile(emailHtml) {
   return new Promise((resolve, reject) => {
     fs.writeFile(`${__dirname}/test.html`, emailHtml, err => {
@@ -63,7 +78,5 @@ async function writeFile(emailHtml) {
     });
   });
 }
-
 // TODO: Build out testing for different logos that properly handles logos with different sizes
-
 // TODO: Build out testing for applying style to the header for mobile device. Centering logo and url herf.
