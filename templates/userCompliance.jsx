@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Email } from 'react-html-email';
+import { Email, renderEmail } from 'react-html-email';
 import Footer from '../components/footer';
-import Header from '../components/header';
+import builderHeader from '../components/header';
 import ComplianceReports from '../components/compliance/complianceReports';
 
 const css = `
@@ -33,12 +33,19 @@ only screen and (max-width: 600px),
 		white-space: nowrap;
 	}`.trim();
 
-const email = (completeCompliance, logoUrl) => (
-  <Email title="Compliance Report" headCSS={css}>
-    <Header src={logoUrl} text="View My Compliance" />
-    <ComplianceReports {...completeCompliance} />
-    <Footer />
-  </Email>
-);
+const email = async (completeCompliance, imageUrl) => {
+  try {
+    const Header = await builderHeader(imageUrl);
+    return renderEmail(
+      <Email title="Compliance Report" headCSS={css}>
+        <Header />
+        <ComplianceReports {...completeCompliance} />
+        <Footer />
+      </Email>
+    );
+  } catch (error) {
+    throw error;
+  }
+};
 
 export default email;

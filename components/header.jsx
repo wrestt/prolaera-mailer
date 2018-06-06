@@ -1,4 +1,6 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
+import probe from 'probe-image-size';
 import { Box, Image, Item } from 'react-html-email';
 
 class Header extends React.Component {
@@ -10,19 +12,19 @@ class Header extends React.Component {
     const {
       link = 'https://app.prolaera.com',
       text = 'prolaera.com',
-      src = 'https://assets.prolaera.com/prolaeraLogo_fullText.png',
+      url = 'https://assets.prolaera.com/prolaeraLogo_fullText.png',
       width = 200,
       height = 47
     } = this.props;
 
-    // TODO: Image size need to be caluclated here
+    // TODO: Image size need to be caluclated here, it is very large now.
     return (
       <Box className={'header'} align="center" width="100%" style={{ backgroundColor: '#F7F7F7' }}>
         <Item align="center">
           <table align="center" cellSpacing={0} style={{ padding: '15px', maxWidth: '584px' }}>
             <tr align="left">
               <td width="292px">
-                <Image alt="logo" src={src} width={width} height={height} />
+                <Image alt="logo" src={url} width={width} height={height} />
               </td>
               <td width="252px" style={{ textAlign: 'center' }}>
                 <a href={link}> {text} → </a>
@@ -35,4 +37,18 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+const builderHeader = async imageUrl => {
+  try {
+    const { url, height, width } = await probe(imageUrl);
+    const props = { url, height, width };
+    return createReactClass({
+      render() {
+        return <Header {...props} />;
+      }
+    });
+  } catch (error) {
+    throw error;
+  }
+};
+
+export default builderHeader;

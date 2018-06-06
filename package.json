@@ -9,6 +9,7 @@
     "test": "node_modules/.bin/jest --runInBand"
   },
   "dependencies": {
+    "create-react-class": "^15.6.3",
     "gm": "^1.23.1",
     "moment": "^2.22.2",
     "probe-image-size": "^4.0.0",
