@@ -5,56 +5,89 @@ var probe = require('probe-image-size');
 import React from 'react';
 import fs from 'fs';
 import { renderEmail } from 'react-html-email';
-import Header from '../header';
 import renderer from 'react-test-renderer';
+import builderHeader from '../header';
+
+const linkUrl = 'https://www.google.com/';
+const linkText = 'View My Compliance';
+const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
+const imageLinks = [
+  'http://assets.prolaera.com/uif-sm.png',
+  'http://assets.prolaera.com/ua-lg.png',
+  'http://assets.prolaera.com/KRS-lg.png',
+  'http://assets.prolaera.com/indinero-lg.png',
+  'http://assets.prolaera.com/HPG-lg.png',
+  'http://assets.prolaera.com/MRZ-lg.png',
+  'http://assets.prolaera.com/NHHCo-lg.png',
+  'http://assets.prolaera.com/a-lign-lg.png'
+];
+const imageUrl = getImageLink(imageLinks);
 
 describe('Email with custom header link', () => {
-  const linkUrl = 'https://www.google.com/';
-  const linkText = 'View My Compliance';
-  const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
-  const imageLinks = [
-    'http://assets.prolaera.com/uif-sm.png',
-    'http://assets.prolaera.com/ua-lg.png',
-    'http://assets.prolaera.com/KRS-lg.png',
-    'http://assets.prolaera.com/indinero-lg.png',
-    'http://assets.prolaera.com/HPG-lg.png',
-    'http://assets.prolaera.com/MRZ-lg.png',
-    'http://assets.prolaera.com/NHHCo-lg.png',
-    'http://assets.prolaera.com/a-lign-lg.png'
-  ];
-  const imageUrl = getImageLink(imageLinks);
   it('it returns the header html', async () => {
-    const emailHtml = renderer.create(<Header link={linkUrl} text={linkText} />);
-    expect(emailHtml).toBeDefined();
+    const headerHtml = await builderHeader(imageUrl);
+    expect(headerHtml).toBeDefined();
   });
-  // Use to save html to a file to make building easier
-  it('it writes an html file with custom link url and text', async () => {
-    const emailHtml = renderEmail(<Header src={imageUrl} link={linkUrl} text={linkText} />);
-    const saved = await writeFile(emailHtml);
-    expect(saved).toEqual(true);
-  });
+
   //Use probe to pull image data from URL
   it('it pulls image data from image url ', async () => {
     const saved = await probe('https://assets.prolaera.com/prolaeraLogo_fullText.png');
     console.log(saved);
     expect(saved.width).toEqual(6927);
   });
-  it('it checks snapshot with custom link url and text', () => {
-    const component = renderer.create(<Header link={linkUrl} text={linkText} />);
-    let headerJson = component.toJSON();
+
+  //Create snapshot of header with custom url and text
+  it('it checks snapshot with custom link url and text', async () => {
+    const Header = await builderHeader(imageUrl);
+    let headerComponent = renderer.create(<Header text={linkText} link={linkUrl} />);
+    let headerJson = headerComponent.toJSON();
     expect(headerJson).toMatchSnapshot();
   });
-  it('component JSON includes link URL', () => {
+  // Use to save html to a file to make building easier
+  it('it writes an html file with custom link url and text', async () => {
+    const Header = await builderHeader(imageUrl);
+    const headerHtml = renderEmail(<Header src={imageUrl} text={linkText} link={linkUrl} />);
+    const saved = await writeFile(headerHtml);
+    expect(saved).toEqual(true);
+  });
+
+  it('component JSON includes link text', async () => {
+    const Header = await builderHeader(imageUrl);
+    const component = renderer.create(<Header link={linkUrl} text={linkText} />);
+    let headerString = JSON.stringify(component.toJSON());
+    let containsLinkText = headerString.includes(linkText);
+    expect(containsLinkText).toEqual(true);
+  });
+
+  it('component JSON includes link URL', async () => {
+    const Header = await builderHeader(imageUrl);
     const component = renderer.create(<Header link={linkUrl} text={linkText} />);
     let headerString = JSON.stringify(component.toJSON());
     let containsUrl = headerString.includes(linkUrl);
     expect(containsUrl).toEqual(true);
   });
-  it('component JSON includes link text', () => {
-    const component = renderer.create(<Header link={linkUrl} text={linkText} />);
-    let headerString = JSON.stringify(component.toJSON());
-    let containsLinkText = headerString.includes(linkText);
-    expect(containsLinkText).toEqual(true);
+
+  //TESTS FOR IMAGE RESIZING
+
+  it('resizes image successfully #1', async () => {
+    const Header = await builderHeader('http://assets.prolaera.com/NHHCo-lg.png');
+    const headerComponent = renderer.create(<Header text={linkText} link={linkUrl} />);
+    let headerJson = headerComponent.toJSON();
+    expect(headerJson).toMatchSnapshot();
+  });
+
+  it('resizes image successfully #2', async () => {
+    const Header = await builderHeader('http://assets.prolaera.com/KRS-lg.png');
+    const headerComponent = renderer.create(<Header text={linkText} link={linkUrl} />);
+    let headerJson = headerComponent.toJSON();
+    expect(headerJson).toMatchSnapshot();
+  });
+
+  it('resizes image successfully #3', async () => {
+    const Header = await builderHeader('http://assets.prolaera.com/a-lign-lg.png');
+    const headerComponent = renderer.create(<Header text={linkText} link={linkUrl} />);
+    let headerJson = headerComponent.toJSON();
+    expect(headerJson).toMatchSnapshot();
   });
 });
 
@@ -67,6 +100,7 @@ function getImageDimensions() {
     console.log(result);
   });
 }
+
 async function writeFile(emailHtml) {
   return new Promise((resolve, reject) => {
     fs.writeFile(`${__dirname}/test.html`, emailHtml, err => {

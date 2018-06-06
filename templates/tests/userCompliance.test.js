@@ -11,9 +11,10 @@ describe('Email compliance Report', () => {
     expect(emailHtml).toBeDefined();
   });
 
-  it('it checks snapshot with no set logo', () => {
-    const component = renderer.create(userCompliance(completeCompliance));
-    const userComplianceJson = component.toJSON();
+  it('it checks snapshot with no set logo', async () => {
+    const emailHtml = await userCompliance(completeCompliance, logoUrl);
+    const emailComponent = renderer.create(emailHtml);
+    const userComplianceJson = emailComponent.toJSON();
     expect(userComplianceJson).toMatchSnapshot();
   });
   // Use to save html to a file to make building easier

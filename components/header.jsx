@@ -12,14 +12,16 @@ class Header extends React.Component {
       height = 47
     } = this.props;
 
-    // TODO: Image size need to be caluclated here, it is very large now.
+    const resizedWidth = width * (47 / height);
+    const resizedHeight = 47;
+
     return (
       <Box className={'header'} align="center" width="100%" style={{ backgroundColor: '#F7F7F7' }}>
         <Item align="center">
           <table align="center" cellSpacing={0} style={{ padding: '15px', maxWidth: '584px' }}>
             <tr align="left">
               <td width="292px">
-                <Image alt="logo" src={url} width={width} height={height} />
+                <Image className={'logo'} alt="logo" src={url} width={resizedWidth} height={resizedHeight} />
               </td>
               <td width="252px" style={{ textAlign: 'center' }}>
                 <a href={link}> {text} → </a>
