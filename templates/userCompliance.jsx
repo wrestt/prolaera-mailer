@@ -38,7 +38,7 @@ const email = async (completeCompliance, imageUrl) => {
     const Header = await builderHeader(imageUrl);
     return renderEmail(
       <Email title="Compliance Report" headCSS={css}>
-        <Header />
+        <Header text="compliance report" />
         <ComplianceReports {...completeCompliance} />
         <Footer />
       </Email>

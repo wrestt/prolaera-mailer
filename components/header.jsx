@@ -1,13 +1,8 @@
 import React from 'react';
-import createReactClass from 'create-react-class';
 import probe from 'probe-image-size';
 import { Box, Image, Item } from 'react-html-email';
 
 class Header extends React.Component {
-  componentDidMount() {
-    console.log('Mounted');
-  }
-
   render() {
     const {
       link = 'https://app.prolaera.com',
@@ -40,12 +35,8 @@ class Header extends React.Component {
 const builderHeader = async imageUrl => {
   try {
     const { url, height, width } = await probe(imageUrl);
-    const props = { url, height, width };
-    return createReactClass({
-      render() {
-        return <Header {...props} />;
-      }
-    });
+    const image = { url, height, width };
+    return props => <Header {...props} {...image} />;
   } catch (error) {
     throw error;
   }
