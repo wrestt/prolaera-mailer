@@ -7,7 +7,7 @@ import fs from 'fs';
 describe('Email compliance Report', () => {
   const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
   it('it returns an emails html', async () => {
-    const emailHtml = userCompliance(completeCompliance, logoUrl);
+    const emailHtml = await userCompliance(completeCompliance, logoUrl);
     expect(emailHtml).toBeDefined();
   });
 
@@ -17,8 +17,8 @@ describe('Email compliance Report', () => {
     expect(userComplianceJson).toMatchSnapshot();
   });
   // Use to save html to a file to make building easier
-  it.skip('it writes an html file', async () => {
-    const emailHtml = userCompliance(completeCompliance, logoUrl);
+  it('it writes an html file', async () => {
+    const emailHtml = await userCompliance(completeCompliance, logoUrl);
     const saved = await writeFile(emailHtml);
     expect(saved).toEqual(true);
   });

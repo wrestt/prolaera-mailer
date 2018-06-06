@@ -6,7 +6,7 @@ const handler = async (event, context) => {
   const { body } = event;
   switch (body.template) {
     case 'userComplaince':
-      const email = renderEmail(userComplaince(body.completeCompliance, body.logoUrl));
+      const email = await userComplaince(body.completeCompliance, body.imageUrl);
       return context.succed(email);
     default:
       context.fail('Invaild Template');
