@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Email, renderEmail } from 'react-html-email';
+import ComplianceReports from '../components/compliance/complianceReports';
 import Footer from '../components/footer';
 import builderHeader from '../components/header';
-import ComplianceReports from '../components/compliance/complianceReports';
 
 const css = `
 @media

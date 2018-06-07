@@ -2,15 +2,15 @@ var gm = require('gm');
 var request = require('request');
 var probe = require('probe-image-size');
 // TODO: Build out simple testing for different urls and text in the header
-import React from 'react';
 import fs from 'fs';
+import React from 'react';
 import { renderEmail } from 'react-html-email';
 import renderer from 'react-test-renderer';
+import { ServerStyleSheet } from 'styled-components';
 import builderHeader from '../header';
 
 const linkUrl = 'https://www.google.com/';
 const linkText = 'View My Compliance';
-const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
 const imageLinks = [
   'http://assets.prolaera.com/uif-sm.png',
   'http://assets.prolaera.com/ua-lg.png',
@@ -46,8 +46,12 @@ describe('Email with custom header link', () => {
   // Use to save html to a file to make building easier
   it('it writes an html file with custom link url and text', async () => {
     const Header = await builderHeader(imageUrl);
-    const headerHtml = renderEmail(<Header src={imageUrl} text={linkText} link={linkUrl} />);
-    const saved = await writeFile(headerHtml);
+    const sheet = new ServerStyleSheet();
+    const headerHtml = renderEmail(sheet.collectStyles(<Header src={imageUrl} text={linkText} link={linkUrl} />));
+    console.log(sheet);
+    const styleTags = sheet.getStyleTags();
+    console.log(styleTags);
+    const saved = await writeFile(styleTags + headerHtml);
     expect(saved).toEqual(true);
   });
 
@@ -89,6 +93,14 @@ describe('Email with custom header link', () => {
     let headerJson = headerComponent.toJSON();
     expect(headerJson).toMatchSnapshot();
   });
+});
+
+it('successfully applies component styling using styled-components', async () => {
+  const Header = await builderHeader('http://assets.prolaera.com/a-lign-lg.png');
+  const headerComponent = renderer.create(<Header text={linkText} link={linkUrl} />);
+  let headerJson = headerComponent.toJSON();
+  const testComponent = renderer.create(<testComponent />).toJSON();
+  expect(testComponent).toHaveStyleRule('color', 'red');
 });
 
 function getImageLink(imageArray) {
