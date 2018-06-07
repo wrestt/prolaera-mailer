@@ -1,8 +1,8 @@
-import React from 'react';
+import fs from 'fs';
 import renderer from 'react-test-renderer';
+import { ServerStyleSheet } from 'styled-components';
 import userCompliance from '../userCompliance';
 import completeCompliance from './completeCompliance';
-import fs from 'fs';
 
 describe('Email compliance Report', () => {
   const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
@@ -19,8 +19,10 @@ describe('Email compliance Report', () => {
   });
   // Use to save html to a file to make building easier
   it('it writes an html file', async () => {
-    const emailHtml = await userCompliance(completeCompliance, logoUrl);
-    const saved = await writeFile(emailHtml);
+    const sheet = new ServerStyleSheet();
+    const email = await userCompliance(completeCompliance, logoUrl);
+    const styleTags = sheet.getStyleTags();
+    const saved = await writeFile(styleTags + email);
     expect(saved).toEqual(true);
   });
 });

@@ -63,7 +63,7 @@ exports[`Email with custom header link it checks snapshot with custom link url a
                 <img
                   alt="logo"
                   height={47}
-                  src="http://assets.prolaera.com/HPG-lg.png"
+                  src="http://assets.prolaera.com/uif-sm.png"
                   style={
                     Object {
                       "border": "none",
@@ -72,7 +72,7 @@ exports[`Email with custom header link it checks snapshot with custom link url a
                       "textDecoration": "none",
                     }
                   }
-                  width={172.81292517006804}
+                  width={47.34879406307977}
                 />
               </td>
               <td

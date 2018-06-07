@@ -19,6 +19,9 @@ class Header extends React.Component {
 
     const HeaderWrapper = styled.div`
       background-color: red;
+      @media (max-width: 700px) {
+        background: blue;
+      }
     `;
 
     const Title = styled.h1`
@@ -31,11 +34,15 @@ class Header extends React.Component {
       color: yellowgreen;
       font-size: 5vw;
       float: right;
+      @media (max-width: 700px) {
+        color: blue;
+        float: left;
+      }
     `;
 
     return (
       <HeaderWrapper>
-        <Paragraph>Testy boy</Paragraph>
+        <Paragraph id="testParagraph">Testy boy</Paragraph>
         <Box className={'header'} align="center" width="100%" style={{ backgroundColor: '#F7F7F7' }}>
           <Item align="center">
             <table align="center" cellSpacing={0} style={{ padding: '15px', maxWidth: '584px' }}>
