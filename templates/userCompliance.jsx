@@ -17,6 +17,7 @@ only screen and (max-width: 600px),
 	.header td {
 		width: 100%;
 	}
+
 	.header td img {
 		margin-left: auto;
 		margin-right: auto;

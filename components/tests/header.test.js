@@ -1,4 +1,3 @@
-var gm = require('gm');
 var request = require('request');
 var probe = require('probe-image-size');
 // TODO: Build out simple testing for different urls and text in the header
@@ -6,7 +5,6 @@ import fs from 'fs';
 import React from 'react';
 import { renderEmail } from 'react-html-email';
 import renderer from 'react-test-renderer';
-import { ServerStyleSheet } from 'styled-components';
 import builderHeader from '../header';
 
 const linkUrl = 'https://www.google.com/';
@@ -43,13 +41,13 @@ describe('Email with custom header link', () => {
     let headerJson = headerComponent.toJSON();
     expect(headerJson).toMatchSnapshot();
   });
+
   // Use to save html to a file to make building easier
+  // Write file function only passes when test is run independently
   it('it writes an html file with custom link url and text', async () => {
     const Header = await builderHeader(imageUrl);
-    const sheet = new ServerStyleSheet();
     const headerHtml = renderEmail(<Header src={imageUrl} text={linkText} link={linkUrl} />);
-    const styleTags = sheet.getStyleTags();
-    const saved = await writeFile(styleTags + headerHtml);
+    const saved = await writeFile(headerHtml);
     expect(saved).toEqual(true);
   });
 

@@ -1,421 +1,301 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Email with custom header link it checks snapshot with custom link url and text 1`] = `
-.c0 {
-  background-color: red;
-}
-
-.c2 {
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-}
-
-.c1 {
-  color: yellowgreen;
-  font-size: 5vw;
-  float: right;
-}
-
-<div
-  className="c0"
->
-  <p
-    className="c1"
-  >
-    Testy boy
-  </p>
-  <table
-    align="center"
-    border="0"
-    cellPadding={0}
-    cellSpacing={0}
-    className="header"
-    style={
-      Object {
-        "backgroundColor": "#F7F7F7",
-      }
+<table
+  align="center"
+  border="0"
+  cellPadding={0}
+  cellSpacing={0}
+  className="header"
+  style={
+    Object {
+      "backgroundColor": "#F7F7F7",
     }
-    valign="top"
-    width="100%"
-  >
-    <tbody>
-      <tr>
-        <td
+  }
+  valign="top"
+  width="100%"
+>
+  <tbody>
+    <tr>
+      <td
+        align="center"
+      >
+        <table
           align="center"
-        >
-          <table
-            align="center"
-            cellSpacing={0}
-            style={
-              Object {
-                "maxWidth": "584px",
-                "padding": "15px",
-              }
+          cellSpacing={0}
+          style={
+            Object {
+              "maxWidth": "584px",
+              "padding": "15px",
             }
+          }
+        >
+          <tr
+            align="left"
           >
-            <tr
-              align="left"
+            <td
+              width="292px"
             >
-              <td
-                width="292px"
-              >
-                <img
-                  alt="logo"
-                  height={47}
-                  src="http://assets.prolaera.com/uif-sm.png"
-                  style={
-                    Object {
-                      "border": "none",
-                      "display": "block",
-                      "outline": "none",
-                      "textDecoration": "none",
-                    }
-                  }
-                  width={47.34879406307977}
-                />
-              </td>
-              <td
+              <img
+                alt="logo"
+                height={47}
+                src="http://assets.prolaera.com/uif-sm.png"
                 style={
                   Object {
-                    "textAlign": "center",
+                    "border": "none",
+                    "display": "block",
+                    "outline": "none",
+                    "textDecoration": "none",
                   }
                 }
-                width="252px"
+                width={47.34879406307977}
+              />
+            </td>
+            <td
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+              width="252px"
+            >
+              <a
+                href="https://www.google.com/"
               >
-                <h1
-                  className="c2"
-                >
-                  Hello I'm a styled component!
-                </h1>
-                <a
-                  href="https://www.google.com/"
-                >
-                   
-                  View My Compliance
-                   → 
-                </a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+                 
+                View My Compliance
+                 → 
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
 `;
 
 exports[`Email with custom header link resizes image successfully #1 1`] = `
-.c0 {
-  background-color: red;
-}
-
-.c2 {
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-}
-
-.c1 {
-  color: yellowgreen;
-  font-size: 5vw;
-  float: right;
-}
-
-<div
-  className="c0"
->
-  <p
-    className="c1"
-  >
-    Testy boy
-  </p>
-  <table
-    align="center"
-    border="0"
-    cellPadding={0}
-    cellSpacing={0}
-    className="header"
-    style={
-      Object {
-        "backgroundColor": "#F7F7F7",
-      }
+<table
+  align="center"
+  border="0"
+  cellPadding={0}
+  cellSpacing={0}
+  className="header"
+  style={
+    Object {
+      "backgroundColor": "#F7F7F7",
     }
-    valign="top"
-    width="100%"
-  >
-    <tbody>
-      <tr>
-        <td
+  }
+  valign="top"
+  width="100%"
+>
+  <tbody>
+    <tr>
+      <td
+        align="center"
+      >
+        <table
           align="center"
-        >
-          <table
-            align="center"
-            cellSpacing={0}
-            style={
-              Object {
-                "maxWidth": "584px",
-                "padding": "15px",
-              }
+          cellSpacing={0}
+          style={
+            Object {
+              "maxWidth": "584px",
+              "padding": "15px",
             }
+          }
+        >
+          <tr
+            align="left"
           >
-            <tr
-              align="left"
+            <td
+              width="292px"
             >
-              <td
-                width="292px"
-              >
-                <img
-                  alt="logo"
-                  height={47}
-                  src="http://assets.prolaera.com/NHHCo-lg.png"
-                  style={
-                    Object {
-                      "border": "none",
-                      "display": "block",
-                      "outline": "none",
-                      "textDecoration": "none",
-                    }
-                  }
-                  width={113.92391304347827}
-                />
-              </td>
-              <td
+              <img
+                alt="logo"
+                height={47}
+                src="http://assets.prolaera.com/NHHCo-lg.png"
                 style={
                   Object {
-                    "textAlign": "center",
+                    "border": "none",
+                    "display": "block",
+                    "outline": "none",
+                    "textDecoration": "none",
                   }
                 }
-                width="252px"
+                width={113.92391304347827}
+              />
+            </td>
+            <td
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+              width="252px"
+            >
+              <a
+                href="https://www.google.com/"
               >
-                <h1
-                  className="c2"
-                >
-                  Hello I'm a styled component!
-                </h1>
-                <a
-                  href="https://www.google.com/"
-                >
-                   
-                  View My Compliance
-                   → 
-                </a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+                 
+                View My Compliance
+                 → 
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
 `;
 
 exports[`Email with custom header link resizes image successfully #2 1`] = `
-.c0 {
-  background-color: red;
-}
-
-.c2 {
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-}
-
-.c1 {
-  color: yellowgreen;
-  font-size: 5vw;
-  float: right;
-}
-
-<div
-  className="c0"
->
-  <p
-    className="c1"
-  >
-    Testy boy
-  </p>
-  <table
-    align="center"
-    border="0"
-    cellPadding={0}
-    cellSpacing={0}
-    className="header"
-    style={
-      Object {
-        "backgroundColor": "#F7F7F7",
-      }
+<table
+  align="center"
+  border="0"
+  cellPadding={0}
+  cellSpacing={0}
+  className="header"
+  style={
+    Object {
+      "backgroundColor": "#F7F7F7",
     }
-    valign="top"
-    width="100%"
-  >
-    <tbody>
-      <tr>
-        <td
+  }
+  valign="top"
+  width="100%"
+>
+  <tbody>
+    <tr>
+      <td
+        align="center"
+      >
+        <table
           align="center"
-        >
-          <table
-            align="center"
-            cellSpacing={0}
-            style={
-              Object {
-                "maxWidth": "584px",
-                "padding": "15px",
-              }
+          cellSpacing={0}
+          style={
+            Object {
+              "maxWidth": "584px",
+              "padding": "15px",
             }
+          }
+        >
+          <tr
+            align="left"
           >
-            <tr
-              align="left"
+            <td
+              width="292px"
             >
-              <td
-                width="292px"
-              >
-                <img
-                  alt="logo"
-                  height={47}
-                  src="http://assets.prolaera.com/KRS-lg.png"
-                  style={
-                    Object {
-                      "border": "none",
-                      "display": "block",
-                      "outline": "none",
-                      "textDecoration": "none",
-                    }
-                  }
-                  width={209.45470692717583}
-                />
-              </td>
-              <td
+              <img
+                alt="logo"
+                height={47}
+                src="http://assets.prolaera.com/KRS-lg.png"
                 style={
                   Object {
-                    "textAlign": "center",
+                    "border": "none",
+                    "display": "block",
+                    "outline": "none",
+                    "textDecoration": "none",
                   }
                 }
-                width="252px"
+                width={209.45470692717583}
+              />
+            </td>
+            <td
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+              width="252px"
+            >
+              <a
+                href="https://www.google.com/"
               >
-                <h1
-                  className="c2"
-                >
-                  Hello I'm a styled component!
-                </h1>
-                <a
-                  href="https://www.google.com/"
-                >
-                   
-                  View My Compliance
-                   → 
-                </a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+                 
+                View My Compliance
+                 → 
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
 `;
 
 exports[`Email with custom header link resizes image successfully #3 1`] = `
-.c0 {
-  background-color: red;
-}
-
-.c2 {
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-}
-
-.c1 {
-  color: yellowgreen;
-  font-size: 5vw;
-  float: right;
-}
-
-<div
-  className="c0"
->
-  <p
-    className="c1"
-  >
-    Testy boy
-  </p>
-  <table
-    align="center"
-    border="0"
-    cellPadding={0}
-    cellSpacing={0}
-    className="header"
-    style={
-      Object {
-        "backgroundColor": "#F7F7F7",
-      }
+<table
+  align="center"
+  border="0"
+  cellPadding={0}
+  cellSpacing={0}
+  className="header"
+  style={
+    Object {
+      "backgroundColor": "#F7F7F7",
     }
-    valign="top"
-    width="100%"
-  >
-    <tbody>
-      <tr>
-        <td
+  }
+  valign="top"
+  width="100%"
+>
+  <tbody>
+    <tr>
+      <td
+        align="center"
+      >
+        <table
           align="center"
-        >
-          <table
-            align="center"
-            cellSpacing={0}
-            style={
-              Object {
-                "maxWidth": "584px",
-                "padding": "15px",
-              }
+          cellSpacing={0}
+          style={
+            Object {
+              "maxWidth": "584px",
+              "padding": "15px",
             }
+          }
+        >
+          <tr
+            align="left"
           >
-            <tr
-              align="left"
+            <td
+              width="292px"
             >
-              <td
-                width="292px"
-              >
-                <img
-                  alt="logo"
-                  height={47}
-                  src="http://assets.prolaera.com/a-lign-lg.png"
-                  style={
-                    Object {
-                      "border": "none",
-                      "display": "block",
-                      "outline": "none",
-                      "textDecoration": "none",
-                    }
-                  }
-                  width={203.01388888888889}
-                />
-              </td>
-              <td
+              <img
+                alt="logo"
+                height={47}
+                src="http://assets.prolaera.com/a-lign-lg.png"
                 style={
                   Object {
-                    "textAlign": "center",
+                    "border": "none",
+                    "display": "block",
+                    "outline": "none",
+                    "textDecoration": "none",
                   }
                 }
-                width="252px"
+                width={203.01388888888889}
+              />
+            </td>
+            <td
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+              width="252px"
+            >
+              <a
+                href="https://www.google.com/"
               >
-                <h1
-                  className="c2"
-                >
-                  Hello I'm a styled component!
-                </h1>
-                <a
-                  href="https://www.google.com/"
-                >
-                   
-                  View My Compliance
-                   → 
-                </a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+                 
+                View My Compliance
+                 → 
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
 `;

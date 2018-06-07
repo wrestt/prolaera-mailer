@@ -1,6 +1,5 @@
 import fs from 'fs';
 import renderer from 'react-test-renderer';
-import { ServerStyleSheet } from 'styled-components';
 import userCompliance from '../userCompliance';
 import completeCompliance from './completeCompliance';
 
@@ -17,12 +16,11 @@ describe('Email compliance Report', () => {
     const userComplianceJson = emailComponent.toJSON();
     expect(userComplianceJson).toMatchSnapshot();
   });
+
   // Use to save html to a file to make building easier
   it('it writes an html file', async () => {
-    const sheet = new ServerStyleSheet();
     const email = await userCompliance(completeCompliance, logoUrl);
-    const styleTags = sheet.getStyleTags();
-    const saved = await writeFile(styleTags + email);
+    const saved = await writeFile(email);
     expect(saved).toEqual(true);
   });
 });
