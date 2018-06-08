@@ -6,7 +6,7 @@ exports[`Email Header Template it checks snapshot with custom link url and text 
   border="0"
   cellPadding={0}
   cellSpacing={0}
-  className="header"
+  className="emailHeader"
   style={
     Object {
       "backgroundColor": "#F7F7F7",
@@ -75,88 +75,13 @@ exports[`Email Header Template it checks snapshot with custom link url and text 
 </table>
 `;
 
-exports[`Email Header Template resizes image successfully #1 1`] = `
+exports[`Email Header Template resizes image successfully KRS logo 1`] = `
 <table
   align="center"
   border="0"
   cellPadding={0}
   cellSpacing={0}
-  className="header"
-  style={
-    Object {
-      "backgroundColor": "#F7F7F7",
-    }
-  }
-  valign="top"
-  width="100%"
->
-  <tbody>
-    <tr>
-      <td
-        align="center"
-      >
-        <table
-          align="center"
-          cellSpacing={0}
-          style={
-            Object {
-              "maxWidth": "584px",
-              "padding": "15px",
-            }
-          }
-        >
-          <tr
-            align="left"
-          >
-            <td
-              width="292px"
-            >
-              <img
-                alt="logo"
-                height={47}
-                src="http://assets.prolaera.com/NHHCo-lg.png"
-                style={
-                  Object {
-                    "border": "none",
-                    "display": "block",
-                    "outline": "none",
-                    "textDecoration": "none",
-                  }
-                }
-                width={113.92391304347827}
-              />
-            </td>
-            <td
-              style={
-                Object {
-                  "textAlign": "center",
-                }
-              }
-              width="252px"
-            >
-              <a
-                href="https://app.prolaera.com"
-              >
-                 
-                prolaera.com
-                 → 
-              </a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
-exports[`Email Header Template resizes image successfully #2 1`] = `
-<table
-  align="center"
-  border="0"
-  cellPadding={0}
-  cellSpacing={0}
-  className="header"
+  className="emailHeader"
   style={
     Object {
       "backgroundColor": "#F7F7F7",
@@ -225,163 +150,13 @@ exports[`Email Header Template resizes image successfully #2 1`] = `
 </table>
 `;
 
-exports[`Email Header Template resizes image successfully #3 1`] = `
+exports[`Email Header Template resizes image successfully NHHco Logo 1`] = `
 <table
   align="center"
   border="0"
   cellPadding={0}
   cellSpacing={0}
-  className="header"
-  style={
-    Object {
-      "backgroundColor": "#F7F7F7",
-    }
-  }
-  valign="top"
-  width="100%"
->
-  <tbody>
-    <tr>
-      <td
-        align="center"
-      >
-        <table
-          align="center"
-          cellSpacing={0}
-          style={
-            Object {
-              "maxWidth": "584px",
-              "padding": "15px",
-            }
-          }
-        >
-          <tr
-            align="left"
-          >
-            <td
-              width="292px"
-            >
-              <img
-                alt="logo"
-                height={47}
-                src="http://assets.prolaera.com/a-lign-lg.png"
-                style={
-                  Object {
-                    "border": "none",
-                    "display": "block",
-                    "outline": "none",
-                    "textDecoration": "none",
-                  }
-                }
-                width={203.01388888888889}
-              />
-            </td>
-            <td
-              style={
-                Object {
-                  "textAlign": "center",
-                }
-              }
-              width="252px"
-            >
-              <a
-                href="https://app.prolaera.com"
-              >
-                 
-                prolaera.com
-                 → 
-              </a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
-exports[`Email with custom header link it checks snapshot with custom link url and text 1`] = `
-<table
-  align="center"
-  border="0"
-  cellPadding={0}
-  cellSpacing={0}
-  className="header"
-  style={
-    Object {
-      "backgroundColor": "#F7F7F7",
-    }
-  }
-  valign="top"
-  width="100%"
->
-  <tbody>
-    <tr>
-      <td
-        align="center"
-      >
-        <table
-          align="center"
-          cellSpacing={0}
-          style={
-            Object {
-              "maxWidth": "584px",
-              "padding": "15px",
-            }
-          }
-        >
-          <tr
-            align="left"
-          >
-            <td
-              width="292px"
-            >
-              <img
-                alt="logo"
-                height={47}
-                src="http://assets.prolaera.com/NHHCo-lg.png"
-                style={
-                  Object {
-                    "border": "none",
-                    "display": "block",
-                    "outline": "none",
-                    "textDecoration": "none",
-                  }
-                }
-                width={113.92391304347827}
-              />
-            </td>
-            <td
-              style={
-                Object {
-                  "textAlign": "center",
-                }
-              }
-              width="252px"
-            >
-              <a
-                href="https://www.google.com/"
-              >
-                 
-                View My Compliance
-                 → 
-              </a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
-exports[`Email with custom header link resizes image successfully #1 1`] = `
-<table
-  align="center"
-  border="0"
-  cellPadding={0}
-  cellSpacing={0}
-  className="header"
+  className="emailHeader"
   style={
     Object {
       "backgroundColor": "#F7F7F7",
@@ -450,88 +225,13 @@ exports[`Email with custom header link resizes image successfully #1 1`] = `
 </table>
 `;
 
-exports[`Email with custom header link resizes image successfully #2 1`] = `
+exports[`Email Header Template resizes image successfully a-lign logo 1`] = `
 <table
   align="center"
   border="0"
   cellPadding={0}
   cellSpacing={0}
-  className="header"
-  style={
-    Object {
-      "backgroundColor": "#F7F7F7",
-    }
-  }
-  valign="top"
-  width="100%"
->
-  <tbody>
-    <tr>
-      <td
-        align="center"
-      >
-        <table
-          align="center"
-          cellSpacing={0}
-          style={
-            Object {
-              "maxWidth": "584px",
-              "padding": "15px",
-            }
-          }
-        >
-          <tr
-            align="left"
-          >
-            <td
-              width="292px"
-            >
-              <img
-                alt="logo"
-                height={47}
-                src="http://assets.prolaera.com/KRS-lg.png"
-                style={
-                  Object {
-                    "border": "none",
-                    "display": "block",
-                    "outline": "none",
-                    "textDecoration": "none",
-                  }
-                }
-                width={209.45470692717583}
-              />
-            </td>
-            <td
-              style={
-                Object {
-                  "textAlign": "center",
-                }
-              }
-              width="252px"
-            >
-              <a
-                href="https://app.prolaera.com"
-              >
-                 
-                prolaera.com
-                 → 
-              </a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
-exports[`Email with custom header link resizes image successfully #3 1`] = `
-<table
-  align="center"
-  border="0"
-  cellPadding={0}
-  cellSpacing={0}
-  className="header"
+  className="emailHeader"
   style={
     Object {
       "backgroundColor": "#F7F7F7",

@@ -1,22 +1,14 @@
-var probe = require('probe-image-size');
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import fs from 'fs';
 import React from 'react';
 import { renderEmail } from 'react-html-email';
 import renderer from 'react-test-renderer';
-import builderHeader from '../header';
+import builderHeader, { Header } from '../header';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('Email Header Template', () => {
-  it('it returns the header html', async () => {
-    const headerHtml = await builderHeader('http://assets.prolaera.com/NHHCo-lg.png');
-    expect(headerHtml).toBeDefined();
-  });
-
-  //Use probe to pull image data from URL
-  it('it pulls image data from image url ', async () => {
-    const saved = await probe('https://assets.prolaera.com/prolaeraLogo_fullText.png');
-    expect(saved.width).toEqual(6927);
-  });
-
   //Create snapshot of header with custom url and text
   it('it checks snapshot with custom link url and text', async () => {
     const Header = await builderHeader('http://assets.prolaera.com/NHHCo-lg.png');
@@ -33,40 +25,40 @@ describe('Email Header Template', () => {
     expect(saved).toEqual(true);
   });
 
-  it('checks that component JSON includes link text', async () => {
-    const Header = await builderHeader('http://assets.prolaera.com/NHHCo-lg.png');
-    const component = renderer.create(<Header text={'View My Compliance'} />);
-    let headerString = JSON.stringify(component.toJSON());
-    let containsLinkText = headerString.includes('View My Compliance');
-    expect(containsLinkText).toEqual(true);
-  });
-
-  it('checks that component JSON includes link URL', async () => {
-    const Header = await builderHeader('http://assets.prolaera.com/NHHCo-lg.png');
-    const component = renderer.create(<Header link={'https://www.google.com/'} />);
-    let headerString = JSON.stringify(component.toJSON());
-    let containsUrl = headerString.includes('https://www.google.com/');
-    expect(containsUrl).toEqual(true);
-  });
-
   //Use to test image resizing
-  it('resizes image successfully #1', async () => {
+  it('resizes image successfully NHHco Logo', async () => {
     const Header = await builderHeader('http://assets.prolaera.com/NHHCo-lg.png');
     const headerComponent = renderer.create(<Header />);
     let headerJson = headerComponent.toJSON();
     expect(headerJson).toMatchSnapshot();
   });
-  it('resizes image successfully #2', async () => {
+  it('resizes image successfully KRS logo', async () => {
     const Header = await builderHeader('http://assets.prolaera.com/KRS-lg.png');
     const headerComponent = renderer.create(<Header />);
     let headerJson = headerComponent.toJSON();
     expect(headerJson).toMatchSnapshot();
   });
-  it('resizes image successfully #3', async () => {
+  it('resizes image successfully a-lign logo', async () => {
     const Header = await builderHeader('http://assets.prolaera.com/a-lign-lg.png');
     const headerComponent = renderer.create(<Header />);
     let headerJson = headerComponent.toJSON();
     expect(headerJson).toMatchSnapshot();
+  });
+});
+
+//Enzyme Tests for custom link url and link text
+describe('<Header />', () => {
+  it('checks that Header html contains logo', async () => {
+    const wrapper = shallow(<Header />);
+    expect(wrapper.find('.headerLogo').exists()).toEqual(true);
+  });
+  it('checks that component html includes link text', async () => {
+    const wrapper = shallow(<Header text={'View My Compliance'} />);
+    expect(wrapper.contains(<a href="https://app.prolaera.com"> View My Compliance → </a>)).toBe(true);
+  });
+  it('checks that component html includes link url', async () => {
+    const wrapper = shallow(<Header text={'View My Compliance'} link={'https://www.google.com/'} />);
+    expect(wrapper.contains(<a href="https://www.google.com/"> View My Compliance → </a>)).toBe(true);
   });
 });
 
