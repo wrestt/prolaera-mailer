@@ -1,4 +1,3 @@
-import 'jest-styled-components';
 import probe from 'probe-image-size';
 import React from 'react';
 import { Box, Image, Item } from 'react-html-email';

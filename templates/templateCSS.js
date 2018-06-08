@@ -8,6 +8,15 @@ only screen and (max-width: 600px),
 		display: block;
 	}
 
+	.header td {
+		width: 100%;
+	}
+
+	.header td img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.report td {
 		/* Behave  like a "row" */
 		border: none;
@@ -26,3 +35,5 @@ only screen and (max-width: 600px),
 		padding-right: 10px;
 		white-space: nowrap;
 	}`.trim();
+
+export default css;

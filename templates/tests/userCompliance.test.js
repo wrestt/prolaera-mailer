@@ -17,7 +17,6 @@ describe('Email compliance Report', () => {
     expect(userComplianceJson).toMatchSnapshot();
   });
 
-  // Use to save html to a file to make building easier
   it('it writes an html file', async () => {
     const email = await userCompliance(completeCompliance, logoUrl);
     const saved = await writeFile(email);
