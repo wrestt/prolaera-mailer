@@ -1,13 +1,16 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
+import { PrettyDate } from '../../lib/dateHelpers';
 
 class EventInfo extends React.Component {
   render() {
     const {
+      completeRegistration,
       courseName,
       startTime,
       endTime,
       recommendedCredits,
+      creditHours,
       location,
       deliveryMethod,
       price,
@@ -31,11 +34,13 @@ class EventInfo extends React.Component {
             </p>
           </Item>
           <Item align="left">
-            <h3>Start Time: {startTime}</h3>
-            <h3>End Time: {endTime}</h3>
+            <h3>Start Time: {PrettyDate(startTime)}</h3>
+            <h3>End Time: {PrettyDate(endTime)}</h3>
             <h3>Recommended CPE Credit(s):</h3>
             <ul>
-              <li>{recommendedCredits}</li>
+              <li>
+                {recommendedCredits} - {creditHours}
+              </li>
             </ul>
             <h3>
               Location: <a>{location}</a>

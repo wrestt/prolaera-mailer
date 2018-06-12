@@ -34,6 +34,12 @@ describe('registration Email', () => {
     let containsCourseName = eventInfoString.includes('ASC 606 Update Training');
     expect(containsCourseName).toEqual(true);
   });
+
+  it('creates snapshot with JSON data passed in', async () => {
+    const email = await registrationEmail(completeRegistration, logoUrl);
+    const emailHtml = await writeFile(email);
+    expect(emailHtml).toMatchSnapshot();
+  });
 });
 
 async function writeFile(emailHtml) {
