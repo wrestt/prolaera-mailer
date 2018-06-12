@@ -37,7 +37,9 @@ class EventInfo extends React.Component {
             <ul>
               <li>{recommendedCredits}</li>
             </ul>
-            <h3>Location: {location}</h3>
+            <h3>
+              Location: <a>{location}</a>
+            </h3>
             <h3>Delivery Method: {deliveryMethod}</h3>
             <h3>Price: {price}</h3>
             <h3>Target Audience: {targetAudience}</h3>

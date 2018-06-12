@@ -5,7 +5,7 @@ import builderHeader from '../components/header';
 import EventInfo from '../components/registration/eventInfo';
 import SubHeader from '../components/registration/registrationSubHeader';
 import SubFooter from '../components/registration/subFooter';
-import css from './templateCSS';
+import css from './templateCSS.js';
 
 const registrationEmail = async (completeRegistration, imageUrl) => {
   try {

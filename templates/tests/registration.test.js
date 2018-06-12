@@ -1,7 +1,9 @@
 import fs from 'fs';
+import React from 'react';
 import renderer from 'react-test-renderer';
+import EventInfo from '../../components/registration/eventInfo';
 import registrationEmail from '../registrationBuilder';
-import completeRegistration from './completeRegistration';
+import completeRegistration from './completeRegistration.json';
 
 describe('registration Email', () => {
   const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
@@ -22,6 +24,15 @@ describe('registration Email', () => {
     const email = await registrationEmail(completeRegistration, logoUrl);
     const saved = await writeFile(email);
     expect(saved).toEqual(true);
+  });
+
+  it('successfully parses completeRegistration JSON data', async () => {
+    const email = await registrationEmail(completeRegistration, logoUrl);
+    const eventInfo = renderer.create(<EventInfo courseName={completeRegistration.course_name} />);
+    console.log('JSON DATA COMING BACK AS: ' + completeRegistration.course_name + '***************');
+    let eventInfoString = JSON.stringify(eventInfo.toJSON());
+    let containsCourseName = eventInfoString.includes('ASC 606 Update Training');
+    expect(containsCourseName).toEqual(true);
   });
 });
 
