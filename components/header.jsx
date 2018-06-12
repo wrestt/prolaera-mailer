@@ -34,7 +34,7 @@ class Header extends React.Component {
   }
 }
 
-const builderHeader = async imageUrl => {
+const buildHeader = async imageUrl => {
   try {
     const { url, height, width } = await probe(imageUrl);
     const image = { url, height, width };
@@ -44,6 +44,6 @@ const builderHeader = async imageUrl => {
   }
 };
 
-export default builderHeader;
+export default buildHeader;
 
 export { Header };
