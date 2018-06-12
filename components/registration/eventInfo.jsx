@@ -5,7 +5,6 @@ import { PrettyDate } from '../../lib/dateHelpers';
 class EventInfo extends React.Component {
   render() {
     const {
-      completeRegistration,
       courseName,
       startTime,
       endTime,
@@ -31,7 +30,8 @@ class EventInfo extends React.Component {
           textAlign: 'center',
           border: '1px solid lightgray',
           width: '500px',
-          padding: '20px'
+          padding: '20px',
+          fontFamily: 'Arial, sans-serif'
         }}
       >
         <Box className={'eventInfo'} align="center" width="500px">
@@ -44,16 +44,18 @@ class EventInfo extends React.Component {
             </p>
           </Item>
           <Item align="left">
-            <h3>Start Time: {PrettyDate(startTime)}</h3>
+            <h3>
+              <strong>Start Time:</strong> {PrettyDate(startTime)}
+            </h3>
             <h3>End Time: {PrettyDate(endTime)}</h3>
             <h3>Recommended CPE Credit(s):</h3>
             <ul>
               <li>
-                {recommendedCredits} - {creditHours}
+                {recommendedCredits} - {creditHours} Hour(s)
               </li>
             </ul>
             <h3>
-              Location: <a>{location}</a>
+              Location: <a href="#">{location}</a>
             </h3>
             <h3>Delivery Method: {deliveryMethod}</h3>
             <h3>Price: {price}</h3>

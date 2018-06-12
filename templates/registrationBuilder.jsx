@@ -29,7 +29,12 @@ const registrationEmail = async (completeRegistration, imageUrl) => {
           learningObjectives={completeRegistration.objectives}
           description={completeRegistration.summary}
         />
-        <SubFooter />
+        <SubFooter
+          text={
+            "More information about this event can be found by navigating to the Prolaera website. Don't have an account with us? No problem. It only takes a few seconds to get one started."
+          }
+          subtext={'We hope you enjoy your event!'}
+        />
         <Footer />
       </Email>
     );

@@ -6,7 +6,16 @@ class SubHeader extends React.Component {
     const { subText = 'You have been', header = 'Registered' } = this.props;
 
     return (
-      <div style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', width: '100%' }}>
+      <div
+        style={{
+          display: 'block',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          width: '500px',
+          fontFamily: 'Arial, sans-serif',
+          padding: '20px'
+        }}
+      >
         <Box className={'subHeader'} align="center" width="500px">
           <Item>
             <table
@@ -22,12 +31,12 @@ class SubHeader extends React.Component {
             >
               <tr>
                 <td>
-                  <h5>{subText}</h5>
+                  <p style={{ color: 'gray', fontStyle: 'italic', marginBottom: '5px' }}>{subText}</p>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <h2>{header}</h2>
+                  <h2 style={{ marginTop: '0px' }}>{header}</h2>
                 </td>
               </tr>
             </table>
