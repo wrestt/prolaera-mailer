@@ -23,7 +23,17 @@ class EventInfo extends React.Component {
     } = this.props;
 
     return (
-      <div style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', textAlign: 'center' }}>
+      <div
+        style={{
+          display: 'block',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          textAlign: 'center',
+          border: '1px solid lightgray',
+          width: '500px',
+          padding: '20px'
+        }}
+      >
         <Box className={'eventInfo'} align="center" width="500px">
           <Item align="left">
             <h1>Event Information:</h1>
@@ -52,8 +62,12 @@ class EventInfo extends React.Component {
             {prep}
             <h3>Prerequisites:</h3>
             {prerequisites}
-            <h3>Level: {level} </h3>
-            <h3>Learning Objectives: {learningObjectives}</h3>
+            <h3>
+              Level: <p>{level}</p>{' '}
+            </h3>
+            <h3>
+              Learning Objectives: <div>{learningObjectives}</div>
+            </h3>
             <h3>Description: {description} </h3>
           </Item>
         </Box>

@@ -12,7 +12,13 @@ class SubHeader extends React.Component {
             <table
               id={'subHeaderTable'}
               align="center"
-              style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto', width: '100%' }}
+              style={{
+                textAlign: 'center',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                width: '100%',
+                border: '1px solid lightgray'
+              }}
             >
               <tr>
                 <td>

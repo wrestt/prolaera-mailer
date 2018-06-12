@@ -18,8 +18,8 @@ const registrationEmail = async (completeRegistration, imageUrl) => {
           courseName={completeRegistration.course_name}
           startTime={completeRegistration.delivery_date}
           endTime={completeRegistration.delivery_end_date}
-          recommendedCredits={completeRegistration.hours.subject_area}
-          creditHours={completeRegistration.hours.credits}
+          recommendedCredits={completeRegistration.hours[0].subject_area}
+          creditHours={completeRegistration.hours[0].credits}
           location={completeRegistration.delivery_location}
           deliveryMethod={completeRegistration.delivery_method}
           targetAudience={completeRegistration.courseAudience}

@@ -2,12 +2,10 @@ import fs from 'fs';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import EventInfo from '../../components/registration/eventInfo';
+import completeRegistration from '../../templates/tests/completeRegistration';
 import registrationEmail from '../registrationBuilder';
-import completeRegistration from './completeRegistration.json';
-
 describe('registration Email', () => {
   const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
-
   it('returns registration subHeader email html', async () => {
     const emailHtml = await registrationEmail(completeRegistration, logoUrl);
     expect(emailHtml).toBeDefined();
