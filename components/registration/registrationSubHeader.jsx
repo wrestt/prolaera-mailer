@@ -26,7 +26,8 @@ class SubHeader extends React.Component {
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 width: '100%',
-                border: '1px solid lightgray'
+                border: '1px solid lightgray',
+                borderRadius: '5px'
               }}
             >
               <tr>
