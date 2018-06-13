@@ -61,14 +61,14 @@ class EventInfo extends React.Component {
             <h3>Price: {price}</h3>
             <h3>Target Audience: {targetAudience}</h3>
             <h3>Prep:</h3>
-            {prep}
+            <div dangerouslySetInnerHTML={{ __html: prep }} />
             <h3>Prerequisites:</h3>
-            {prerequisites}
+            <div dangerouslySetInnerHTML={{ __html: prerequisites }} />{' '}
             <h3>
-              Level: <p>{level}</p>{' '}
+              Level: <p>{level}</p>
             </h3>
             <h3>
-              Learning Objectives: <div>{learningObjectives}</div>
+              Learning Objectives: <div dangerouslySetInnerHTML={{ __html: learningObjectives }} />
             </h3>
             <h3>Description: {description} </h3>
           </Item>

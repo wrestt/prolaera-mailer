@@ -38,7 +38,7 @@
   "level": "Basic",
   "locations": [],
   "max_participants": 30,
-  "objectives": "<ol><li>One</li><li>Two<br>Three</li></ol>",
+  "objectives": "<ol><li>One</li><li>Two</li><li>Three</li></ol>",
   "payee": "222222",
   "prep": "<p>None</p>",
   "prerequisites": "<p>&nbsp;None&nbsp;<br></p>",
