@@ -12,7 +12,7 @@ const registrationEmail = async (completeRegistration, imageUrl) => {
     return renderEmail(
       <Email title="Registration Successful!" headCSS={css}>
         <Header />
-        <SubHeader />
+        <SubHeader subText={'You have been'} header={'Registered'} />
         <EventInfo
           courseName={completeRegistration.course_name}
           startTime={completeRegistration.delivery_date}
