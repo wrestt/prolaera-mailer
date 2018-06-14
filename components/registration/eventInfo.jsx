@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
 import { PrettyDate } from '../../lib/dateHelpers';
-
+import setInnerHtml from '../../lib/domHelpers';
 class EventInfo extends React.Component {
   render() {
     const {
@@ -21,6 +21,17 @@ class EventInfo extends React.Component {
       description
     } = this.props;
 
+    const deliveryDict = {
+      0: 'Self-Study',
+      1: 'Group-Live',
+      2: 'Group-Internet / Webinar',
+      3: 'Publication',
+      4: 'Instruction',
+      5: 'University',
+      6: 'Self-Study (Non-Interactive)',
+      7: 'Carry Over'
+    };
+
     return (
       <div
         style={{
@@ -37,14 +48,14 @@ class EventInfo extends React.Component {
       >
         <Box className={'eventInfo'} align="center" width="500px">
           <Item align="left">
-            <h2 align="center" style={{ marginTop: '0px' }}>
+            <h3 align="center" style={{ marginTop: '0px' }}>
               Event Information:
-            </h2>
-            <h3 align="center">
-              <em>
-                {courseName} ({deliveryMethod})
-              </em>
             </h3>
+            <h4 align="center">
+              <em>
+                {courseName} ({deliveryDict[deliveryMethod]})
+              </em>
+            </h4>
             <p>
               You have been registered for a new event. More details on the event are included below, and be sure to
               open and save the attached file to your calendar.
@@ -52,44 +63,44 @@ class EventInfo extends React.Component {
           </Item>
           <Item align="left">
             <div style={{ paddingLeft: '30px' }}>
-              <h3>
+              <h4>
                 Start Time: <span style={{ fontWeight: 'normal' }}>{PrettyDate(startTime)}</span>
-              </h3>
-              <h3>
+              </h4>
+              <h4>
                 End Time: <span style={{ fontWeight: 'normal' }}>{PrettyDate(endTime)}</span>
-              </h3>
-              <h3>Recommended CPE Credit(s):</h3>
+              </h4>
+              <h4>Recommended CPE Credit(s):</h4>
               <ul>
                 <li>
                   {recommendedCredits} - {creditHours} Hour(s)
                 </li>
               </ul>
-              <h3>
+              <h4>
                 Location:{' '}
                 <a href="#">
                   {' '}
                   <span style={{ fontWeight: 'normal' }}>{location}</span>
                 </a>
-              </h3>
-              <h3>
+              </h4>
+              <h4>
                 Delivery Method: <span style={{ fontWeight: 'normal' }}>{deliveryMethod}</span>
-              </h3>
-              <h3>
+              </h4>
+              <h4>
                 Price: <span style={{ fontWeight: 'normal' }}>{price}</span>
-              </h3>
-              <h3>
+              </h4>
+              <h4>
                 Target Audience: <span style={{ fontWeight: 'normal' }}>{targetAudience}</span>
-              </h3>
-              <h3>Prep:</h3>
-              <div dangerouslySetInnerHTML={{ __html: prep }} />
-              <h3>Prerequisites:</h3>
-              <div dangerouslySetInnerHTML={{ __html: prerequisites }} /> <h3> Level: </h3>
+              </h4>
+              <h4>Prep:</h4>
+              <div dangerouslySetInnerHTML={setInnerHtml(prep)} />
+              <h4>Prerequisites:</h4>
+              <div dangerouslySetInnerHTML={setInnerHtml(prerequisites)} /> <h4> Level: </h4>
               <div>{level}</div>
-              <h3>Learning Objectives:</h3>
-              <div dangerouslySetInnerHTML={{ __html: learningObjectives }} />
-              <h3>
+              <h4>Learning Objectives:</h4>
+              <div dangerouslySetInnerHTML={setInnerHtml(learningObjectives)} />
+              <h4>
                 Description: <span style={{ fontWeight: 'normal' }}>{description}</span>{' '}
-              </h3>
+              </h4>
             </div>
           </Item>
         </Box>

@@ -11,11 +11,12 @@ class SubFooter extends React.Component {
           display: 'block',
           marginLeft: 'auto',
           marginRight: 'auto',
+          marginTop: '20px',
           marginBottom: '20px',
           textAlign: 'center',
           fontFamily: 'Arial, sans-serif',
           border: '1px solid lightgray',
-          borderTop: '0px',
+          borderRadius: '5px',
           padding: '20px',
           width: '500px'
         }}

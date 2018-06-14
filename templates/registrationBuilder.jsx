@@ -3,8 +3,8 @@ import { Email, renderEmail } from 'react-html-email';
 import Footer from '../components/footer';
 import builderHeader from '../components/header';
 import EventInfo from '../components/registration/eventInfo';
-import SubHeader from '../components/registration/registrationSubHeader';
 import SubFooter from '../components/registration/subFooter';
+import SubHeader from '../components/registration/SubHeader';
 import css from './templateCSS.js';
 const registrationEmail = async (completeRegistration, imageUrl) => {
   try {

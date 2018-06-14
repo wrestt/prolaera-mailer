@@ -11,9 +11,13 @@ class SubHeader extends React.Component {
           display: 'block',
           marginLeft: 'auto',
           marginRight: 'auto',
+          marginTop: '20px',
+          marginBottom: '20px',
           width: '500px',
           fontFamily: 'Arial, sans-serif',
-          padding: '20px'
+          padding: '20px',
+          border: '1px solid lightgray',
+          borderRadius: '5px'
         }}
       >
         <Box className={'subHeader'} align="center" width="500px">
@@ -21,14 +25,7 @@ class SubHeader extends React.Component {
             <table
               id={'subHeaderTable'}
               align="center"
-              style={{
-                textAlign: 'center',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                width: '100%',
-                border: '1px solid lightgray',
-                borderRadius: '5px'
-              }}
+              style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto', width: '100%' }}
             >
               <tr>
                 <td>
