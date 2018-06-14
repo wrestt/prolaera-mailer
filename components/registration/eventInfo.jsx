@@ -83,7 +83,7 @@ class EventInfo extends React.Component {
                 </a>
               </h4>
               <h4>
-                Delivery Method: <span style={{ fontWeight: 'normal' }}>{deliveryMethod}</span>
+                Delivery Method: <span style={{ fontWeight: 'normal' }}>{deliveryDict[deliveryMethod]}</span>
               </h4>
               <h4>
                 Price: <span style={{ fontWeight: 'normal' }}>{price}</span>
