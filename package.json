@@ -9,6 +9,7 @@
     "test": "node_modules/.bin/jest --runInBand"
   },
   "dependencies": {
+    "dompurify": "^1.0.4",
     "moment": "^2.22.2",
     "probe-image-size": "^4.0.0",
     "react": "^16.4.0",
