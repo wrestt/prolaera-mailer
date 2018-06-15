@@ -4,10 +4,10 @@ import { Box, Item } from 'react-html-email';
 class CourseReview extends React.Component {
   render() {
     const {
-      adminProfileId = 'testAdminProfileId',
+      adminProfileId = 'adminProfileId',
       courseId,
-      by,
       courseName,
+      by,
       recommendedCredits,
       creditHours,
       deliveryMethod,
@@ -91,7 +91,7 @@ class CourseReview extends React.Component {
               style={{ width: '100%', textAlign: 'center', padding: '20px 0px 20px 0px' }}
             >
               <a
-                href={'admin/' + { adminProfileId } + '/' + { courseId } + '/review'}
+                href={'admin/' + adminProfileId + '/' + courseId + '/review'}
                 className="viewCourseButton"
                 style={{
                   maxWidth: '200px',
