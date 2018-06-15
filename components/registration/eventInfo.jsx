@@ -1,36 +1,26 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
 import { PrettyDate } from '../../lib/dateHelpers';
+import deliveryDict from '../../lib/deliveryHelper';
 import setInnerHtml from '../../lib/domHelpers';
 class EventInfo extends React.Component {
   render() {
     const {
-      courseName,
-      startTime,
-      endTime,
-      recommendedCredits,
-      creditHours,
-      location,
-      deliveryMethod,
-      price,
-      targetAudience,
-      prep,
-      prerequisites,
-      level,
-      learningObjectives,
-      description
+      registeredForOrInvitedTo = 'added to',
+      courseName = 'None provided',
+      startTime = 'None provided',
+      endTime = 'None provided',
+      recommendedCredits = ['None provided'],
+      location = 'None provided',
+      deliveryMethod = 'None provided',
+      price = 0,
+      targetAudience = 'Any',
+      prep = 'None required',
+      prerequisites = 'None required',
+      level = 'Any',
+      learningObjectives = 'None provided',
+      description = 'None provided'
     } = this.props;
-
-    const deliveryDict = {
-      0: 'Self-Study',
-      1: 'Group-Live',
-      2: 'Group-Internet / Webinar',
-      3: 'Publication',
-      4: 'Instruction',
-      5: 'University',
-      6: 'Self-Study (Non-Interactive)',
-      7: 'Carry Over'
-    };
 
     return (
       <div
@@ -57,8 +47,8 @@ class EventInfo extends React.Component {
               </em>
             </h4>
             <p>
-              You have been registered for a new event. More details on the event are included below, and be sure to
-              open and save the attached file to your calendar.
+              You have been {registeredForOrInvitedTo} a new event. More details on the event are included below, and be
+              sure to open and save the attached file to your calendar.
             </p>
           </Item>
           <Item align="left">
@@ -71,9 +61,11 @@ class EventInfo extends React.Component {
               </h4>
               <h4>Recommended CPE Credit(s):</h4>
               <ul>
-                <li>
-                  {recommendedCredits} - {creditHours} Hour(s)
-                </li>
+                {Array.apply(null, recommendedCredits).map(item => (
+                  <li key={item.category_id}>
+                    {item.subject_area} - {item.credits} Hour(s)
+                  </li>
+                ))}
               </ul>
               <h4>
                 Location:{' '}
@@ -99,7 +91,10 @@ class EventInfo extends React.Component {
               <h4>Learning Objectives:</h4>
               <div dangerouslySetInnerHTML={setInnerHtml(learningObjectives)} />
               <h4>
-                Description: <span style={{ fontWeight: 'normal' }}>{description}</span>{' '}
+                Description:{' '}
+                <span style={{ fontWeight: 'normal' }}>
+                  <div dangerouslySetInnerHTML={setInnerHtml(description)} />
+                </span>{' '}
               </h4>
             </div>
           </Item>
@@ -108,5 +103,8 @@ class EventInfo extends React.Component {
     );
   }
 }
+EventInfo.defaultProps = {
+  price: 'Free'
+};
 
 export default EventInfo;

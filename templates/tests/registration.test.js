@@ -3,7 +3,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import EventInfo from '../../components/registration/eventInfo';
 import setInnerHtml from '../../lib/domHelpers';
-import completeRegistration from '../../templates/tests/completeRegistration';
+import completeRegistration from '../../templates/tests/event';
 import registrationEmail from '../eventRegistrationBuilder';
 describe('registration Email', () => {
   const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
