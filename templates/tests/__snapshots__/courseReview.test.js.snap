@@ -172,7 +172,6 @@ exports[`CourseReview component custom input tests creates and checks a snapshot
             </h3>
             <h3>
               Learning Objectives:
-               
               <div
                 dangerouslySetInnerHTML={
                   Object {

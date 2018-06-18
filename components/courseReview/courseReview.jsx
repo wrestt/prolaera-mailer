@@ -72,7 +72,7 @@ class CourseReview extends React.Component {
                 Level: <span style={{ fontWeight: '300' }}>{level}</span>
               </h3>
               <h3>
-                Learning Objectives:{' '}
+                Learning Objectives:
                 <div style={{ fontSize: '18px', fontWeight: '300' }} dangerouslySetInnerHTML={{ __html: objectives }} />
               </h3>
               <h3>Description:</h3>

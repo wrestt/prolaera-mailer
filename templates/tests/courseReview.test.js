@@ -77,7 +77,7 @@ describe('CourseReview component custom input tests', () => {
     ).toBe(true);
   });
 
-  it('checks html with custom delivery method', async () => {
+  it('checks html with custom course delivery method', async () => {
     const wrapper = shallow(<CourseReview {...course} delivery_method={2} />);
     expect(
       wrapper.contains(
@@ -88,10 +88,67 @@ describe('CourseReview component custom input tests', () => {
     ).toBe(true);
   });
 
-  it('checks html with custom credit amounts and subject area', async () => {
+  it('checks html with custom course credit number and subject area', async () => {
     const wrapper = shallow(<CourseReview {...course} hours={[{ credits: 4, subject_area: 'Test Subject Area' }]} />);
     expect(
       wrapper.contains(<li style={{ fontSize: '18px', fontWeight: '300' }}>Test Subject Area - 4 Hour(s)</li>)
+    ).toBe(true);
+  });
+  it('checks html with custom course level', async () => {
+    const wrapper = shallow(<CourseReview {...course} level={'Advanced'} />);
+    expect(
+      wrapper.contains(
+        <h3>
+          Level: <span style={{ fontWeight: '300' }}>Advanced</span>
+        </h3>
+      )
+    ).toBe(true);
+  });
+  it('checks html with custom course objectives', async () => {
+    const wrapper = shallow(<CourseReview {...course} objectives={'<ol><li>First</li><li>Second</li></ol>'} />);
+    expect(
+      wrapper.contains(
+        <h3>
+          Learning Objectives:
+          <div
+            style={{ fontSize: '18px', fontWeight: '300' }}
+            dangerouslySetInnerHTML={{ __html: '<ol><li>First</li><li>Second</li></ol>' }}
+          />
+        </h3>
+      )
+    ).toBe(true);
+  });
+
+  it('checks html with custom prep', async () => {
+    const wrapper = shallow(<CourseReview {...course} prep={'<p>Test Prep</p>'} />);
+    expect(
+      wrapper.contains(
+        <div style={{ fontSize: '18px', fontWeight: '300' }} dangerouslySetInnerHTML={{ __html: '<p>Test Prep</p>' }} />
+      )
+    ).toBe(true);
+  });
+
+  it('checks html with custom prerequisites', async () => {
+    const wrapper = shallow(<CourseReview {...course} prerequisites={'<p>Test Prereqs</p>'} />);
+    expect(
+      wrapper.contains(
+        <div
+          style={{ fontSize: '18px', fontWeight: '300' }}
+          dangerouslySetInnerHTML={{ __html: '<p>Test Prereqs</p>' }}
+        />
+      )
+    ).toBe(true);
+  });
+
+  it('checks html with custom summary', async () => {
+    const wrapper = shallow(<CourseReview {...course} summary={'<p>Test Summary</p>'} />);
+    expect(
+      wrapper.contains(
+        <div
+          style={{ fontSize: '18px', fontWeight: '300' }}
+          dangerouslySetInnerHTML={{ __html: '<p>Test Summary</p>' }}
+        />
+      )
     ).toBe(true);
   });
 
