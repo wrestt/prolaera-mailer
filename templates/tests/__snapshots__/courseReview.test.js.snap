@@ -57,9 +57,6 @@ exports[`CourseReview component custom input tests creates and checks a snapshot
               }
             }
           >
-            <h1>
-              Course Information:
-            </h1>
             <h3>
               By: 
               <span

@@ -94,6 +94,7 @@ describe('CourseReview component custom input tests', () => {
       wrapper.contains(<li style={{ fontSize: '18px', fontWeight: '300' }}>Test Subject Area - 4 Hour(s)</li>)
     ).toBe(true);
   });
+
   it('checks html with custom course level', async () => {
     const wrapper = shallow(<CourseReview {...course} level={'Advanced'} />);
     expect(
@@ -104,6 +105,7 @@ describe('CourseReview component custom input tests', () => {
       )
     ).toBe(true);
   });
+
   it('checks html with custom course objectives', async () => {
     const wrapper = shallow(<CourseReview {...course} objectives={'<ol><li>First</li><li>Second</li></ol>'} />);
     expect(

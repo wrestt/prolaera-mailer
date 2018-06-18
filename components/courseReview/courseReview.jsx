@@ -42,7 +42,6 @@ class CourseReview extends React.Component {
           </Item>
           <Item align="left">
             <div style={{ paddingLeft: '40px' }}>
-              <h1>Course Information:</h1>
               <h3>
                 By: <span style={{ fontWeight: '300' }}>{by}</span>
               </h3>
