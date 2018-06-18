@@ -13,7 +13,7 @@ class EventInfo extends React.Component {
       hours = [''],
       delivery_location = '',
       delivery_method = 1,
-      price = 0,
+      price = '$0.00',
       courseAudience = '',
       prep = '',
       prerequisites = '',
@@ -68,7 +68,7 @@ class EventInfo extends React.Component {
                 ))}
               </ul>
               <h4>
-                delivery_location:{' '}
+                Location:{' '}
                 <a href="#">
                   {' '}
                   <span style={{ fontWeight: 'normal' }}>{delivery_location}</span>
@@ -91,7 +91,7 @@ class EventInfo extends React.Component {
               <h4>Learning Objectives:</h4>
               <div dangerouslySetInnerHTML={setInnerHtml(objectives)} />
               <h4>
-                summary:{' '}
+                Summary:{' '}
                 <span style={{ fontWeight: 'normal' }}>
                   <div dangerouslySetInnerHTML={setInnerHtml(summary)} />
                 </span>{' '}

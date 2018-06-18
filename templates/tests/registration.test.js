@@ -26,7 +26,7 @@ describe('registration Email', () => {
   });
 
   it('successfully parses completeRegistration JSON data', async () => {
-    const eventInfo = renderer.create(<EventInfo courseName={completeRegistration.course_name} />);
+    const eventInfo = renderer.create(<EventInfo course_name={completeRegistration.course_name} />);
     let eventInfoString = JSON.stringify(eventInfo.toJSON());
     let containsCourseName = eventInfoString.includes('ASC 606 Update Training');
     expect(containsCourseName).toEqual(true);

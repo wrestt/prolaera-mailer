@@ -25,7 +25,7 @@ describe('invitation Email', () => {
   });
 
   it('successfully parses JSON data', async () => {
-    const eventInfo = renderer.create(<EventInfo courseName={eventInvite.course_name} />);
+    const eventInfo = renderer.create(<EventInfo course_name={eventInvite.course_name} />);
     let eventInfoString = JSON.stringify(eventInfo.toJSON());
     let containsCourseName = eventInfoString.includes('Fraud in the Digital Age');
     expect(containsCourseName).toEqual(true);
@@ -40,7 +40,7 @@ describe('invitation Email', () => {
   it('provides default email output values if none are provided', async () => {
     let eventInfo = renderer.create(<EventInfo />);
     let emailString = JSON.stringify(eventInfo.toJSON());
-    let containsDefaultInfo = emailString.includes('None provided');
+    let containsDefaultInfo = emailString.includes('Summary:', ' ');
     expect(containsDefaultInfo).toEqual(true);
   });
 });
