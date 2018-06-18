@@ -5,14 +5,31 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import CourseReview from '../../components/courseReview/courseReview';
 import CourseReviewBuilder from '../courseReviewBuilder';
-import completeCourse from './completeCourse';
 
 Enzyme.configure({ adapter: new Adapter() });
+const course = {
+  by: 'John Doe',
+  course_id: '1234-1234-1234-1234',
+  courseAudience: 'Accountants',
+  delivery_method: 1,
+  hours: [
+    {
+      credits: 1,
+      subject_area: 'Tax Preparation'
+    }
+  ],
+  level: 'Basic',
+  name: 'Tax Preparation 102',
+  objectives: '<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>',
+  prep: '<p>Read course introduction</p>',
+  prerequisites: '<p>Tax Prep 101</p>',
+  summary: '<p>This course is the second installation of Tax Prep focused on general tax planning.</p>'
+};
 
 describe('CourseReview component html test file', () => {
   it('writes an html file', async () => {
     const courseReviewEmail = await CourseReviewBuilder(
-      completeCourse,
+      course,
       'https://assets.prolaera.com/prolaeraLogo_fullText.png'
     );
     const saved = await writeFile(courseReviewEmail);
@@ -22,35 +39,39 @@ describe('CourseReview component html test file', () => {
 
 describe('CourseReview component tests', () => {
   it('creates and checks a snapshot of CourseReview html', async () => {
-    let reviewHtml = renderer.create(
-      <CourseReview courseName={'Example Course'} adminProfileId={'exampleAdminProfileId'} />
-    );
+    let reviewHtml = renderer.create(<CourseReview {...course} />);
     let reviewJson = reviewHtml.toJSON();
     expect(reviewJson).toMatchSnapshot();
   });
 
   it('checks default CourseReview html', async () => {
-    const wrapper = shallow(<CourseReview />);
-    expect(wrapper.contains(<h1>Course Information:</h1>)).toBe(true);
-  });
-
-  it('checks CourseReview html with custom course name', async () => {
-    const wrapper = shallow(<CourseReview />);
+    const wrapper = shallow(<CourseReview {...course} />);
     expect(
       wrapper.contains(
         <p style={{ fontSize: '18px', fontWeight: '300', marginTop: '5px', marginBottom: '5px' }}>
-          You have been selected to review ASC 606 (Self-Study).
+          You have been selected to review Tax Preparation 102.
+        </p>
+      )
+    ).toBe(true);
+  });
+
+  it('checks CourseReview html with custom course name', async () => {
+    const wrapper = shallow(<CourseReview {...course} name={'Test Course Name'} />);
+    expect(
+      wrapper.contains(
+        <p style={{ fontSize: '18px', fontWeight: '300', marginTop: '5px', marginBottom: '5px' }}>
+          You have been selected to review Test Course Name.
         </p>
       )
     ).toBe(true);
   });
 
   it('checks CourseReview html with custom admin profile ID', async () => {
-    const wrapper = shallow(<CourseReview adminProfileId={'testAdminProfileId'} />);
+    const wrapper = shallow(<CourseReview {...course} adminProfileId={'testAdminProfileId'} />);
     expect(
       wrapper.contains(
         <a
-          href="admin/testAdminProfileId/6ef58c8e-6ab7-4798-bd21-1c8fa8bcb137"
+          href="admin/testAdminProfileId/1234-1234-1234-1234/review"
           className="viewCourseButton"
           style={{
             maxWidth: '200px',
@@ -66,11 +87,11 @@ describe('CourseReview component tests', () => {
     ).toBe(true);
   });
   it('checks CourseReview html with custom course ID', async () => {
-    const wrapper = shallow(<CourseReview courseId={'testCourseId'} />);
+    const wrapper = shallow(<CourseReview {...course} course_id={'testCourseId'} />);
     expect(
       wrapper.contains(
         <a
-          href="admin/adminProfileId/testCourseId"
+          href="admin/adminProfileId/testCourseId/review"
           className="viewCourseButton"
           style={{
             maxWidth: '200px',

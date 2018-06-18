@@ -1,23 +1,23 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
+import deliveryHelper from '../../lib/deliveryHelper';
 
 class CourseReview extends React.Component {
   render() {
     const {
       adminProfileId = 'adminProfileId',
-      courseId,
-      courseName,
-      by,
-      recommendedCredits,
-      creditHours,
-      deliveryMethod,
-      price,
-      targetAudience,
-      prep,
-      prerequisites,
-      level,
-      learningObjectives,
-      description
+      course_id = '',
+      name = '',
+      by = '',
+      hours = [{ credits: '', subject_area: '' }],
+      delivery_method = 1,
+      price = '$0',
+      courseAudience = '',
+      prep = '',
+      prerequisites = '',
+      level = '',
+      objectives = '',
+      summary = ''
     } = this.props;
 
     return (
@@ -37,7 +37,7 @@ class CourseReview extends React.Component {
         <Box className={'courseReview'} align="center" width="500px">
           <Item align="left">
             <p style={{ fontSize: '18px', fontWeight: '300', marginTop: '5px', marginBottom: '5px' }}>
-              You have been selected to review {courseName}.
+              You have been selected to review {name}.
             </p>
           </Item>
           <Item align="left">
@@ -49,17 +49,17 @@ class CourseReview extends React.Component {
               <h3>Recommended CPE Credit(s):</h3>
               <ul>
                 <li style={{ fontSize: '18px', fontWeight: '300' }}>
-                  {recommendedCredits} - {creditHours} Hour(s)
+                  {hours[0].subject_area} - {hours[0].credits} Hour(s)
                 </li>
               </ul>
               <h3>
-                Delivery Method: <span style={{ fontWeight: '300' }}>{deliveryMethod}</span>
+                Delivery Method: <span style={{ fontWeight: '300' }}>{deliveryHelper(delivery_method)}</span>
               </h3>
               <h3>
                 Price: <span style={{ fontWeight: '300' }}>{{ price } > 0 ? { price } : 'Free'}</span>
               </h3>
               <h3>
-                Target Audience: <span style={{ fontWeight: '300' }}>{targetAudience}</span>
+                Target Audience: <span style={{ fontWeight: '300' }}>{courseAudience}</span>
               </h3>
               <h3>Prep:</h3>
               <div style={{ fontSize: '18px', fontWeight: '300' }} dangerouslySetInnerHTML={{ __html: prep }} />
@@ -73,13 +73,10 @@ class CourseReview extends React.Component {
               </h3>
               <h3>
                 Learning Objectives:{' '}
-                <div
-                  style={{ fontSize: '18px', fontWeight: '300' }}
-                  dangerouslySetInnerHTML={{ __html: learningObjectives }}
-                />
+                <div style={{ fontSize: '18px', fontWeight: '300' }} dangerouslySetInnerHTML={{ __html: objectives }} />
               </h3>
               <h3>Description:</h3>
-              <div style={{ fontSize: '18px', fontWeight: '300' }} dangerouslySetInnerHTML={{ __html: description }} />
+              <div style={{ fontSize: '18px', fontWeight: '300' }} dangerouslySetInnerHTML={{ __html: summary }} />
             </div>
           </Item>
           <Item align="left">
@@ -91,7 +88,7 @@ class CourseReview extends React.Component {
               style={{ width: '100%', textAlign: 'center', padding: '20px 0px 20px 0px' }}
             >
               <a
-                href={'admin/' + adminProfileId + '/' + courseId + '/review'}
+                href={'admin/' + adminProfileId + '/' + course_id + '/review'}
                 className="viewCourseButton"
                 style={{
                   maxWidth: '200px',

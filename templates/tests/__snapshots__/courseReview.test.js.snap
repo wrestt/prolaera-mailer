@@ -41,7 +41,7 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
             }
           >
             You have been selected to review 
-            Example Course
+            Tax Preparation 102
             .
           </p>
         </td>
@@ -68,7 +68,9 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
                     "fontWeight": "300",
                   }
                 }
-              />
+              >
+                John Doe
+              </span>
             </h3>
             <h3>
               Recommended CPE Credit(s):
@@ -82,7 +84,9 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
                   }
                 }
               >
+                Tax Preparation
                  - 
+                1
                  Hour(s)
               </li>
             </ul>
@@ -94,7 +98,9 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
                     "fontWeight": "300",
                   }
                 }
-              />
+              >
+                Group-Live
+              </span>
             </h3>
             <h3>
               Price: 
@@ -116,7 +122,9 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
                     "fontWeight": "300",
                   }
                 }
-              />
+              >
+                Accountants
+              </span>
             </h3>
             <h3>
               Prep:
@@ -124,7 +132,7 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
             <div
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": undefined,
+                  "__html": "<p>Read course introduction</p>",
                 }
               }
               style={
@@ -140,7 +148,7 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
             <div
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": undefined,
+                  "__html": "<p>Tax Prep 101</p>",
                 }
               }
               style={
@@ -158,7 +166,9 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
                     "fontWeight": "300",
                   }
                 }
-              />
+              >
+                Basic
+              </span>
             </h3>
             <h3>
               Learning Objectives:
@@ -166,7 +176,7 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
               <div
                 dangerouslySetInnerHTML={
                   Object {
-                    "__html": undefined,
+                    "__html": "<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>",
                   }
                 }
                 style={
@@ -183,7 +193,7 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
             <div
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": undefined,
+                  "__html": "<p>This course is the second installation of Tax Prep focused on general tax planning.</p>",
                 }
               }
               style={
@@ -222,7 +232,7 @@ exports[`CourseReview component tests creates and checks a snapshot of CourseRev
           >
             <a
               className="viewCourseButton"
-              href="admin/exampleAdminProfileId/undefined/review"
+              href="admin/adminProfileId/1234-1234-1234-1234/review"
               style={
                 Object {
                   "backgroundColor": "#68B63E",

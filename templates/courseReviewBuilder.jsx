@@ -13,20 +13,7 @@ const CourseReviewBuilder = async (completeCourse, imageUrl) => {
       <Email title="Registration Successful!" headCSS={css}>
         <Header />
         <CourseReviewSubHeader />
-        <CourseReview
-          courseId={completeCourse.course_id}
-          by={completeCourse.by}
-          courseName={completeCourse.name}
-          recommendedCredits={completeCourse.hours[0].subject_area}
-          creditHours={completeCourse.hours[0].credits}
-          deliveryMethod={completeCourse.delivery_method}
-          targetAudience={completeCourse.courseAudience}
-          prep={completeCourse.prep}
-          prerequisites={completeCourse.prerequisites}
-          level={completeCourse.level}
-          learningObjectives={completeCourse.objectives}
-          description={completeCourse.summary}
-        />
+        <CourseReview {...completeCourse} />
         <Footer />
       </Email>
     );
