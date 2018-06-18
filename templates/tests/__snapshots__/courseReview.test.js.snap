@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CourseReview component tests creates and checks a snapshot of CourseReview html 1`] = `
+exports[`CourseReview component custom input tests creates and checks a snapshot of CourseReview html 1`] = `
 <div
   style={
     Object {

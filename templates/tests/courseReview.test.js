@@ -37,14 +37,14 @@ describe('CourseReview component html test file', () => {
   });
 });
 
-describe('CourseReview component tests', () => {
+describe('CourseReview component custom input tests', () => {
   it('creates and checks a snapshot of CourseReview html', async () => {
     let reviewHtml = renderer.create(<CourseReview {...course} />);
     let reviewJson = reviewHtml.toJSON();
     expect(reviewJson).toMatchSnapshot();
   });
 
-  it('checks default CourseReview html', async () => {
+  it('checks default html', async () => {
     const wrapper = shallow(<CourseReview {...course} />);
     expect(
       wrapper.contains(
@@ -55,7 +55,7 @@ describe('CourseReview component tests', () => {
     ).toBe(true);
   });
 
-  it('checks CourseReview html with custom course name', async () => {
+  it('checks html with custom course name', async () => {
     const wrapper = shallow(<CourseReview {...course} name={'Test Course Name'} />);
     expect(
       wrapper.contains(
@@ -63,6 +63,35 @@ describe('CourseReview component tests', () => {
           You have been selected to review Test Course Name.
         </p>
       )
+    ).toBe(true);
+  });
+
+  it('checks html with custom course audience', async () => {
+    const wrapper = shallow(<CourseReview {...course} courseAudience={'Test Course Audience'} />);
+    expect(
+      wrapper.contains(
+        <h3>
+          Target Audience: <span style={{ fontWeight: '300' }}>Test Course Audience</span>
+        </h3>
+      )
+    ).toBe(true);
+  });
+
+  it('checks html with custom delivery method', async () => {
+    const wrapper = shallow(<CourseReview {...course} delivery_method={2} />);
+    expect(
+      wrapper.contains(
+        <h3>
+          Delivery Method: <span style={{ fontWeight: '300' }}>Group-Internet / Webinar</span>
+        </h3>
+      )
+    ).toBe(true);
+  });
+
+  it('checks html with custom credit amounts and subject area', async () => {
+    const wrapper = shallow(<CourseReview {...course} hours={[{ credits: 4, subject_area: 'Test Subject Area' }]} />);
+    expect(
+      wrapper.contains(<li style={{ fontSize: '18px', fontWeight: '300' }}>Test Subject Area - 4 Hour(s)</li>)
     ).toBe(true);
   });
 
