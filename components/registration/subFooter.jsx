@@ -3,7 +3,7 @@ import { Box, Item } from 'react-html-email';
 
 class SubFooter extends React.Component {
   render() {
-    const { text, subtext } = this.props;
+    const { text, subtext = '' } = this.props;
 
     return (
       <div

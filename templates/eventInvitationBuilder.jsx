@@ -15,6 +15,7 @@ const invitationEmail = async (event, imageUrl) => {
         <Header />
         <SubHeader subText={'You have been'} header={'Invited'} />
         <EventInfo
+          {...event}
           registeredForOrInvitedTo={'invited to'}
           courseName={event.course_name}
           startTime={event.delivery_date}

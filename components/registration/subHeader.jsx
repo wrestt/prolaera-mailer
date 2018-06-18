@@ -3,7 +3,7 @@ import { Box, Item } from 'react-html-email';
 
 class SubHeader extends React.Component {
   render() {
-    const { subText, header } = this.props;
+    const { subText = '', header } = this.props;
 
     return (
       <div

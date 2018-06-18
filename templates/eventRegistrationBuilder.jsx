@@ -14,6 +14,7 @@ const registrationEmail = async (event, imageUrl) => {
         <Header />
         <SubHeader subText={'You have been'} header={'Registered'} />
         <EventInfo
+          {...event}
           courseName={event.course_name}
           startTime={event.delivery_date}
           endTime={event.delivery_end_date}

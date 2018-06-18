@@ -1,25 +1,25 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
 import { PrettyDate } from '../../lib/dateHelpers';
-import deliveryDict from '../../lib/deliveryHelper';
+import deliveryHelper from '../../lib/deliveryHelper';
 import setInnerHtml from '../../lib/domHelpers';
 class EventInfo extends React.Component {
   render() {
     const {
-      registeredForOrInvitedTo = 'added to',
-      courseName = 'None provided',
-      startTime = 'None provided',
-      endTime = 'None provided',
-      recommendedCredits = ['None provided'],
-      location = 'None provided',
-      deliveryMethod = 'None provided',
+      registeredForOrInvitedTo = '',
+      course_name = '',
+      delivery_date = '',
+      delivery_end_date = '',
+      hours = [''],
+      delivery_location = '',
+      delivery_method = 1,
       price = 0,
-      targetAudience = 'Any',
-      prep = 'None required',
-      prerequisites = 'None required',
-      level = 'Any',
-      learningObjectives = 'None provided',
-      description = 'None provided'
+      courseAudience = '',
+      prep = '',
+      prerequisites = '',
+      level = '',
+      objectives = '',
+      summary = ''
     } = this.props;
 
     return (
@@ -43,7 +43,7 @@ class EventInfo extends React.Component {
             </h3>
             <h4 align="center">
               <em>
-                {courseName} ({deliveryDict[deliveryMethod]})
+                {course_name} ({deliveryHelper(delivery_method)})
               </em>
             </h4>
             <p>
@@ -54,34 +54,34 @@ class EventInfo extends React.Component {
           <Item align="left">
             <div style={{ paddingLeft: '30px' }}>
               <h4>
-                Start Time: <span style={{ fontWeight: 'normal' }}>{PrettyDate(startTime)}</span>
+                Start Time: <span style={{ fontWeight: 'normal' }}>{PrettyDate(delivery_date)}</span>
               </h4>
               <h4>
-                End Time: <span style={{ fontWeight: 'normal' }}>{PrettyDate(endTime)}</span>
+                End Time: <span style={{ fontWeight: 'normal' }}>{PrettyDate(delivery_end_date)}</span>
               </h4>
               <h4>Recommended CPE Credit(s):</h4>
               <ul>
-                {Array.apply(null, recommendedCredits).map(item => (
+                {Array.apply(null, hours).map(item => (
                   <li key={item.category_id}>
                     {item.subject_area} - {item.credits} Hour(s)
                   </li>
                 ))}
               </ul>
               <h4>
-                Location:{' '}
+                delivery_location:{' '}
                 <a href="#">
                   {' '}
-                  <span style={{ fontWeight: 'normal' }}>{location}</span>
+                  <span style={{ fontWeight: 'normal' }}>{delivery_location}</span>
                 </a>
               </h4>
               <h4>
-                Delivery Method: <span style={{ fontWeight: 'normal' }}>{deliveryDict[deliveryMethod]}</span>
+                Delivery Method: <span style={{ fontWeight: 'normal' }}>{deliveryHelper(delivery_method)}</span>
               </h4>
               <h4>
                 Price: <span style={{ fontWeight: 'normal' }}>{price}</span>
               </h4>
               <h4>
-                Target Audience: <span style={{ fontWeight: 'normal' }}>{targetAudience}</span>
+                Target Audience: <span style={{ fontWeight: 'normal' }}>{courseAudience}</span>
               </h4>
               <h4>Prep:</h4>
               <div dangerouslySetInnerHTML={setInnerHtml(prep)} />
@@ -89,11 +89,11 @@ class EventInfo extends React.Component {
               <div dangerouslySetInnerHTML={setInnerHtml(prerequisites)} /> <h4> Level: </h4>
               <div>{level}</div>
               <h4>Learning Objectives:</h4>
-              <div dangerouslySetInnerHTML={setInnerHtml(learningObjectives)} />
+              <div dangerouslySetInnerHTML={setInnerHtml(objectives)} />
               <h4>
-                Description:{' '}
+                summary:{' '}
                 <span style={{ fontWeight: 'normal' }}>
-                  <div dangerouslySetInnerHTML={setInnerHtml(description)} />
+                  <div dangerouslySetInnerHTML={setInnerHtml(summary)} />
                 </span>{' '}
               </h4>
             </div>
@@ -103,8 +103,5 @@ class EventInfo extends React.Component {
     );
   }
 }
-EventInfo.defaultProps = {
-  price: 'Free'
-};
 
 export default EventInfo;
