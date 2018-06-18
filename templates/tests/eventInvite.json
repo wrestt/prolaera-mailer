@@ -1,0 +1,80 @@
+{
+  "access": [222222],
+  "company_id": 222222,
+  "course_id": "145d67d6-16e4-43b4-8b7e-5189927ef8c2",
+  "course_name": "Fraud in the Digital Age",
+  "courseAudience": "CPAs who perform audits, some other guys, literally anyone with a brain and 200,000 dollars.",
+  "delivery_date": "2018-06-14T09:24:00.000Z",
+  "delivery_end_date": "2018-06-15T04:24:00.000Z",
+  "delivery_location": "The White House, 1600 Pennsylvania Avenue Northwest, Washington, DC, USA",
+  "delivery_method": 1,
+  "event_id": "e2b650ed-6ee4-4f5b-a614-f72562790ebe",
+  "form_id": "Texas",
+  "hours": [
+    {
+      "category_id": "13948c5c-fb58-401e-ad09-54a727e11a03",
+      "credits": 12,
+      "fraud": true,
+      "subject_area": "Auditing"
+    },
+    {
+      "category_id": "uncategorized",
+      "credits": 4,
+      "subject_area": "Uncategorized",
+      "yellowbook": true
+    },
+    {
+      "category_id": "other_categories",
+      "credits": 0.1,
+      "employeeBenefitPlan": true,
+      "subject_area": "Other"
+    }
+  ],
+  "hours_basic": {},
+  "instructors": [
+    {
+      "$$hashKey": "object:29712",
+      "email": "dtuck43@gmail.com",
+      "experience": true,
+      "first": "Drew",
+      "last": "Tucker",
+      "time": 4
+    },
+    {
+      "$$hashKey": "object:29715",
+      "email": "fakeyMcfake@aol.com",
+      "experience": false,
+      "first": "Fakey",
+      "last": "McFake",
+      "time": 10
+    }
+  ],
+  "inviteOnly": false,
+  "level": "Advanced",
+  "locations": [
+    {
+      "$$hashKey": "object:29709",
+      "capacity": 1,
+      "location": "111 S Jackson St, Seattle, WA, USA"
+    }
+  ],
+  "max_participants": 100,
+  "objectives": "<ul><li>Objective 1</li><li>Objective 2</li><li>Objective 3</li><li>Objective 3 + 1</li></ul>",
+  "payee": "222222",
+  "prep": "<div><u>None needed.&nbsp;</u></div>",
+  "prerequisites":
+    "<ul><li>Familiarity with fraud detection methods</li><li>Deep-seated hatred for fraud</li><li>Love of avoiding fraud</li><li>Two hundred thousand dollars</li></ul>",
+  "price": 200000,
+  "sponsor":
+    "{\"company_id\":222222,\"addressOne\":\"3005 Highland Parkway\",\"zip\":\"60515-5799\",\"logoUrl\":\"https://files.prolaera.com/companies/222222/sponsors/92d752ce-da89-4762-9623-bc0f090f30ef/125b0f46-5a85-4b8a-90ff-dfaa448f9848.png\",\"sponsors\":{\"qAS\":\"107294\",\"newYork\":\"002087\",\"allOthers\":\"Ohio/CPE.186\",\"name\":\"Becker Professional Education\",\"illinois\":\"158.002405\",\"texas\":\"009580\",\"nationalRegistry\":\"107294\",\"newJersey\":\"20CE00226700\"},\"signatureUrl\":\"https://files.prolaera.com/companies/222222/sponsors/92d752ce-da89-4762-9623-bc0f090f30ef/1e3b549a-9db1-4f1e-9a2c-a2feef41d870.png\",\"sponsorStatement\":\"In accordance with the standards of the National Registry of CPE Sponsors, CPE credits have been granted based on a 50-minute hour. NASBA 107294/NY BOA 002087/NJ BOA 20CE00226700/TX BOA 009580/OH BOA CPE186/IL BOA 158.002405/PA BOA PX177823 Becker Professional Education is registered with the National Association of State Boards of Accountancy (NASBA) as a sponsor of continuing professional education on the National Registry of CPE Sponsors. State boards of accountancy have final authority on the acceptance of individual courses for CPE credit. Complaints regarding registered sponsors may be submitted to the National Registry of CPE Sponsors through its website: www.learningmarket.org.\",\"logoName\":\"Becker_logo.png\",\"name\":\"THE NEW SPONSOR\",\"state\":\"Illinois\",\"sponsor_id\":\"92d752ce-da89-4762-9623-bc0f090f30ef\",\"signature\":{\"name\":\"Michael J. Malee\",\"title\":\"President\",\"imageUrl\":\"https://files.prolaera.com/companies/222222/sponsors/92d752ce-da89-4762-9623-bc0f090f30ef/1e3b549a-9db1-4f1e-9a2c-a2feef41d870.png\"},\"city\":\"Downers Grove\",\"active\":true,\"archived\":false,\"signatureName\":\"mmalee.png\"}",
+  "summary":
+    "<p><b>This course is about</b>&nbsp;detecting fraud. On top of that, this course is also about many other things. Here is a list of some of the things that will be covered in this course.&nbsp;</p><ul><li>Stuff</li><li>Things</li><li>Topics</li></ul><p>Please bring a pen and paper, and laptop. If you don't have any of those, tough luck.</p><div><span style=\"background-color: rgb(85, 98, 113); color: rgb(123, 136, 152); font-family: &quot;Mercury SSm A&quot;, &quot;Mercury SSm B&quot;, Georgia, Times, &quot;Times New Roman&quot;, &quot;Microsoft YaHei New&quot;, &quot;Microsoft Yahei&quot;, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, serif; font-size: 1.1875em;\"><br></span></div>",
+  "temp_registrations": [],
+  "updates": [
+    {
+      "profile_uid": "d4f629c7-2905-4886-84b7-b869a70814c7",
+      "time": 1529007664211
+    }
+  ],
+  "vendor": "222222"
+}
