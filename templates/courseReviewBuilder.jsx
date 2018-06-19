@@ -10,7 +10,7 @@ const CourseReviewBuilder = async (completeCourse, imageUrl) => {
   try {
     const Header = await builderHeader(imageUrl);
     return renderEmail(
-      <Email title="Registration Successful!" headCSS={css}>
+      <Email title="New course review on Prolaera" headCSS={css}>
         <Header />
         <CourseReviewSubHeader />
         <CourseReview {...completeCourse} />
