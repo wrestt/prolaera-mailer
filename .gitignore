@@ -1,4 +1,7 @@
 node_modules
-.DS_Store
 yarn.lock
 test.html
+.DS_Store
+templates/tests/test.html
+yarn.lock
+package.lock.json
