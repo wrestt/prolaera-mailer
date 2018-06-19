@@ -37,7 +37,7 @@ class EventInfo extends React.Component {
           boxShadow: '1px 1px 8px darkgray'
         }}
       >
-        <Box className={'eventInfo'} align="center" width="500px">
+        <Box className='eventInfo' align="center" width="500px">
           <Item align="left">
             <h3 align="center" style={{ marginTop: '0px' }}>
               Event Information:
