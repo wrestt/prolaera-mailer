@@ -44,7 +44,7 @@ describe('CourseReview component custom input tests', () => {
     expect(reviewJson).toMatchSnapshot();
   });
 
-  it('checks default html', async () => {
+  it('checks all custom inputs', async () => {
     const wrapper = shallow(<CourseReview {...course} />);
     expect(
       wrapper.contains(
@@ -53,117 +53,77 @@ describe('CourseReview component custom input tests', () => {
         </p>
       )
     ).toBe(true);
-  });
-
-  it('checks html with custom course name', async () => {
-    const wrapper = shallow(<CourseReview {...course} name={'Test Course Name'} />);
-    expect(
-      wrapper.contains(
-        <p style={{ fontSize: '18px', fontWeight: '300', marginTop: '5px', marginBottom: '5px' }}>
-          You have been selected to review Test Course Name.
-        </p>
-      )
-    ).toBe(true);
-  });
-
-  it('checks html with custom course audience', async () => {
-    const wrapper = shallow(<CourseReview {...course} courseAudience={'Test Course Audience'} />);
     expect(
       wrapper.contains(
         <h3>
-          Target Audience: <span style={{ fontWeight: '300' }}>Test Course Audience</span>
+          Target Audience: <span style={{ fontWeight: '300' }}>Accountants</span>
         </h3>
       )
     ).toBe(true);
-  });
-
-  it('checks html with custom course delivery method', async () => {
-    const wrapper = shallow(<CourseReview {...course} delivery_method={2} />);
     expect(
       wrapper.contains(
         <h3>
-          Delivery Method: <span style={{ fontWeight: '300' }}>Group-Internet / Webinar</span>
+          Delivery Method: <span style={{ fontWeight: '300' }}>Group-Live</span>
         </h3>
       )
     ).toBe(true);
-  });
-
-  it('checks html with custom course credit number and subject area', async () => {
-    const wrapper = shallow(<CourseReview {...course} hours={[{ credits: 4, subject_area: 'Test Subject Area' }]} />);
-    expect(
-      wrapper.contains(<li style={{ fontSize: '18px', fontWeight: '300' }}>Test Subject Area - 4 Hour(s)</li>)
-    ).toBe(true);
-  });
-
-  it('checks html with custom course level', async () => {
-    const wrapper = shallow(<CourseReview {...course} level={'Advanced'} />);
+    expect(wrapper.contains(<li style={{ fontSize: '18px', fontWeight: '300' }}>Tax Preparation - 1 Hour(s)</li>)).toBe(
+      true
+    );
     expect(
       wrapper.contains(
         <h3>
-          Level: <span style={{ fontWeight: '300' }}>Advanced</span>
+          Level: <span style={{ fontWeight: '300' }}>Basic</span>
         </h3>
       )
     ).toBe(true);
-  });
-
-  it('checks html with custom course objectives', async () => {
-    const wrapper = shallow(<CourseReview {...course} objectives={'<ol><li>First</li><li>Second</li></ol>'} />);
     expect(
       wrapper.contains(
         <h3>
           Learning Objectives:
           <div
             style={{ fontSize: '18px', fontWeight: '300' }}
-            dangerouslySetInnerHTML={{ __html: '<ol><li>First</li><li>Second</li></ol>' }}
+            dangerouslySetInnerHTML={{
+              __html: '<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>'
+            }}
           />
         </h3>
       )
     ).toBe(true);
-  });
-
-  it('checks html with custom prep', async () => {
-    const wrapper = shallow(<CourseReview {...course} prep={'<p>Test Prep</p>'} />);
-    expect(
-      wrapper.contains(
-        <div style={{ fontSize: '18px', fontWeight: '300' }} dangerouslySetInnerHTML={{ __html: '<p>Test Prep</p>' }} />
-      )
-    ).toBe(true);
-  });
-
-  it('checks html with custom prerequisites', async () => {
-    const wrapper = shallow(<CourseReview {...course} prerequisites={'<p>Test Prereqs</p>'} />);
     expect(
       wrapper.contains(
         <div
           style={{ fontSize: '18px', fontWeight: '300' }}
-          dangerouslySetInnerHTML={{ __html: '<p>Test Prereqs</p>' }}
+          dangerouslySetInnerHTML={{ __html: '<p>Read course introduction</p>' }}
         />
       )
     ).toBe(true);
-  });
-
-  it('checks html with custom summary', async () => {
-    const wrapper = shallow(<CourseReview {...course} summary={'<p>Test Summary</p>'} />);
     expect(
       wrapper.contains(
         <div
           style={{ fontSize: '18px', fontWeight: '300' }}
-          dangerouslySetInnerHTML={{ __html: '<p>Test Summary</p>' }}
+          dangerouslySetInnerHTML={{ __html: '<p>Tax Prep 101</p>' }}
         />
       )
     ).toBe(true);
-  });
-
-  it('checks CourseReview html with custom admin profile ID', async () => {
-    const wrapper = shallow(<CourseReview {...course} adminProfileId={'testAdminProfileId'} />);
+    expect(
+      wrapper.contains(
+        <div
+          style={{ fontSize: '18px', fontWeight: '300' }}
+          dangerouslySetInnerHTML={{
+            __html: '<p>This course is the second installation of Tax Prep focused on general tax planning.</p>'
+          }}
+        />
+      )
+    ).toBe(true);
     expect(
       wrapper.contains(
         <a
-          href="admin/testAdminProfileId/1234-1234-1234-1234/review"
+          href="admin/adminProfileId/1234-1234-1234-1234/review"
           className="viewCourseButton"
           style={{
             maxWidth: '200px',
-            backgroundColor: '#68B63E',
+            backgroundColor: '#72C02C',
             padding: '14px 14px 14px 14px',
             color: 'white',
             textDecoration: 'none'
@@ -173,17 +133,14 @@ describe('CourseReview component custom input tests', () => {
         </a>
       )
     ).toBe(true);
-  });
-  it('checks CourseReview html with custom course ID', async () => {
-    const wrapper = shallow(<CourseReview {...course} course_id={'testCourseId'} />);
     expect(
       wrapper.contains(
         <a
-          href="admin/adminProfileId/testCourseId/review"
+          href="admin/adminProfileId/1234-1234-1234-1234/review"
           className="viewCourseButton"
           style={{
             maxWidth: '200px',
-            backgroundColor: '#68B63E',
+            backgroundColor: '#72C02C',
             padding: '14px 14px 14px 14px',
             color: 'white',
             textDecoration: 'none'

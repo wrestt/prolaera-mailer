@@ -231,7 +231,7 @@ exports[`CourseReview component custom input tests creates and checks a snapshot
               href="admin/adminProfileId/1234-1234-1234-1234/review"
               style={
                 Object {
-                  "backgroundColor": "#68B63E",
+                  "backgroundColor": "#72C02C",
                   "color": "white",
                   "maxWidth": "200px",
                   "padding": "14px 14px 14px 14px",

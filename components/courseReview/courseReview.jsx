@@ -91,7 +91,7 @@ class CourseReview extends React.Component {
                 className="viewCourseButton"
                 style={{
                   maxWidth: '200px',
-                  backgroundColor: '#68B63E',
+                  backgroundColor: '#72C02C',
                   padding: '14px 14px 14px 14px',
                   color: 'white',
                   textDecoration: 'none'
