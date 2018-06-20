@@ -17,7 +17,8 @@ class SubHeader extends React.Component {
           fontFamily: 'Arial, sans-serif',
           padding: '20px',
           border: '1px solid lightgray',
-          borderRadius: '5px'
+          borderRadius: '5px',
+          boxShadow: '1px 1px 8px darkgray'
         }}
       >
         <Box className={'subHeader'} align="center" width="500px">
@@ -34,7 +35,7 @@ class SubHeader extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <h2 style={{ marginTop: '0px' }}>{header}</h2>
+                  <h2 style={{ fontSize: '40px', marginTop: '0px', marginBottom: '5px' }}>{header}</h2>
                 </td>
               </tr>
             </table>

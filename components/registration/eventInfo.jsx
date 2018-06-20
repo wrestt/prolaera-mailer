@@ -3,6 +3,7 @@ import { Box, Item } from 'react-html-email';
 import { PrettyDate } from '../../lib/dateHelpers';
 import deliveryHelper from '../../lib/deliveryHelper';
 import setInnerHtml from '../../lib/domHelpers';
+
 class EventInfo extends React.Component {
   render() {
     const {
@@ -10,7 +11,7 @@ class EventInfo extends React.Component {
       course_name = '',
       delivery_date = '',
       delivery_end_date = '',
-      hours = [''],
+      hours = [],
       delivery_location = '',
       delivery_method = 1,
       price = '$0.00',
@@ -33,7 +34,8 @@ class EventInfo extends React.Component {
           borderRadius: '5px',
           width: '500px',
           padding: '20px',
-          fontFamily: 'Arial, sans-serif'
+          fontFamily: 'Arial, sans-serif',
+          boxShadow: '1px 1px 8px darkgray'
         }}
       >
         <Box className={'eventInfo'} align="center" width="500px">
