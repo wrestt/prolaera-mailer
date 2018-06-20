@@ -63,9 +63,9 @@ class EventInfo extends React.Component {
               </h4>
               <h4>Recommended CPE Credit(s):</h4>
               <ul>
-                {hours.map(item => (
-                  <li key={item.toString()} style={{ padding: '5px' }}>
-                    {item.subject_area} - {item.credits} Hour(s)
+                {hours.map((hour, index) => (
+                  <li key={index} style={{ padding: '5px' }}>
+                    {hour.subject_area} - {hour.credits} Hour(s)
                   </li>
                 ))}
               </ul>
