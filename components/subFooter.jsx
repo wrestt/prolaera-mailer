@@ -22,7 +22,7 @@ class SubFooter extends React.Component {
           boxShadow: '1px 1px 8px darkgray'
         }}
       >
-        <Box className={'subFooter'} align="center" width="500px">
+        <Box className="subFooter" align="center" width="500px">
           <Item align="left">
             <p>{text}</p>
             <p>{subtext}</p>

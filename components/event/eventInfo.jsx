@@ -14,7 +14,7 @@ class EventInfo extends React.Component {
       hours = [],
       delivery_location = '',
       delivery_method = 1,
-      price = '$0.00',
+      price = 0,
       courseAudience = '',
       prep = '',
       prerequisites = '',
@@ -38,7 +38,7 @@ class EventInfo extends React.Component {
           boxShadow: '1px 1px 8px darkgray'
         }}
       >
-        <Box className={'eventInfo'} align="center" width="500px">
+        <Box className="eventInfo" align="center" width="500px">
           <Item align="left">
             <h3 align="center" style={{ marginTop: '0px' }}>
               Event Information:
@@ -63,16 +63,15 @@ class EventInfo extends React.Component {
               </h4>
               <h4>Recommended CPE Credit(s):</h4>
               <ul>
-                {Array.apply(null, hours).map(item => (
-                  <li key={item.category_id}>
+                {hours.map(item => (
+                  <li key={item.toString()} style={{ padding: '5px' }}>
                     {item.subject_area} - {item.credits} Hour(s)
                   </li>
                 ))}
               </ul>
               <h4>
-                Location:{' '}
-                <a href="#">
-                  {' '}
+                Location:
+                <a href={'https://www.google.com/maps/place/' + `${delivery_location}`}>
                   <span style={{ fontWeight: 'normal' }}>{delivery_location}</span>
                 </a>
               </h4>
@@ -80,7 +79,7 @@ class EventInfo extends React.Component {
                 Delivery Method: <span style={{ fontWeight: 'normal' }}>{deliveryHelper(delivery_method)}</span>
               </h4>
               <h4>
-                Price: <span style={{ fontWeight: 'normal' }}>{price}</span>
+                Price: <span style={{ fontWeight: 'normal' }}>${price}.00</span>
               </h4>
               <h4>
                 Target Audience: <span style={{ fontWeight: 'normal' }}>{courseAudience}</span>
@@ -88,15 +87,16 @@ class EventInfo extends React.Component {
               <h4>Prep:</h4>
               <div dangerouslySetInnerHTML={setInnerHtml(prep)} />
               <h4>Prerequisites:</h4>
-              <div dangerouslySetInnerHTML={setInnerHtml(prerequisites)} /> <h4> Level: </h4>
+              <div dangerouslySetInnerHTML={setInnerHtml(prerequisites)} />
+              <h4> Level: </h4>
               <div>{level}</div>
               <h4>Learning Objectives:</h4>
               <div dangerouslySetInnerHTML={setInnerHtml(objectives)} />
               <h4>
-                Summary:{' '}
+                Summary:
                 <span style={{ fontWeight: 'normal' }}>
                   <div dangerouslySetInnerHTML={setInnerHtml(summary)} />
-                </span>{' '}
+                </span>
               </h4>
             </div>
           </Item>

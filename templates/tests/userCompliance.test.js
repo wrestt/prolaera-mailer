@@ -1,7 +1,7 @@
 import fs from 'fs';
 import renderer from 'react-test-renderer';
-import userCompliance from '../userCompliance';
-import completeCompliance from './completeCompliance';
+import userCompliance from '../builders/userCompliance';
+import completeCompliance from './json/completeCompliance';
 
 describe('Email compliance Report', () => {
   const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';

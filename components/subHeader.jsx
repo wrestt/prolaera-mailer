@@ -21,10 +21,10 @@ class SubHeader extends React.Component {
           boxShadow: '1px 1px 8px darkgray'
         }}
       >
-        <Box className={'subHeader'} align="center" width="500px">
+        <Box className="subHeader" align="center" width="500px">
           <Item>
             <table
-              id={'subHeaderTable'}
+              id="subHeaderTable"
               align="center"
               style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto', width: '100%' }}
             >
@@ -35,7 +35,7 @@ class SubHeader extends React.Component {
               </tr>
               <tr>
                 <td>
-                  <h2 style={{ fontSize: '40px', marginTop: '0px', marginBottom: '5px' }}>{header}</h2>
+                  <h2 style={{ fontSize: '35px', marginTop: '0px', marginBottom: '5px' }}>{header}</h2>
                 </td>
               </tr>
             </table>
