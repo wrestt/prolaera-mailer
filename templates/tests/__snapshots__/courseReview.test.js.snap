@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseReview component custom input tests creates and checks a snapshot of CourseReview html 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid lightgray",
+      "display": "block",
+      "fontFamily": "Arial, sans-serif",
+      "marginBottom": "20px",
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "padding": "20px",
+      "textAlign": "center",
+      "width": "500px",
+    }
+  }
+>
+  <table
+    align="center"
+    border="0"
+    cellPadding={0}
+    cellSpacing={0}
+    className="courseReview"
+    valign="top"
+    width="500px"
+  >
+    <tbody>
+      <tr>
+        <td
+          align="left"
+        >
+          <p
+            style={
+              Object {
+                "fontSize": "18px",
+                "fontWeight": "300",
+                "marginBottom": "5px",
+                "marginTop": "5px",
+              }
+            }
+          >
+            You have been selected to review 
+            Tax Preparation 102
+            .
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td
+          align="left"
+        >
+          <div
+            style={
+              Object {
+                "paddingLeft": "40px",
+              }
+            }
+          >
+            <h3>
+              By: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "300",
+                  }
+                }
+              >
+                John Doe
+              </span>
+            </h3>
+            <h3>
+              Recommended CPE Credit(s):
+            </h3>
+            <ul>
+              <li
+                style={
+                  Object {
+                    "fontSize": "18px",
+                    "fontWeight": "300",
+                  }
+                }
+              >
+                Tax Preparation
+                 - 
+                1
+                 Hour(s)
+              </li>
+            </ul>
+            <h3>
+              Delivery Method: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "300",
+                  }
+                }
+              >
+                Group-Live
+              </span>
+            </h3>
+            <h3>
+              Price: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "300",
+                  }
+                }
+              >
+                Free
+              </span>
+            </h3>
+            <h3>
+              Target Audience: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "300",
+                  }
+                }
+              >
+                Accountants
+              </span>
+            </h3>
+            <h3>
+              Prep:
+            </h3>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Read course introduction</p>",
+                }
+              }
+              style={
+                Object {
+                  "fontSize": "18px",
+                  "fontWeight": "300",
+                }
+              }
+            />
+            <h3>
+              Prerequisites:
+            </h3>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Tax Prep 101</p>",
+                }
+              }
+              style={
+                Object {
+                  "fontSize": "18px",
+                  "fontWeight": "300",
+                }
+              }
+            />
+            <h3>
+              Level: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "300",
+                  }
+                }
+              >
+                Basic
+              </span>
+            </h3>
+            <h3>
+              Learning Objectives:
+              <div
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>",
+                  }
+                }
+                style={
+                  Object {
+                    "fontSize": "18px",
+                    "fontWeight": "300",
+                  }
+                }
+              />
+            </h3>
+            <h3>
+              Description:
+            </h3>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>This course is the second installation of Tax Prep focused on general tax planning.</p>",
+                }
+              }
+              style={
+                Object {
+                  "fontSize": "18px",
+                  "fontWeight": "300",
+                }
+              }
+            />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          align="left"
+        >
+          <p
+            style={
+              Object {
+                "fontSize": "18px",
+                "fontWeight": "300",
+              }
+            }
+          >
+            More information about this course can be found by navigating to the Prolaera website.
+          </p>
+          <div
+            className="buttonContainer"
+            style={
+              Object {
+                "padding": "20px 0px 20px 0px",
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <a
+              className="viewCourseButton"
+              href="admin/adminProfileId/1234-1234-1234-1234/review"
+              style={
+                Object {
+                  "backgroundColor": "#72C02C",
+                  "color": "white",
+                  "maxWidth": "200px",
+                  "padding": "14px 14px 14px 14px",
+                  "textDecoration": "none",
+                }
+              }
+            >
+              View Course
+            </a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
