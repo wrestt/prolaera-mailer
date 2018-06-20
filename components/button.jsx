@@ -6,12 +6,15 @@ class Button extends React.Component {
     return (
       <div className="customButton" style={{ width: '100%', textAlign: 'center', padding: '20px 0px 20px 0px' }}>
         <a
+          href="#"
           style={{
             maxWidth: '200px',
             backgroundColor: '#72C02C',
             padding: '14px 14px 14px 14px',
             color: 'white',
-            textDecoration: 'none'
+            textDecoration: 'none',
+            borderRadius: '10px',
+            boxShadow: '1px 1px 8px darkgray'
           }}
         >
           {text}
