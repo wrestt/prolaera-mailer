@@ -1,6 +1,4 @@
-import * as React from 'react';
-import { renderEmail } from 'react-html-email';
-import userComplaince from './templates/userCompliance';
+import userComplaince from './templates/builders/userCompliance';
 
 const handler = async (event, context) => {
   const { body } = event;

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Email, renderEmail } from 'react-html-email';
-import ComplianceReports from '../components/compliance/complianceReports';
-import Footer from '../components/footer';
-import buildHeader from '../components/header';
-import css from './templateCSS.js';
+import ComplianceReports from '../../components/compliance/complianceReports';
+import Footer from '../../components/footer';
+import buildHeader from '../../components/header';
+import css from '../templateCSS.js';
 
 const email = async (completeCompliance, imageUrl) => {
   try {
