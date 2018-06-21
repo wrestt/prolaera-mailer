@@ -11,24 +11,25 @@ class GenericInfo extends React.Component {
           display: 'block',
           marginLeft: 'auto',
           marginRight: 'auto',
-          textAlign: 'center',
+          textAlign: 'left',
           border: '1px solid lightgray',
           borderRadius: '5px',
           width: '500px',
           padding: '20px',
           fontFamily: 'Arial, sans-serif',
-          boxShadow: '1px 1px 8px darkgray'
+          boxShadow: '1px 1px 8px darkgray',
+          marginBottom: '20px'
         }}
       >
         <Box align="center">
           <Item>
-            <p>{header}</p>
+            <div>{header}</div>
           </Item>
           <Item>
-            <p>{body}</p>
+            <div>{body}</div>
           </Item>
           <Item>
-            <p>{footer}</p>
+            <div>{footer}</div>
           </Item>
         </Box>
       </div>

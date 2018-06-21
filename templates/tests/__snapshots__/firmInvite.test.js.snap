@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Firm Invite component creates and checks snapshot of FirmInvite component html 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid lightgray",
+      "borderRadius": "5px",
+      "boxShadow": "1px 1px 8px darkgray",
+      "display": "block",
+      "fontFamily": "Arial, sans-serif",
+      "marginBottom": "20px",
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "padding": "20px",
+      "textAlign": "left",
+      "width": "500px",
+    }
+  }
+>
+  <table
+    align="center"
+    border="0"
+    cellPadding={0}
+    cellSpacing={0}
+    valign="top"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div>
+            <p>
+              You've been added to 
+              Test CPA Firm
+               on Prolaera
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <div>
+              <p>
+                Your account is waiting for you and there are only a couple quick steps to complete.
+              </p>
+              <ol>
+                <li>
+                  Click the button below to register your account.
+                </li>
+                <li>
+                  On the registration page simply enter a password for your new account and click "Register".
+                </li>
+              </ol>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <p>
+              That's it! You're ready to explore the new tools and resources you have access to.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

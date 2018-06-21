@@ -20,7 +20,7 @@ describe('GenericInfo component', () => {
     expect(
       wrapper.contains(
         <Item>
-          <p>Oh yeah!</p>
+          <div>Oh yeah!</div>
         </Item>
       )
     ).toBe(true);
@@ -28,7 +28,7 @@ describe('GenericInfo component', () => {
     expect(
       wrapper.contains(
         <Item>
-          <p>Check out this body!</p>
+          <div>Check out this body!</div>
         </Item>
       )
     ).toBe(true);
@@ -36,7 +36,7 @@ describe('GenericInfo component', () => {
     expect(
       wrapper.contains(
         <Item>
-          <p>Okay, all done now</p>
+          <div>Okay, all done now</div>
         </Item>
       )
     ).toBe(true);
