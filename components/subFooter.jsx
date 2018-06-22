@@ -1,7 +1,5 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
-import css from '../templates/templateCSS';
-import Button from './button';
 
 class SubFooter extends React.Component {
   render() {
@@ -30,7 +28,6 @@ class SubFooter extends React.Component {
             <p>{subtext}</p>
           </Item>
         </Box>
-        <Button text={'Why hello!'} headCSS={css} />
       </div>
     );
   }
