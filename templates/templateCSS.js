@@ -42,6 +42,13 @@ only screen and (max-width: 600px),
 		width: 45%;
 		padding-right: 10px;
 		white-space: nowrap;
-	}`.trim();
+	}
+	
+	.customButton:hover {
+		color:black;
+		
+	}
+	
+	`.trim();
 
 export default css;
