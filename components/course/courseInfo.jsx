@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
 import deliveryHelper from '../../lib/deliveryHelper';
+import Button from '../button';
 
-class CourseReview extends React.Component {
+class CourseInfo extends React.Component {
   render() {
     const {
-      header = 'Course Information:',
-      footer = '',
+      headerProps,
+      buttonProps,
       adminProfileId = 'adminProfileId',
       course_id = '',
       name = '',
@@ -40,7 +41,9 @@ class CourseReview extends React.Component {
       >
         <Box className={'courseReview'} align="center" width="500px">
           <Item align="left">
-            <div style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px' }}>{header}</div>
+            <div style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px' }}>
+              {headerProps ? <p>{headerProps}</p> : <h2>{name}</h2>}
+            </div>
           </Item>
           <Item align="left">
             <div style={{ paddingLeft: '40px' }}>
@@ -84,7 +87,7 @@ class CourseReview extends React.Component {
             </div>
           </Item>
           <Item align="left">
-            <div style={{ fontSize: '18px', fontWeight: 'normal' }}>{footer}</div>
+            <div>{buttonProps ? <Button text={buttonProps} /> : <span className="buttonSpan" />}</div>
           </Item>
         </Box>
       </div>
@@ -92,4 +95,4 @@ class CourseReview extends React.Component {
   }
 }
 
-export default CourseReview;
+export default CourseInfo;

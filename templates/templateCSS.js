@@ -1,8 +1,4 @@
 const css = `
-
-
-
-
 @media
 only screen and (max-width: 600px),
 (min-device-width: 600px) and (max-device-width: 1024px)  {
@@ -48,7 +44,7 @@ only screen and (max-width: 600px),
 		color:black;
 		
 	}
-	
+}
 	`.trim();
 
 export default css;

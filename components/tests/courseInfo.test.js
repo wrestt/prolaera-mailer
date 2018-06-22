@@ -2,9 +2,11 @@ import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import Button from '../../components/button';
 import CourseInfo from '../../components/course/courseInfo';
 
 Enzyme.configure({ adapter: new Adapter() });
+
 const course = {
   by: 'John Doe',
   course_id: '1234-1234-1234-1234',
@@ -25,24 +27,19 @@ const course = {
   header: 'Your course Tax Preparation 101 is ready for review',
   footer: 'Log in below'
 };
+const headerText = "You've been assigned a new course, " + `${course.name}`;
+const buttonText = 'Log In';
 
-describe('CourseReview component custom input tests', () => {
-  it('creates and checks a snapshot of CourseReview html', async () => {
-    let reviewHtml = renderer.create(<CourseInfo {...course} />);
-    let reviewJson = reviewHtml.toJSON();
-    expect(reviewJson).toMatchSnapshot();
+describe('CourseInfo component custom input tests', () => {
+  it('creates and checks a snapshot of CourseInfo html', async () => {
+    let courseHtml = renderer.create(<CourseInfo {...course} />);
+    let courseJson = courseHtml.toJSON();
+    expect(courseJson).toMatchSnapshot();
   });
 
   it('checks all custom inputs', async () => {
-    const wrapper = shallow(<CourseInfo {...course} />);
-    expect(
-      wrapper.contains(
-        <div style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px' }}>
-          Your course Tax Preparation 101 is ready for review
-        </div>
-      )
-    ).toBe(true);
-    expect(wrapper.contains(<div style={{ fontSize: '18px', fontWeight: 'normal' }}>Log in below</div>)).toBe(true);
+    const wrapper = shallow(<CourseInfo {...course} headerProps={headerText} buttonProps={buttonText} />);
+    expect(wrapper.contains(<p>You've been assigned a new course, Tax Preparation 102</p>)).toBe(true);
     expect(
       wrapper.contains(
         <h3>
@@ -106,5 +103,6 @@ describe('CourseReview component custom input tests', () => {
         />
       )
     ).toBe(true);
+    expect(wrapper.contains(<Button text={'Log In'} />)).toBe(true);
   });
 });

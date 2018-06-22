@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CourseReview component custom input tests creates and checks a snapshot of CourseReview html 1`] = `
+exports[`CourseInfo component custom input tests creates and checks a snapshot of CourseInfo html 1`] = `
 <div
   style={
     Object {
@@ -41,7 +41,9 @@ exports[`CourseReview component custom input tests creates and checks a snapshot
               }
             }
           >
-            Your course Tax Preparation 101 is ready for review
+            <h2>
+              Tax Preparation 102
+            </h2>
           </div>
         </td>
       </tr>
@@ -205,15 +207,10 @@ exports[`CourseReview component custom input tests creates and checks a snapshot
         <td
           align="left"
         >
-          <div
-            style={
-              Object {
-                "fontSize": "18px",
-                "fontWeight": "normal",
-              }
-            }
-          >
-            Log in below
+          <div>
+            <span
+              className="buttonSpan"
+            />
           </div>
         </td>
       </tr>
