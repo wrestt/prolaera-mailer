@@ -1,9 +1,9 @@
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import fs from 'fs';
 import React from 'react';
 import renderer from 'react-test-renderer';
 import GenericInfo from '../../components/generic/GenericInfo';
+import writeFile from '../../lib/writeFileHelper';
 import firmInviteBuilder from '../builders/firmInviteBuilder';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -32,25 +32,13 @@ describe('Firm Invite component', () => {
 });
 
 describe('create html test file', () => {
-  it('it writes an html file to test.html', async () => {
+  it.skip('it writes an html file to test.html', async () => {
     const firmInviteEmail = await firmInviteBuilder(
       user,
       company,
       'https://assets.prolaera.com/prolaeraLogo_fullText.png'
     );
-    const saved = await writeFile(firmInviteEmail);
+    const saved = await writeFile(firmInviteEmail, 'firmInviteTest.html');
     expect(saved).toEqual(true);
   });
 });
-
-async function writeFile(emailHtml) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile(`${__dirname}/html/firmInviteTest.html`, emailHtml, err => {
-      if (err) {
-        console.log(err);
-        reject(err);
-      }
-      resolve(true);
-    });
-  });
-}
