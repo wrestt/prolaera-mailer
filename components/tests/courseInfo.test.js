@@ -5,7 +5,6 @@ import renderer from 'react-test-renderer';
 import CourseInfo from '../../components/course/courseInfo';
 
 Enzyme.configure({ adapter: new Adapter() });
-
 const course = {
   by: 'John Doe',
   course_id: '1234-1234-1234-1234',
@@ -22,7 +21,9 @@ const course = {
   objectives: '<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>',
   prep: '<p>Read course introduction</p>',
   prerequisites: '<p>Tax Prep 101</p>',
-  summary: '<p>This course is the second installation of Tax Prep focused on general tax planning.</p>'
+  summary: '<p>This course is the second installation of Tax Prep focused on general tax planning.</p>',
+  header: 'Your course Tax Preparation 101 is ready for review',
+  footer: 'Log in below'
 };
 
 describe('CourseReview component custom input tests', () => {
@@ -36,11 +37,12 @@ describe('CourseReview component custom input tests', () => {
     const wrapper = shallow(<CourseInfo {...course} />);
     expect(
       wrapper.contains(
-        <p style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px', marginBottom: '5px' }}>
-          You have been selected to review Tax Preparation 102.
-        </p>
+        <div style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px' }}>
+          Your course Tax Preparation 101 is ready for review
+        </div>
       )
     ).toBe(true);
+    expect(wrapper.contains(<div style={{ fontSize: '18px', fontWeight: 'normal' }}>Log in below</div>)).toBe(true);
     expect(
       wrapper.contains(
         <h3>

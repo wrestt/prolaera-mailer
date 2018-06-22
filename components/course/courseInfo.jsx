@@ -5,6 +5,8 @@ import deliveryHelper from '../../lib/deliveryHelper';
 class CourseReview extends React.Component {
   render() {
     const {
+      header = 'Course Information:',
+      footer = '',
       adminProfileId = 'adminProfileId',
       course_id = '',
       name = '',
@@ -38,9 +40,7 @@ class CourseReview extends React.Component {
       >
         <Box className={'courseReview'} align="center" width="500px">
           <Item align="left">
-            <p style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px', marginBottom: '5px' }}>
-              You have been selected to review {name}.
-            </p>
+            <div style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px' }}>{header}</div>
           </Item>
           <Item align="left">
             <div style={{ paddingLeft: '40px' }}>
@@ -84,9 +84,7 @@ class CourseReview extends React.Component {
             </div>
           </Item>
           <Item align="left">
-            <p style={{ fontSize: '18px', fontWeight: 'normal' }}>
-              More information about this course can be found by navigating to the Prolaera website.
-            </p>
+            <div style={{ fontSize: '18px', fontWeight: 'normal' }}>{footer}</div>
           </Item>
         </Box>
       </div>
