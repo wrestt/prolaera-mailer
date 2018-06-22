@@ -104,39 +104,5 @@ describe('CourseReview component custom input tests', () => {
         />
       )
     ).toBe(true);
-    expect(
-      wrapper.contains(
-        <a
-          href="admin/adminProfileId/1234-1234-1234-1234/review"
-          className="viewCourseButton"
-          style={{
-            maxWidth: '200px',
-            backgroundColor: '#72C02C',
-            padding: '14px 14px 14px 14px',
-            color: 'white',
-            textDecoration: 'none'
-          }}
-        >
-          View Course
-        </a>
-      )
-    ).toBe(true);
-    expect(
-      wrapper.contains(
-        <a
-          href="admin/adminProfileId/1234-1234-1234-1234/review"
-          className="viewCourseButton"
-          style={{
-            maxWidth: '200px',
-            backgroundColor: '#72C02C',
-            padding: '14px 14px 14px 14px',
-            color: 'white',
-            textDecoration: 'none'
-          }}
-        >
-          View Course
-        </a>
-      )
-    ).toBe(true);
   });
 });

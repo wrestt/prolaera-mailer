@@ -28,10 +28,12 @@ class CourseReview extends React.Component {
           marginRight: 'auto',
           textAlign: 'center',
           border: '1px solid lightgray',
+          borderRadius: '5px',
           width: '500px',
           padding: '20px',
           fontFamily: 'Arial, sans-serif',
-          marginBottom: '20px'
+          marginBottom: '20px',
+          boxShadow: '1px 1px 8px darkgray'
         }}
       >
         <Box className={'courseReview'} align="center" width="500px">
@@ -85,24 +87,6 @@ class CourseReview extends React.Component {
             <p style={{ fontSize: '18px', fontWeight: 'normal' }}>
               More information about this course can be found by navigating to the Prolaera website.
             </p>
-            <div
-              className="buttonContainer"
-              style={{ width: '100%', textAlign: 'center', padding: '20px 0px 20px 0px' }}
-            >
-              <a
-                href={'admin/' + adminProfileId + '/' + course_id + '/review'}
-                className="viewCourseButton"
-                style={{
-                  maxWidth: '200px',
-                  backgroundColor: '#72C02C',
-                  padding: '14px 14px 14px 14px',
-                  color: 'white',
-                  textDecoration: 'none'
-                }}
-              >
-                View Course
-              </a>
-            </div>
           </Item>
         </Box>
       </div>

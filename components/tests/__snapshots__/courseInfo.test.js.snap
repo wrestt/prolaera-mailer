@@ -216,32 +216,6 @@ exports[`CourseReview component custom input tests creates and checks a snapshot
           >
             More information about this course can be found by navigating to the Prolaera website.
           </p>
-          <div
-            className="buttonContainer"
-            style={
-              Object {
-                "padding": "20px 0px 20px 0px",
-                "textAlign": "center",
-                "width": "100%",
-              }
-            }
-          >
-            <a
-              className="viewCourseButton"
-              href="admin/adminProfileId/1234-1234-1234-1234/review"
-              style={
-                Object {
-                  "backgroundColor": "#72C02C",
-                  "color": "white",
-                  "maxWidth": "200px",
-                  "padding": "14px 14px 14px 14px",
-                  "textDecoration": "none",
-                }
-              }
-            >
-              View Course
-            </a>
-          </div>
         </td>
       </tr>
     </tbody>
