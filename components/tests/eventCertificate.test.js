@@ -31,7 +31,20 @@ describe('eventCertificate component', () => {
     expect(
       wrapper.contains(
         <Item>
-          <h4>Shoe-Tying 101: July 18, 2018 - July 19, 2018</h4>
+          <div
+            style={{
+              maxWidth: '300px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              border: '1px solid lightgray',
+              borderRadius: '8px',
+              background: 'linear-gradient(to bottom right, #ffd11a, #fff0b3, #ffd633)',
+              boxShadow: '1px 1px 8px darkgray'
+            }}
+          >
+            <h3 style={{ marginBottom: '5px' }}>Shoe-Tying 101</h3>
+            <h6 style={{ marginTop: '0px' }}>July 18, 2018 - July 19, 2018</h6>
+          </div>
         </Item>
       )
     ).toBe(true);
@@ -39,7 +52,7 @@ describe('eventCertificate component', () => {
     expect(
       wrapper.contains(
         <Item>
-          <h3>Congratulations Jeff,</h3>
+          <h4>Congratulations Jeff!</h4>
         </Item>
       )
     ).toBe(true);
@@ -55,9 +68,9 @@ describe('eventCertificate component', () => {
     expect(
       wrapper.contains(
         <Item>
-          <span style={{ display: 'inline' }}>
-            <Button text="View Certificate" /> <Button text="Complete Evaluation" />
-          </span>
+          <Button text={'View Certificate'} />
+          <hr style={{ width: '45px' }} />
+          <Button text={'Complete Evaluation'} />
         </Item>
       )
     ).toBe(true);
