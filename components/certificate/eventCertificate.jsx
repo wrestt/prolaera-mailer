@@ -26,13 +26,13 @@ class EventCertificate extends React.Component {
           textAlign: 'center',
           border: '1px solid lightgray',
           borderRadius: '5px',
-          width: '500px',
+          maxWidth: '500px',
           padding: '20px',
           fontFamily: 'Arial, sans-serif',
           boxShadow: '1px 1px 8px darkgray'
         }}
       >
-        <Box align="center">
+        <Box align="center" width="100%">
           <Item>
             <h4>
               {course_name}: {PrettyDate(delivery_date)} - {PrettyDate(delivery_end_date)}

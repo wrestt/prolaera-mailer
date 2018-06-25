@@ -18,11 +18,11 @@ class SubFooter extends React.Component {
           border: '1px solid lightgray',
           borderRadius: '5px',
           padding: '20px',
-          width: '500px',
+          maxWidth: '500px',
           boxShadow: '1px 1px 8px darkgray'
         }}
       >
-        <Box className="subFooter" align="center" width="500px">
+        <Box className="subFooter" align="center" width="100%">
           <Item align="left">
             <p>{text}</p>
             <p>{subtext}</p>

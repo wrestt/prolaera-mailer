@@ -14,14 +14,14 @@ class GenericInfo extends React.Component {
           textAlign: 'left',
           border: '1px solid lightgray',
           borderRadius: '5px',
-          width: '500px',
+          maxWidth: '500px',
           padding: '20px',
           fontFamily: 'Arial, sans-serif',
           boxShadow: '1px 1px 8px darkgray',
           marginBottom: '20px'
         }}
       >
-        <Box align="center">
+        <Box align="center" width="100%">
           <Item>
             <div>{header}</div>
           </Item>
