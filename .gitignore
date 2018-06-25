@@ -4,3 +4,4 @@ test.html
 .DS_Store
 templates/tests/test.html
 yarn.lock
+package.lock.json

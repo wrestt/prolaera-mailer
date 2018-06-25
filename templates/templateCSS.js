@@ -12,11 +12,11 @@ only screen and (max-width: 600px),
 		display: block;
 	}
 
-	.header td {
+	.emailHeader td {
 		width: 100%;
 	}
 
-	.header td img {
+	.emailHeader td img {
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -42,6 +42,13 @@ only screen and (max-width: 600px),
 		width: 45%;
 		padding-right: 10px;
 		white-space: nowrap;
-	}`.trim();
+	}
+	
+	.customButton:hover {
+		color:black;
+		
+	}
+	
+	`.trim();
 
 export default css;

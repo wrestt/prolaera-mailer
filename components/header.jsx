@@ -16,12 +16,12 @@ class Header extends React.Component {
     const resizedHeight = 47;
 
     return (
-      <Box className={'header'} align="center" width="100%" style={{ backgroundColor: '#F7F7F7' }}>
+      <Box className="emailHeader" align="center" width="100%" style={{ backgroundColor: '#F7F7F7' }}>
         <Item align="center">
           <table align="center" cellSpacing={0} style={{ padding: '15px', maxWidth: '584px' }}>
             <tr align="left">
               <td width="292px">
-                <Image className={'logo'} alt="logo" src={url} width={resizedWidth} height={resizedHeight} />
+                <Image className="headerLogo" alt="logo" src={url} width={resizedWidth} height={resizedHeight} />
               </td>
               <td width="252px" style={{ textAlign: 'center' }}>
                 <a href={link}> {text} → </a>
@@ -34,7 +34,7 @@ class Header extends React.Component {
   }
 }
 
-const builderHeader = async imageUrl => {
+const buildHeader = async imageUrl => {
   try {
     const { url, height, width } = await probe(imageUrl);
     const image = { url, height, width };
@@ -44,4 +44,6 @@ const builderHeader = async imageUrl => {
   }
 };
 
-export default builderHeader;
+export default buildHeader;
+
+export { Header };
