@@ -8,7 +8,7 @@ class CourseCertificate extends React.Component {
     const {
       name = '',
       by = '',
-      delivery_method = 0,
+      delivery_method = 1,
       first = '',
       header = 'Congratulations',
       body = 'Attached is your Certificate of Completion. We hope that you enjoyed your course! If you have any suggestions for improving your CPE experience, please reply directly to this email and let us know.',
@@ -47,7 +47,7 @@ class CourseCertificate extends React.Component {
             >
               <h3 style={{ marginBottom: '5px' }}>{name}</h3>
               <h6 style={{ marginTop: '0px' }}>
-                Instructor: {by} - ({deliveryHelper(delivery_method)})
+                Instructor: {by} ({deliveryHelper(delivery_method)})
               </h6>
             </div>
           </Item>
