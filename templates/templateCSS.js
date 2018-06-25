@@ -48,6 +48,10 @@ only screen and (max-width: 600px),
 		color:black;
 		
 	}
+
+
+/*End of media query*/
+}
 	
 	`.trim();
 
