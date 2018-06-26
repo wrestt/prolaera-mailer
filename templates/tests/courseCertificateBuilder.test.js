@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import writeFile from '../../lib/writeFileHelper';
-import user from '../../templates/tests/json/completeUser';
 import course from '../../templates/tests/json/completeCourse';
+import user from '../../templates/tests/json/completeUser';
 import courseCertificateEmail from '../builders/courseCertificateBuilder';
 describe('eventCertificateBuilder', () => {
   const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
@@ -13,7 +13,7 @@ describe('eventCertificateBuilder', () => {
     expect(certificateJSON).toMatchSnapshot();
   });
 
-  it('should write an HTML file', async () => {
+  it.skip('writes an HTML file', async () => {
     const email = await courseCertificateEmail(course, user, logoUrl);
     const saved = await writeFile(email, 'courseCertificateTest.html');
     expect(saved).toEqual(true);

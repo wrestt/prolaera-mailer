@@ -2,6 +2,7 @@ import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import Button from '../../components/button';
 import CourseInfo from '../../components/course/courseInfo';
 
 Enzyme.configure({ adapter: new Adapter() });
@@ -22,25 +23,23 @@ const course = {
   objectives: '<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>',
   prep: '<p>Read course introduction</p>',
   prerequisites: '<p>Tax Prep 101</p>',
-  summary: '<p>This course is the second installation of Tax Prep focused on general tax planning.</p>'
+  summary: '<p>This course is the second installation of Tax Prep focused on general tax planning.</p>',
+  header: 'Your course Tax Preparation 101 is ready for review',
+  footer: 'Log in below'
 };
+const headerText = "You've been assigned a new course, " + `${course.name}`;
+const buttonText = 'Log In';
 
-describe('CourseReview component custom input tests', () => {
-  it('creates and checks a snapshot of CourseReview html', async () => {
-    let reviewHtml = renderer.create(<CourseInfo {...course} />);
-    let reviewJson = reviewHtml.toJSON();
-    expect(reviewJson).toMatchSnapshot();
+describe('CourseInfo component custom input tests', () => {
+  it('creates and checks a snapshot of CourseInfo html', async () => {
+    let courseHtml = renderer.create(<CourseInfo {...course} />);
+    let courseJson = courseHtml.toJSON();
+    expect(courseJson).toMatchSnapshot();
   });
 
   it('checks all custom inputs', async () => {
-    const wrapper = shallow(<CourseInfo {...course} />);
-    expect(
-      wrapper.contains(
-        <p style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px', marginBottom: '5px' }}>
-          You have been selected to review Tax Preparation 102.
-        </p>
-      )
-    ).toBe(true);
+    const wrapper = shallow(<CourseInfo {...course} headerProps={headerText} buttonProps={buttonText} />);
+    expect(wrapper.contains(<p>You've been assigned a new course, Tax Preparation 102</p>)).toBe(true);
     expect(
       wrapper.contains(
         <h3>
@@ -104,5 +103,6 @@ describe('CourseReview component custom input tests', () => {
         />
       )
     ).toBe(true);
+    expect(wrapper.contains(<Button text={'Log In'} />)).toBe(true);
   });
 });

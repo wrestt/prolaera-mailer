@@ -1,10 +1,13 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
 import deliveryHelper from '../../lib/deliveryHelper';
+import Button from '../button';
 
-class CourseReview extends React.Component {
+class CourseInfo extends React.Component {
   render() {
     const {
+      headerProps,
+      buttonProps,
       adminProfileId = 'adminProfileId',
       course_id = '',
       name = '',
@@ -38,9 +41,9 @@ class CourseReview extends React.Component {
       >
         <Box className="courseReview" align="center" width="100%">
           <Item align="left">
-            <p style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px', marginBottom: '5px' }}>
-              You have been selected to review {name}.
-            </p>
+            <div style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px' }}>
+              {headerProps ? <p>{headerProps}</p> : <h2>{name}</h2>}
+            </div>
           </Item>
           <Item align="left">
             <div style={{ paddingLeft: '40px' }}>
@@ -84,9 +87,7 @@ class CourseReview extends React.Component {
             </div>
           </Item>
           <Item align="left">
-            <p style={{ fontSize: '18px', fontWeight: 'normal' }}>
-              More information about this course can be found by navigating to the Prolaera website.
-            </p>
+            <div>{buttonProps ? <Button text={buttonProps} /> : <span className="buttonSpan" />}</div>
           </Item>
         </Box>
       </div>
@@ -94,4 +95,4 @@ class CourseReview extends React.Component {
   }
 }
 
-export default CourseReview;
+export default CourseInfo;
