@@ -12,9 +12,9 @@ exports[`Firm Invite component creates and checks snapshot of FirmInvite compone
       "marginBottom": "20px",
       "marginLeft": "auto",
       "marginRight": "auto",
+      "maxWidth": "500px",
       "padding": "20px",
       "textAlign": "left",
-      "width": "500px",
     }
   }
 >
@@ -24,6 +24,7 @@ exports[`Firm Invite component creates and checks snapshot of FirmInvite compone
     cellPadding={0}
     cellSpacing={0}
     valign="top"
+    width="100%"
   >
     <tbody>
       <tr>

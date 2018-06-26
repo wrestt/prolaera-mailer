@@ -2,14 +2,14 @@ import React from 'react';
 import { Email, renderEmail } from 'react-html-email';
 import EventInfo from '../../components/event/eventInfo';
 import Footer from '../../components/footer';
-import builderHeader from '../../components/header';
+import buildHeader from '../../components/header';
 import SubFooter from '../../components/subFooter';
 import SubHeader from '../../components/SubHeader';
 import css from '../templateCSS.js';
 
 const invitationEmail = async (event, imageUrl) => {
   try {
-    const Header = await builderHeader(imageUrl);
+    const Header = await buildHeader(imageUrl);
     return renderEmail(
       <Email title="You have been Invited" headCSS={css}>
         <Header />

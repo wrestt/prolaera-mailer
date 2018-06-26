@@ -12,9 +12,9 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
       "marginBottom": "20px",
       "marginLeft": "auto",
       "marginRight": "auto",
+      "maxWidth": "500px",
       "padding": "20px",
       "textAlign": "center",
-      "width": "500px",
     }
   }
 >
@@ -25,7 +25,7 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
     cellSpacing={0}
     className="courseReview"
     valign="top"
-    width="500px"
+    width="100%"
   >
     <tbody>
       <tr>
