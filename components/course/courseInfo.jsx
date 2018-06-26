@@ -29,14 +29,14 @@ class CourseReview extends React.Component {
           textAlign: 'center',
           border: '1px solid lightgray',
           borderRadius: '5px',
-          width: '500px',
+          maxWidth: '500px',
           padding: '20px',
           fontFamily: 'Arial, sans-serif',
           marginBottom: '20px',
           boxShadow: '1px 1px 8px darkgray'
         }}
       >
-        <Box className={'courseReview'} align="center" width="500px">
+        <Box className="courseReview" align="center" width="100%">
           <Item align="left">
             <p style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px', marginBottom: '5px' }}>
               You have been selected to review {name}.

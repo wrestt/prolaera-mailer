@@ -7,27 +7,23 @@ class SubHeader extends React.Component {
 
     return (
       <div
+        id="subHeaderWrapper"
         style={{
           display: 'block',
           marginLeft: 'auto',
           marginRight: 'auto',
           marginTop: '20px',
           marginBottom: '20px',
-          width: '500px',
+          maxWidth: '500px',
           fontFamily: 'Arial, sans-serif',
-          padding: '20px',
           border: '1px solid lightgray',
           borderRadius: '5px',
           boxShadow: '1px 1px 8px darkgray'
         }}
       >
-        <Box className="subHeader" align="center" width="500px">
+        <Box className="subHeader" align="center" width="100%">
           <Item>
-            <table
-              id="subHeaderTable"
-              align="center"
-              style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto', width: '100%' }}
-            >
+            <table id="subHeaderTable" style={{ textAlign: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
               <tr>
                 <td>
                   <p style={{ color: 'gray', fontStyle: 'italic', marginBottom: '5px' }}>{subText}</p>

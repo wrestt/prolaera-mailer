@@ -1,17 +1,17 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
-import { PrettyDate } from '../../lib/dateHelpers';
 import Button from '../button';
+import deliveryHelper from '../../lib/deliveryHelper';
 
-class EventCertificate extends React.Component {
+class CourseCertificate extends React.Component {
   render() {
     const {
-      course_name = '',
-      delivery_date = '',
-      delivery_end_date = '',
+      name = '',
+      by = '',
+      delivery_method = 1,
       first = '',
       header = 'Congratulations',
-      body = 'Attached is your Certificate of Completion. We hope that you enjoyed the event! If you have any suggestions for improving your CPE experience, please reply directly to this email and let us know.',
+      body = 'Attached is your Certificate of Completion. We hope that you enjoyed your course! If you have any suggestions for improving your CPE experience, please reply directly to this email and let us know.',
       button1Text = 'View Certificate',
       button2Text = 'Complete Evaluation'
     } = this.props;
@@ -45,9 +45,9 @@ class EventCertificate extends React.Component {
                 boxShadow: '1px 1px 8px darkgray'
               }}
             >
-              <h3 style={{ marginBottom: '5px' }}>{course_name}</h3>
+              <h3 style={{ marginBottom: '5px' }}>{name}</h3>
               <h6 style={{ marginTop: '0px' }}>
-                {PrettyDate(delivery_date)} - {PrettyDate(delivery_end_date)}
+                Instructor: {by} ({deliveryHelper(delivery_method)})
               </h6>
             </div>
           </Item>
@@ -70,4 +70,4 @@ class EventCertificate extends React.Component {
   }
 }
 
-export default EventCertificate;
+export default CourseCertificate;

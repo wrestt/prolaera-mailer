@@ -1,6 +1,8 @@
 const css = `
 
-
+#subHeaderWrapper {
+	padding: 20px;
+}
 
 
 @media
@@ -21,8 +23,9 @@ only screen and (max-width: 600px),
 		margin-right: auto;
 	}
 
-	.subHeader {
-		display: relative;
+	#subHeaderWrapper {
+		width: 100%;
+		padding: 0px;
 	}
 
 	.report td {
@@ -52,6 +55,8 @@ only screen and (max-width: 600px),
 
 /*End of media query*/
 }
+
+
 	
 	`.trim();
 

@@ -4,30 +4,30 @@ import React from 'react';
 import { Item } from 'react-html-email';
 import renderer from 'react-test-renderer';
 import Button from '../button';
-import EventCertificate from '../certificate/eventCertificate';
+import CourseCertificate from '../certificate/courseCertificate';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 const certificate = {
-  course_name: 'Shoe-Tying 101',
-  delivery_date: '2018-07-18T22:00:00.000Z',
-  delivery_end_date: '2018-07-19T00:00:00.000Z',
+  name: 'Shoe-Tying 101',
+  by: 'Elon Musk',
+  delivery_method: 1,
   first: 'Jeff',
   body: 'This is a test body! It should match.',
   button1Text: 'View Certificate',
   button2Text: 'Complete Evaluation'
 };
 
-describe('eventCertificate component', () => {
+describe('CourseCertificate component', () => {
   it('should return default values if none provided', async () => {
-    let certificate = renderer.create(<EventCertificate />);
+    let certificate = renderer.create(<CourseCertificate />);
     let certString = JSON.stringify(certificate.toJSON());
     let containsDefault = certString.includes('Congratulations');
     expect(containsDefault).toEqual(true);
   });
 
   it('checks all custom inputs', async () => {
-    const wrapper = shallow(<EventCertificate {...certificate} />);
+    const wrapper = shallow(<CourseCertificate {...certificate} />);
     expect(
       wrapper.contains(
         <Item>
@@ -43,7 +43,7 @@ describe('eventCertificate component', () => {
             }}
           >
             <h3 style={{ marginBottom: '5px' }}>Shoe-Tying 101</h3>
-            <h6 style={{ marginTop: '0px' }}>July 18, 2018 - July 19, 2018</h6>
+            <h6 style={{ marginTop: '0px' }}>Instructor: Elon Musk (Group-Live)</h6>
           </div>
         </Item>
       )
