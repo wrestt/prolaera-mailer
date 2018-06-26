@@ -16,7 +16,7 @@ const CourseReviewBuilder = async (completeCourse, imageUrl) => {
         <CourseInfo
           {...completeCourse}
           buttonProps={'Log In'}
-          headerProps={"You've been assigned a new course, " + `${completeCourse.name}`}
+          headerProps={"You've been assigned a new course: " + `${completeCourse.name}`}
         />
         <Footer />
       </Email>

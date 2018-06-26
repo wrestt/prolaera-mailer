@@ -22,7 +22,7 @@ class TrackInfo extends React.Component {
           boxShadow: '1px 1px 8px darkgray'
         }}
       >
-        <Box className={'trackInfo'} align="center" width="500px">
+        <Box className="trackInfo" align="center" width="500px">
           <Item align="left">
             <p style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px', marginBottom: '5px' }}>
               You have been assigned a new learning track.

@@ -14,7 +14,7 @@ class CourseInfo extends React.Component {
       by = '',
       hours = [{ credits: '', subject_area: '' }],
       delivery_method = 1,
-      price = '$0',
+      price = 0,
       courseAudience = '',
       prep = '',
       prerequisites = '',
@@ -42,7 +42,13 @@ class CourseInfo extends React.Component {
         <Box className="courseReview" align="center" width="100%">
           <Item align="left">
             <div style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px' }}>
-              {headerProps ? <p>{headerProps}</p> : <h2>{name}</h2>}
+              {headerProps ? (
+                <p>{headerProps}</p>
+              ) : (
+                <em>
+                  <h2>{name}</h2>
+                </em>
+              )}
             </div>
           </Item>
           <Item align="left">
