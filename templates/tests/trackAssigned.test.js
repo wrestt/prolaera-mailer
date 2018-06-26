@@ -5,7 +5,7 @@ import trackAssignedBuilder from '../builders/trackAssignedBuilder';
 describe('trackAssigned Email', () => {
   const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
   const track = {
-    name: 'John',
+    name: 'Q4 Tax Planning Track',
     author: 'CPE Authors Inc',
     description: 'This is the foremost learning track for CPAs.'
   };
@@ -21,7 +21,7 @@ describe('trackAssigned Email', () => {
     expect(registrationJson).toMatchSnapshot();
   });
 
-  it('writes an html file', async () => {
+  it.skip('writes an html file', async () => {
     const email = await trackAssignedBuilder(track, logoUrl);
     const saved = await writeFile(email, 'trackAssignedTest.html');
     expect(saved).toEqual(true);

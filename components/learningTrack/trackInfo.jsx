@@ -28,12 +28,12 @@ class TrackInfo extends React.Component {
               You have been assigned a new learning track.
             </p>
             <h3>
-              Track Name: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>{name}</span>
+              Name: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>{name}</span>
             </h3>
             <h3>
-              Track Author: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>{author}</span>
+              Author: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>{author}</span>
             </h3>
-            <h3>Track Description</h3>
+            <h3>Description:</h3>
             <p style={{ fontSize: '18px', fontWeight: 'normal' }}>{description}</p>
           </Item>
           <Item align="left">

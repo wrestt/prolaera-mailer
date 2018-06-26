@@ -5,6 +5,8 @@ exports[`CourseReview component custom input tests creates and checks a snapshot
   style={
     Object {
       "border": "1px solid lightgray",
+      "borderRadius": "5px",
+      "boxShadow": "1px 1px 8px darkgray",
       "display": "block",
       "fontFamily": "Arial, sans-serif",
       "marginBottom": "20px",
