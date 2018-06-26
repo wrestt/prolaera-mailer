@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseInfo component custom input tests creates and checks a snapshot of CourseInfo html 1`] = `
+<div
+  style={
+    Object {
+      "border": "1px solid lightgray",
+      "borderRadius": "5px",
+      "boxShadow": "1px 1px 8px darkgray",
+      "display": "block",
+      "fontFamily": "Arial, sans-serif",
+      "marginBottom": "20px",
+      "marginLeft": "auto",
+      "marginRight": "auto",
+      "maxWidth": "500px",
+      "padding": "20px",
+      "textAlign": "center",
+    }
+  }
+>
+  <table
+    align="center"
+    border="0"
+    cellPadding={0}
+    cellSpacing={0}
+    className="courseReview"
+    valign="top"
+    width="100%"
+  >
+    <tbody>
+      <tr>
+        <td
+          align="left"
+        >
+          <div
+            style={
+              Object {
+                "fontSize": "18px",
+                "fontWeight": "normal",
+                "marginTop": "5px",
+              }
+            }
+          >
+            <em>
+              <h2>
+                Tax Preparation 102
+              </h2>
+            </em>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          align="left"
+        >
+          <div
+            style={
+              Object {
+                "paddingLeft": "40px",
+              }
+            }
+          >
+            <h3>
+              By: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                John Doe
+              </span>
+            </h3>
+            <h3>
+              Recommended CPE Credit(s):
+            </h3>
+            <ul>
+              <li
+                style={
+                  Object {
+                    "fontSize": "18px",
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                Tax Preparation
+                 - 
+                1
+                 Hour(s)
+              </li>
+            </ul>
+            <h3>
+              Delivery Method: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                Group-Live
+              </span>
+            </h3>
+            <h3>
+              Price: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                Free
+              </span>
+            </h3>
+            <h3>
+              Target Audience: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                Accountants
+              </span>
+            </h3>
+            <h3>
+              Prep:
+            </h3>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Read course introduction</p>",
+                }
+              }
+              style={
+                Object {
+                  "fontSize": "18px",
+                  "fontWeight": "normal",
+                }
+              }
+            />
+            <h3>
+              Prerequisites:
+            </h3>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>Tax Prep 101</p>",
+                }
+              }
+              style={
+                Object {
+                  "fontSize": "18px",
+                  "fontWeight": "normal",
+                }
+              }
+            />
+            <h3>
+              Level: 
+              <span
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
+              >
+                Basic
+              </span>
+            </h3>
+            <h3>
+              Learning Objectives:
+              <div
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>",
+                  }
+                }
+                style={
+                  Object {
+                    "fontSize": "18px",
+                    "fontWeight": "normal",
+                  }
+                }
+              />
+            </h3>
+            <h3>
+              Description:
+            </h3>
+            <div
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<p>This course is the second installation of Tax Prep focused on general tax planning.</p>",
+                }
+              }
+              style={
+                Object {
+                  "fontSize": "18px",
+                  "fontWeight": "normal",
+                }
+              }
+            />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          align="left"
+        >
+          <div>
+            <span
+              className="buttonSpan"
+            />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

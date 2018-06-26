@@ -1,6 +1,8 @@
 const css = `
 
-
+#subHeaderWrapper {
+	padding: 20px;
+}
 
 
 @media
@@ -21,8 +23,9 @@ only screen and (max-width: 600px),
 		margin-right: auto;
 	}
 
-	.subHeader {
-		display: relative;
+	#subHeaderWrapper {
+		width: 100%;
+		padding: 0px;
 	}
 
 	.report td {
@@ -42,6 +45,19 @@ only screen and (max-width: 600px),
 		width: 45%;
 		padding-right: 10px;
 		white-space: nowrap;
-	}`.trim();
+	}
+	
+	.customButton:hover {
+		color:black;
+		
+	}
+
+
+/*End of media query*/
+}
+
+
+	
+	`.trim();
 
 export default css;
