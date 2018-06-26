@@ -7,7 +7,7 @@ import builderHeader from '../../components/header';
 import SubHeader from '../../components/subHeader';
 import css from '../templateCSS.js';
 
-const CourseReviewBuilder = async (completeCourse, imageUrl) => {
+const courseApprovedBuilder = async (completeCourse, imageUrl) => {
   try {
     const headerText = (
       <p>
@@ -29,4 +29,4 @@ const CourseReviewBuilder = async (completeCourse, imageUrl) => {
   }
 };
 
-export default CourseReviewBuilder;
+export default courseApprovedBuilder;

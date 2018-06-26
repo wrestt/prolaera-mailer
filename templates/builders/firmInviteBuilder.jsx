@@ -6,7 +6,7 @@ import builderHeader from '../../components/header';
 import SubHeader from '../../components/subHeader';
 import css from '../templateCSS.js';
 
-const CourseReviewBuilder = async (completeUser, completeCompany, imageUrl) => {
+const firmInviteBuilder = async (completeUser, completeCompany, imageUrl) => {
   try {
     const headerText = <p>You've been added to {completeCompany.company_name} on Prolaera</p>;
     const bodyText = (
@@ -33,4 +33,4 @@ const CourseReviewBuilder = async (completeUser, completeCompany, imageUrl) => {
   }
 };
 
-export default CourseReviewBuilder;
+export default firmInviteBuilder;
