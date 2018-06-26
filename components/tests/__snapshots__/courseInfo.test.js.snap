@@ -41,9 +41,11 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
               }
             }
           >
-            <h2>
-              Tax Preparation 102
-            </h2>
+            <em>
+              <h2>
+                Tax Preparation 102
+              </h2>
+            </em>
           </div>
         </td>
       </tr>
