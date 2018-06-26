@@ -1,0 +1,19 @@
+{
+  "name": "Q1 Audit Track",
+  "author": "testAuthor",
+  "description": "Quarterly auditing CPE track",
+  "content": {
+    "type": "testEvent",
+    "course_id": "1234-5678",
+    "activity_id": "8765-4321",
+    "course": "testCourse",
+    "activity": "testActivity",
+    "events": ["Event1", "Event2", "Event3"]
+  },
+  "active": true,
+  "courses": "testCourses",
+  "access": "testAccess",
+  "archive": true,
+  "updates": ["Update1", "Update2", "Update3"],
+  "progress": ["AssignedTrack1", "AssignedTrack2"]
+}

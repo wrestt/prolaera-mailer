@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CourseReview component custom input tests creates and checks a snapshot of CourseReview html 1`] = `
+exports[`CourseInfo component custom input tests creates and checks a snapshot of CourseInfo html 1`] = `
 <div
   style={
     Object {
@@ -32,20 +32,19 @@ exports[`CourseReview component custom input tests creates and checks a snapshot
         <td
           align="left"
         >
-          <p
+          <div
             style={
               Object {
                 "fontSize": "18px",
                 "fontWeight": "normal",
-                "marginBottom": "5px",
                 "marginTop": "5px",
               }
             }
           >
-            You have been selected to review 
-            Tax Preparation 102
-            .
-          </p>
+            <h2>
+              Tax Preparation 102
+            </h2>
+          </div>
         </td>
       </tr>
       <tr>
@@ -208,16 +207,11 @@ exports[`CourseReview component custom input tests creates and checks a snapshot
         <td
           align="left"
         >
-          <p
-            style={
-              Object {
-                "fontSize": "18px",
-                "fontWeight": "normal",
-              }
-            }
-          >
-            More information about this course can be found by navigating to the Prolaera website.
-          </p>
+          <div>
+            <span
+              className="buttonSpan"
+            />
+          </div>
         </td>
       </tr>
     </tbody>
