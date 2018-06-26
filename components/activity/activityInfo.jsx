@@ -1,8 +1,11 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
+import Button from '../button';
 
 class ActivityInfo extends React.Component {
   render() {
+    const { name = '', author = '', buttonText = 'View Activity' } = this.props;
+
     return (
       <div
         style={{
@@ -20,7 +23,20 @@ class ActivityInfo extends React.Component {
         }}
       >
         <Box align="center" width="100%">
-          <Item />
+          <Item>
+            <h5>You have been assigned to a new Activity:</h5>
+          </Item>
+          <Item align="center">
+            <h3>{name}</h3>
+          </Item>
+          <Item align="left">
+            <h4>
+              By: <span style={{ fontWeight: 'normal' }}>{author}</span>
+            </h4>
+          </Item>
+          <Item>
+            <Button text={buttonText} />
+          </Item>
         </Box>
       </div>
     );
