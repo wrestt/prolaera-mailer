@@ -6,7 +6,7 @@ import SubHeader from '../../components/subHeader';
 import TeamInfo from '../../components/team/teamInfo';
 import css from '../templateCSS.js';
 
-const CourseReviewBuilder = async (completeTeam, imageUrl) => {
+const teamLeadBuilder = async (completeTeam, imageUrl) => {
   try {
     const Header = await builderHeader(imageUrl);
     const buttonText = 'Log In';
@@ -23,4 +23,4 @@ const CourseReviewBuilder = async (completeTeam, imageUrl) => {
   }
 };
 
-export default CourseReviewBuilder;
+export default teamLeadBuilder;

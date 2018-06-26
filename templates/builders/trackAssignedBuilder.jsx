@@ -6,7 +6,7 @@ import TrackInfo from '../../components/learningTrack/trackInfo';
 import SubHeader from '../../components/subHeader';
 import css from '../templateCSS.js';
 
-const CourseReviewBuilder = async (completeTrack, imageUrl) => {
+const trackAssignedBuilder = async (completeTrack, imageUrl) => {
   try {
     const Header = await builderHeader(imageUrl);
     const buttonText = 'Log In';
@@ -23,4 +23,4 @@ const CourseReviewBuilder = async (completeTrack, imageUrl) => {
   }
 };
 
-export default CourseReviewBuilder;
+export default trackAssignedBuilder;
