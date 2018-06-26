@@ -4,7 +4,7 @@ import Button from '../button';
 
 class ActivityInfo extends React.Component {
   render() {
-    const { name = '', author = '', buttonText = 'View Activity' } = this.props;
+    const { name = '', author = '', buttonText = 'View Details' } = this.props;
 
     return (
       <div
@@ -24,15 +24,24 @@ class ActivityInfo extends React.Component {
       >
         <Box align="center" width="100%">
           <Item>
-            <h5>You have been assigned to a new Activity:</h5>
-          </Item>
-          <Item align="center">
-            <h3>{name}</h3>
-          </Item>
-          <Item align="left">
-            <h4>
-              By: <span style={{ fontWeight: 'normal' }}>{author}</span>
-            </h4>
+            <h4>You have been assigned to a new Activity:</h4>
+            <div
+              style={{
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                marginBottom: '15px',
+                border: '1px solid lightgray',
+                boxShadow: '1px 1px 8px darkgray',
+                maxWidth: '300px'
+              }}
+            >
+              <h3 style={{ marginBottom: '0px' }}>
+                <em>{name}</em>
+              </h3>
+              <h4 style={{ marginTop: '7px' }}>
+                By: <span style={{ fontWeight: 'normal' }}>{author}</span>
+              </h4>
+            </div>
           </Item>
           <Item>
             <Button text={buttonText} />
