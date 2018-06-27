@@ -21,7 +21,7 @@ describe('trackAssigned Email', () => {
     expect(registrationJson).toMatchSnapshot();
   });
 
-  it.skip('writes an html file', async () => {
+  it('writes an html file', async () => {
     const email = await trackAssignedBuilder(track, logoUrl);
     const saved = await writeFile(email, 'trackAssignedTest.html');
     expect(saved).toEqual(true);

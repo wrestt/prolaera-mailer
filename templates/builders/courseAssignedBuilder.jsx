@@ -11,7 +11,7 @@ const courseAssignedBuilder = async (completeCourse, imageUrl) => {
     const Header = await builderHeader(imageUrl);
     return renderEmail(
       <Email title={"You've been assigned a new course"} headCSS={css}>
-        <Header />
+        <Header {...completeCourse} />
         <SubHeader subText={'New course'} header={'Assigned'} />
         <CourseInfo {...completeCourse} buttonProps={'Log In'} />
         <Footer />

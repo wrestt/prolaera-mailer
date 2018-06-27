@@ -12,9 +12,13 @@ const invitationEmail = async (event, imageUrl) => {
     const Header = await buildHeader(imageUrl);
     return renderEmail(
       <Email title="You have been Invited" headCSS={css}>
-        <Header />
-        <SubHeader subText="You have been" header="Invited" />
-        <EventInfo {...event} registeredForOrInvitedTo="invited to" />
+        <Header text="View Event" {...event} />
+        <SubHeader
+          subText="You have been"
+          header="Invited"
+          message="You have been invited to a new event! More details are included below. Please click the register button below if you are able to attend."
+        />
+        <EventInfo {...event} buttonText="Register" />
         <SubFooter text="All you need to do is RSVP. If you decide to go, you will be navigated to the Prolaera website. Don't have an account with us? No problem, it only takes a few seconds to get one started!" />
         <Footer />
       </Email>

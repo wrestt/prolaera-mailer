@@ -17,7 +17,7 @@ describe('Email compliance Report', () => {
     expect(userComplianceJson).toMatchSnapshot();
   });
 
-  it.skip('it writes an html file', async () => {
+  it('it writes an html file', async () => {
     const email = await userCompliance(completeCompliance, logoUrl);
     const saved = await writeFile(email, 'userComplianceTest.html');
     expect(saved).toEqual(true);

@@ -13,7 +13,7 @@ describe('invitation Email', () => {
     expect(registrationJson).toMatchSnapshot();
   });
 
-  it.skip('writes an html file', async () => {
+  it('writes an html file', async () => {
     const email = await invitationEmail(eventInvite, logoUrl);
     const saved = await writeFile(email, 'inviteTest.html');
     expect(saved).toEqual(true);

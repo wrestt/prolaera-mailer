@@ -27,7 +27,7 @@ only screen and (max-width: 600px),
 	.emailHeader td img {
 		margin-left: auto;
 		margin-right: auto;
-	}
+	} 
 
 	#subHeaderWrapper {
 		width: 100%;

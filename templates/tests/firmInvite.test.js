@@ -32,7 +32,7 @@ describe('Firm Invite component', () => {
 });
 
 describe('create html test file', () => {
-  it.skip('writes an html file to firmInviteTest.html', async () => {
+  it('writes an html file to firmInviteTest.html', async () => {
     const firmInviteEmail = await firmInviteBuilder(
       user,
       company,
