@@ -8,14 +8,14 @@ import buildHeader from '../../components/header';
 import SubHeader from '../../components/SubHeader';
 import css from '../templateCSS';
 
-const courseCertificateEmail = async (course, user, imageUrl) => {
+const courseCertificateEmail = async (course, user, certificate, imageUrl) => {
   try {
     const Header = await buildHeader(imageUrl);
     return renderEmail(
       <Email title="You have completed a course" headCSS={css}>
-        <Header />
-        <SubHeader subText="You have received a" header="Certificate" />
-        <CourseCertificate {...course} {...user} />
+        <Header text="Complete Evaluation" {...certificate} {...course} />
+        <SubHeader {...user} subText="You have received a" header="Certificate" />
+        <CourseCertificate {...certificate} {...course} {...user} />
         <CourseInfo {...course} />
         <Footer />
       </Email>

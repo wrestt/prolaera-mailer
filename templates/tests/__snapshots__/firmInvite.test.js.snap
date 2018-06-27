@@ -4,9 +4,8 @@ exports[`Firm Invite component creates and checks snapshot of FirmInvite compone
 <div
   style={
     Object {
-      "border": "1px solid lightgray",
+      "backgroundColor": "white",
       "borderRadius": "5px",
-      "boxShadow": "1px 1px 8px darkgray",
       "display": "block",
       "fontFamily": "Arial, sans-serif",
       "marginBottom": "20px",

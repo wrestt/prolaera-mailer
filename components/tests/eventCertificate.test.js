@@ -15,14 +15,16 @@ const certificate = {
   first: 'Jeff',
   body: 'This is a test body! It should match.',
   button1Text: 'View Certificate',
-  button2Text: 'Complete Evaluation'
+  button2Text: 'Complete Evaluation',
+  button1Link: '#',
+  button2Link: '#'
 };
 
 describe('eventCertificate component', () => {
   it('should return default values if none provided', async () => {
     let certificate = renderer.create(<EventCertificate />);
     let certString = JSON.stringify(certificate.toJSON());
-    let containsDefault = certString.includes('Congratulations');
+    let containsDefault = certString.includes('');
     expect(containsDefault).toEqual(true);
   });
 
@@ -52,14 +54,6 @@ describe('eventCertificate component', () => {
     expect(
       wrapper.contains(
         <Item>
-          <h4>Congratulations Jeff!</h4>
-        </Item>
-      )
-    ).toBe(true);
-
-    expect(
-      wrapper.contains(
-        <Item>
           <p>This is a test body! It should match.</p>
         </Item>
       )
@@ -68,9 +62,9 @@ describe('eventCertificate component', () => {
     expect(
       wrapper.contains(
         <Item>
-          <Button text={'View Certificate'} />
+          <Button text={'View Certificate'} link={'#'} />
           <hr style={{ width: '45px' }} />
-          <Button text={'Complete Evaluation'} />
+          <Button text={'Complete Evaluation'} link={'#'} />
         </Item>
       )
     ).toBe(true);

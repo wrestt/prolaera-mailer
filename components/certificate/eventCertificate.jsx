@@ -11,9 +11,14 @@ class EventCertificate extends React.Component {
       delivery_end_date = '',
       first = '',
       header = 'Congratulations',
-      body = 'Attached is your Certificate of Completion. We hope that you enjoyed the event! If you have any suggestions for improving your CPE experience, please reply directly to this email and let us know.',
+      body,
+      profile_uid,
+      event_id,
+      pdf,
       button1Text = 'View Certificate',
-      button2Text = 'Complete Evaluation'
+      button2Text = 'Complete Evaluation',
+      button1Link = `${pdf}`,
+      button2Link = 'https://app.prolaera.com/#/users/' + `${profile_uid}` + '/events/' + `${event_id}` + '/review'
     } = this.props;
 
     return (
@@ -51,17 +56,12 @@ class EventCertificate extends React.Component {
             </div>
           </Item>
           <Item>
-            <h4>
-              {header} {first}!
-            </h4>
-          </Item>
-          <Item>
             <p>{body}</p>
           </Item>
           <Item>
-            <Button text={button1Text} />
+            <Button text={button1Text} link={button1Link} />
             <hr style={{ width: '45px' }} />
-            <Button text={button2Text} />
+            <Button text={button2Text} link={button2Link} />
           </Item>
         </Box>
       </div>

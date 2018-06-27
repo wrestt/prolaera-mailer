@@ -3,7 +3,17 @@ import { Box, Item } from 'react-html-email';
 
 class SubHeader extends React.Component {
   render() {
-    const { subText = '', header = '', message = '' } = this.props;
+    const {
+      profile_uid,
+      subText = '',
+      header = '',
+      first,
+      message = '',
+      certMessage = 'Congratulations ' +
+        `${first}` +
+        '! ' +
+        "You've been issued a new certificate of completion. Please take a few moments to complete an evaluation to help us improve by clicking the Complete Evaluation button below."
+    } = this.props;
 
     return (
       <div
@@ -36,6 +46,7 @@ class SubHeader extends React.Component {
               <tr>
                 <td>
                   <p>{message}</p>
+                  <div>{profile_uid ? <p>{certMessage}</p> : <div />}</div>
                 </td>
               </tr>
             </table>
