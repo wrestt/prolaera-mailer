@@ -61,8 +61,8 @@ class EventInfo extends React.Component {
               <h4>
                 End Time: <span style={{ fontWeight: 'normal' }}>{PrettyDate(delivery_end_date)}</span>
               </h4>
-              <h4>Recommended CPE Credit(s):</h4>
-              <ul>
+              <h4 style={{ marginBottom: '0px' }}>Recommended CPE Credit(s):</h4>
+              <ul style={{ marginTop: '10px' }}>
                 {hours.map((hour, index) => (
                   <li key={index} style={{ padding: '5px' }}>
                     {hour.subject_area} - {hour.credits} Hour(s)
@@ -84,20 +84,17 @@ class EventInfo extends React.Component {
               <h4>
                 Target Audience: <span style={{ fontWeight: 'normal' }}>{courseAudience}</span>
               </h4>
-              <h4>Prep:</h4>
-              <div dangerouslySetInnerHTML={setInnerHtml(prep)} />
-              <h4>Prerequisites:</h4>
-              <div dangerouslySetInnerHTML={setInnerHtml(prerequisites)} />
-              <h4> Level: </h4>
-              <div>{level}</div>
-              <h4>Learning Objectives:</h4>
-              <div dangerouslySetInnerHTML={setInnerHtml(objectives)} />
+              <h4 style={{ marginBottom: '0px' }}>Prep:</h4>
+              <div className="innerHtmlStyles" dangerouslySetInnerHTML={setInnerHtml(prep)} />
+              <h4 style={{ marginBottom: '0px' }}>Prerequisites:</h4>
+              <div className="innerHtmlStyles" dangerouslySetInnerHTML={setInnerHtml(prerequisites)} />
               <h4>
-                Summary:
-                <span style={{ fontWeight: 'normal' }}>
-                  <div dangerouslySetInnerHTML={setInnerHtml(summary)} />
-                </span>
+                Level: <span style={{ fontWeight: 'normal' }}>{level}</span>
               </h4>
+              <h4 style={{ marginBottom: '0px' }}>Learning Objectives:</h4>
+              <div className="innerHtmlStyles" dangerouslySetInnerHTML={setInnerHtml(objectives)} />
+              <h4 style={{ marginBottom: '0px' }}>Summary:</h4>
+              <div className="innerHtmlStyles" dangerouslySetInnerHTML={setInnerHtml(summary)} />
             </div>
           </Item>
         </Box>

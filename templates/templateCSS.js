@@ -4,6 +4,12 @@ const css = `
 	padding: 20px;
 }
 
+.innerHtmlStyles {
+	margin-top: 10px;
+}
+.innerHtmlStyles p, .innerHtmlStyles ol, .innerHtmlStyles ul  {
+	margin-top: 10px;
+}
 
 @media
 only screen and (max-width: 600px),

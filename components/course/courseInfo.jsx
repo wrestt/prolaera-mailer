@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Item } from 'react-html-email';
 import deliveryHelper from '../../lib/deliveryHelper';
+import setInnerHtml from '../../lib/domHelpers';
 import Button from '../button';
 
 class CourseInfo extends React.Component {
   render() {
     const {
-      headerProps,
       buttonProps,
       adminProfileId = 'adminProfileId',
       course_id = '',
@@ -41,55 +41,59 @@ class CourseInfo extends React.Component {
       >
         <Box className="courseReview" align="center" width="100%">
           <Item align="left">
-            <div style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px' }}>
-              {headerProps ? (
-                <p>{headerProps}</p>
-              ) : (
-                <em>
-                  <h2>{name}</h2>
-                </em>
-              )}
-            </div>
+            <h3 align="center" style={{ marginTop: '0px' }}>
+              Course Information:
+            </h3>
+            <h4 align="center" style={{ marginTop: '0px', marginBottom: '0px' }}>
+              <em>
+                {name} ({deliveryHelper(delivery_method)})
+              </em>
+            </h4>
           </Item>
           <Item align="left">
             <div style={{ paddingLeft: '40px' }}>
-              <h3>
+              <h4>
                 By: <span style={{ fontWeight: 'normal' }}>{by}</span>
-              </h3>
-              <h3>Recommended CPE Credit(s):</h3>
-              <ul>
-                <li style={{ fontSize: '18px', fontWeight: 'normal' }}>
+              </h4>
+              <h4 style={{ marginBottom: '0px' }}>Recommended CPE Credit(s):</h4>
+              <ul style={{ marginTop: '10px' }}>
+                <li style={{ fontWeight: 'normal' }}>
                   {hours[0].subject_area} - {hours[0].credits} Hour(s)
                 </li>
               </ul>
-              <h3>
-                Delivery Method: <span style={{ fontWeight: 'normal' }}>{deliveryHelper(delivery_method)}</span>
-              </h3>
-              <h3>
+              <h4>
                 Price: <span style={{ fontWeight: 'normal' }}>{{ price } > 0 ? { price } : 'Free'}</span>
-              </h3>
-              <h3>
+              </h4>
+              <h4>
                 Target Audience: <span style={{ fontWeight: 'normal' }}>{courseAudience}</span>
-              </h3>
-              <h3>Prep:</h3>
-              <div style={{ fontSize: '18px', fontWeight: 'normal' }} dangerouslySetInnerHTML={{ __html: prep }} />
-              <h3>Prerequisites:</h3>
+              </h4>
+              <h4 style={{ marginBottom: '0px' }}>Prep:</h4>
               <div
-                style={{ fontSize: '18px', fontWeight: 'normal' }}
-                dangerouslySetInnerHTML={{ __html: prerequisites }}
+                className="innerHtmlStyles"
+                style={{ fontWeight: 'normal' }}
+                dangerouslySetInnerHTML={setInnerHtml(prep)}
               />
-              <h3>
+              <h4 style={{ marginBottom: '0px' }}>Prerequisites:</h4>
+              <div
+                className="innerHtmlStyles"
+                style={{ fontWeight: 'normal' }}
+                dangerouslySetInnerHTML={setInnerHtml(prerequisites)}
+              />
+              <h4>
                 Level: <span style={{ fontWeight: 'normal' }}>{level}</span>
-              </h3>
-              <h3>
-                Learning Objectives:
-                <div
-                  style={{ fontSize: '18px', fontWeight: 'normal' }}
-                  dangerouslySetInnerHTML={{ __html: objectives }}
-                />
-              </h3>
-              <h3>Description:</h3>
-              <div style={{ fontSize: '18px', fontWeight: 'normal' }} dangerouslySetInnerHTML={{ __html: summary }} />
+              </h4>
+              <h4 style={{ marginBottom: '0px' }}>Learning Objectives:</h4>
+              <div
+                className="innerHtmlStyles"
+                style={{ fontWeight: 'normal' }}
+                dangerouslySetInnerHTML={setInnerHtml(objectives)}
+              />
+              <h4 style={{ marginBottom: '0px' }}>Description:</h4>
+              <div
+                className="innerHtmlStyles"
+                style={{ fontWeight: 'normal' }}
+                dangerouslySetInnerHTML={setInnerHtml(summary)}
+              />
             </div>
           </Item>
           <Item align="left">

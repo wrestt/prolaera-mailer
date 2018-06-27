@@ -13,11 +13,7 @@ const courseApprovedBuilder = async (completeCourse, imageUrl) => {
       <Email title={`${completeCourse.name}` + ' has been approved'} headCSS={css}>
         <Header />
         <SubHeader subText={'Your course has been'} header={'Approved'} />
-        <CourseInfo
-          {...completeCourse}
-          headerProps={'Your course, ' + `${completeCourse.name}` + ', has been approved.'}
-          buttonProps={'Log In'}
-        />
+        <CourseInfo {...completeCourse} buttonProps={'Log In'} />
         <Footer />
       </Email>
     );

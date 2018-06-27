@@ -4,6 +4,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Button from '../../components/button';
 import CourseInfo from '../../components/course/courseInfo';
+import setInnerHtml from '../../lib/domHelpers';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -27,7 +28,6 @@ const course = {
   header: 'Your course Tax Preparation 101 is ready for review',
   footer: 'Log in below'
 };
-const headerText = "You've been assigned a new course, " + `${course.name}`;
 const buttonText = 'Log In';
 
 describe('CourseInfo component custom input tests', () => {
@@ -38,68 +38,78 @@ describe('CourseInfo component custom input tests', () => {
   });
 
   it('checks all custom inputs', async () => {
-    const wrapper = shallow(<CourseInfo {...course} headerProps={headerText} buttonProps={buttonText} />);
-    expect(wrapper.contains(<p>You've been assigned a new course, Tax Preparation 102</p>)).toBe(true);
+    const wrapper = shallow(<CourseInfo {...course} buttonProps={buttonText} />);
+    expect(wrapper.contains(<em>Tax Preparation 102 (Group-Live)</em>)).toBe(true);
     expect(
       wrapper.contains(
-        <h3>
+        <h4>
+          By: <span style={{ fontWeight: 'normal' }}>John Doe</span>
+        </h4>
+      )
+    ).toBe(true);
+
+    expect(wrapper.contains(<li style={{ fontWeight: 'normal' }}>Tax Preparation - 1 Hour(s)</li>)).toBe(true);
+
+    expect(
+      wrapper.contains(
+        <h4>
+          Price: <span style={{ fontWeight: 'normal' }}>Free</span>
+        </h4>
+      )
+    ).toBe(true);
+
+    expect(
+      wrapper.contains(
+        <h4>
           Target Audience: <span style={{ fontWeight: 'normal' }}>Accountants</span>
-        </h3>
+        </h4>
       )
     ).toBe(true);
     expect(
       wrapper.contains(
-        <h3>
-          Delivery Method: <span style={{ fontWeight: 'normal' }}>Group-Live</span>
-        </h3>
+        <div
+          className="innerHtmlStyles"
+          style={{ fontWeight: 'normal' }}
+          dangerouslySetInnerHTML={setInnerHtml('<p>Read course introduction</p>')}
+        />
       )
     ).toBe(true);
     expect(
-      wrapper.contains(<li style={{ fontSize: '18px', fontWeight: 'normal' }}>Tax Preparation - 1 Hour(s)</li>)
+      wrapper.contains(
+        <div
+          className="innerHtmlStyles"
+          style={{ fontWeight: 'normal' }}
+          dangerouslySetInnerHTML={setInnerHtml('<p>Tax Prep 101</p>')}
+        />
+      )
     ).toBe(true);
     expect(
       wrapper.contains(
-        <h3>
+        <h4>
           Level: <span style={{ fontWeight: 'normal' }}>Basic</span>
-        </h3>
-      )
-    ).toBe(true);
-    expect(
-      wrapper.contains(
-        <h3>
-          Learning Objectives:
-          <div
-            style={{ fontSize: '18px', fontWeight: 'normal' }}
-            dangerouslySetInnerHTML={{
-              __html: '<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>'
-            }}
-          />
-        </h3>
+        </h4>
       )
     ).toBe(true);
     expect(
       wrapper.contains(
         <div
-          style={{ fontSize: '18px', fontWeight: 'normal' }}
-          dangerouslySetInnerHTML={{ __html: '<p>Read course introduction</p>' }}
+          className="innerHtmlStyles"
+          style={{ fontWeight: 'normal' }}
+          dangerouslySetInnerHTML={setInnerHtml(
+            '<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>'
+          )}
         />
       )
     ).toBe(true);
+
     expect(
       wrapper.contains(
         <div
-          style={{ fontSize: '18px', fontWeight: 'normal' }}
-          dangerouslySetInnerHTML={{ __html: '<p>Tax Prep 101</p>' }}
-        />
-      )
-    ).toBe(true);
-    expect(
-      wrapper.contains(
-        <div
-          style={{ fontSize: '18px', fontWeight: 'normal' }}
-          dangerouslySetInnerHTML={{
-            __html: '<p>This course is the second installation of Tax Prep focused on general tax planning.</p>'
-          }}
+          className="innerHtmlStyles"
+          style={{ fontWeight: 'normal' }}
+          dangerouslySetInnerHTML={setInnerHtml(
+            '<p>This course is the second installation of Tax Prep focused on general tax planning.</p>'
+          )}
         />
       )
     ).toBe(true);

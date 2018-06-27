@@ -32,21 +32,32 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
         <td
           align="left"
         >
-          <div
+          <h3
+            align="center"
             style={
               Object {
-                "fontSize": "18px",
-                "fontWeight": "normal",
-                "marginTop": "5px",
+                "marginTop": "0px",
+              }
+            }
+          >
+            Course Information:
+          </h3>
+          <h4
+            align="center"
+            style={
+              Object {
+                "marginBottom": "0px",
+                "marginTop": "0px",
               }
             }
           >
             <em>
-              <h2>
-                Tax Preparation 102
-              </h2>
+              Tax Preparation 102
+               (
+              Group-Live
+              )
             </em>
-          </div>
+          </h4>
         </td>
       </tr>
       <tr>
@@ -60,7 +71,7 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
               }
             }
           >
-            <h3>
+            <h4>
               By: 
               <span
                 style={
@@ -71,15 +82,26 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
               >
                 John Doe
               </span>
-            </h3>
-            <h3>
+            </h4>
+            <h4
+              style={
+                Object {
+                  "marginBottom": "0px",
+                }
+              }
+            >
               Recommended CPE Credit(s):
-            </h3>
-            <ul>
+            </h4>
+            <ul
+              style={
+                Object {
+                  "marginTop": "10px",
+                }
+              }
+            >
               <li
                 style={
                   Object {
-                    "fontSize": "18px",
                     "fontWeight": "normal",
                   }
                 }
@@ -90,19 +112,7 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
                  Hour(s)
               </li>
             </ul>
-            <h3>
-              Delivery Method: 
-              <span
-                style={
-                  Object {
-                    "fontWeight": "normal",
-                  }
-                }
-              >
-                Group-Live
-              </span>
-            </h3>
-            <h3>
+            <h4>
               Price: 
               <span
                 style={
@@ -113,8 +123,8 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
               >
                 Free
               </span>
-            </h3>
-            <h3>
+            </h4>
+            <h4>
               Target Audience: 
               <span
                 style={
@@ -125,11 +135,18 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
               >
                 Accountants
               </span>
-            </h3>
-            <h3>
+            </h4>
+            <h4
+              style={
+                Object {
+                  "marginBottom": "0px",
+                }
+              }
+            >
               Prep:
-            </h3>
+            </h4>
             <div
+              className="innerHtmlStyles"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": "<p>Read course introduction</p>",
@@ -137,15 +154,21 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
               }
               style={
                 Object {
-                  "fontSize": "18px",
                   "fontWeight": "normal",
                 }
               }
             />
-            <h3>
+            <h4
+              style={
+                Object {
+                  "marginBottom": "0px",
+                }
+              }
+            >
               Prerequisites:
-            </h3>
+            </h4>
             <div
+              className="innerHtmlStyles"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": "<p>Tax Prep 101</p>",
@@ -153,12 +176,11 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
               }
               style={
                 Object {
-                  "fontSize": "18px",
                   "fontWeight": "normal",
                 }
               }
             />
-            <h3>
+            <h4>
               Level: 
               <span
                 style={
@@ -169,27 +191,40 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
               >
                 Basic
               </span>
-            </h3>
-            <h3>
+            </h4>
+            <h4
+              style={
+                Object {
+                  "marginBottom": "0px",
+                }
+              }
+            >
               Learning Objectives:
-              <div
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>",
-                  }
-                }
-                style={
-                  Object {
-                    "fontSize": "18px",
-                    "fontWeight": "normal",
-                  }
-                }
-              />
-            </h3>
-            <h3>
-              Description:
-            </h3>
+            </h4>
             <div
+              className="innerHtmlStyles"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<ol><li>Learn about tax planning</li><li>Apply skills</li><li>Review tax planning</li></ol>",
+                }
+              }
+              style={
+                Object {
+                  "fontWeight": "normal",
+                }
+              }
+            />
+            <h4
+              style={
+                Object {
+                  "marginBottom": "0px",
+                }
+              }
+            >
+              Description:
+            </h4>
+            <div
+              className="innerHtmlStyles"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": "<p>This course is the second installation of Tax Prep focused on general tax planning.</p>",
@@ -197,7 +232,6 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
               }
               style={
                 Object {
-                  "fontSize": "18px",
                   "fontWeight": "normal",
                 }
               }
