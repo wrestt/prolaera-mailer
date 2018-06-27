@@ -36,7 +36,8 @@ class EventInfo extends React.Component {
           borderRadius: '5px',
           maxWidth: '500px',
           padding: '20px',
-          fontFamily: 'Arial, sans-serif'
+          fontFamily: 'Arial, sans-serif',
+          backgroundColor: 'white'
         }}
       >
         <Box className="eventInfo" align="center" width="100%">

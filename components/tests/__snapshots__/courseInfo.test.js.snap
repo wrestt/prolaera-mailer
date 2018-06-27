@@ -4,9 +4,9 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
 <div
   style={
     Object {
+      "backgroundColor": "white",
       "border": "1px solid lightgray",
       "borderRadius": "5px",
-      "boxShadow": "1px 1px 8px darkgray",
       "display": "block",
       "fontFamily": "Arial, sans-serif",
       "marginBottom": "20px",

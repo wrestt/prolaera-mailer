@@ -1,5 +1,9 @@
 const css = `
 
+body {
+	background-color: #F7F7F7;
+}
+
 #subHeaderWrapper {
 	padding: 20px;
 }

@@ -15,11 +15,10 @@ class SubFooter extends React.Component {
           marginBottom: '20px',
           textAlign: 'center',
           fontFamily: 'Arial, sans-serif',
-          border: '1px solid lightgray',
           borderRadius: '5px',
           padding: '20px',
           maxWidth: '500px',
-          boxShadow: '1px 1px 8px darkgray'
+          backgroundColor: 'white'
         }}
       >
         <Box className="subFooter" align="center" width="100%">
