@@ -11,9 +11,9 @@ const courseApprovedBuilder = async (completeCourse, imageUrl) => {
     const Header = await builderHeader(imageUrl);
     return renderEmail(
       <Email title={`${completeCourse.name}` + ' has been approved'} headCSS={css}>
-        <Header />
+        <Header text=" " />
         <SubHeader subText={'Your course has been'} header={'Approved'} />
-        <CourseInfo {...completeCourse} buttonProps={'Log In'} />
+        <CourseInfo {...completeCourse} />
         <Footer />
       </Email>
     );

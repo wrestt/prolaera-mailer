@@ -7,9 +7,9 @@ import Button from '../button';
 class CourseInfo extends React.Component {
   render() {
     const {
-      buttonProps,
-      adminProfileId = 'adminProfileId',
-      course_id = '',
+      adminProfileId,
+      buttonText,
+      buttonLink,
       name = '',
       by = '',
       hours = [{ credits: '', subject_area: '' }],
@@ -22,6 +22,13 @@ class CourseInfo extends React.Component {
       objectives = '',
       summary = ''
     } = this.props;
+
+    let newButtonLink = '';
+    if (adminProfileId) {
+      newButtonLink = 'admin/' + adminProfileId + '/' + buttonLink + '/review';
+    } else {
+      newButtonLink = 'courses/' + buttonLink;
+    }
 
     return (
       <div
@@ -96,7 +103,13 @@ class CourseInfo extends React.Component {
             </div>
           </Item>
           <Item align="left">
-            <div>{buttonProps ? <Button text={buttonProps} /> : <span className="buttonSpan" />}</div>
+            <div>
+              {buttonLink ? (
+                <Button text={buttonText} link={'https://app.prolaera.com/#/' + newButtonLink} />
+              ) : (
+                <span className="buttonSpan" />
+              )}
+            </div>
           </Item>
         </Box>
       </div>

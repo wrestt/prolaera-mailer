@@ -11,7 +11,8 @@ Enzyme.configure({
 const team = {
   name: 'Test Team Name',
   description: 'Test Team Description',
-  buttonProps: 'Test Button Text'
+  buttonText: 'Test Button Text',
+  buttonLink: 'www.testButtonLink.com'
 };
 
 describe('TeamInfo component', () => {
@@ -24,9 +25,12 @@ describe('TeamInfo component', () => {
         </h4>
       )
     ).toBe(true);
-
     expect(wrapper.contains(<p style={{ marginTop: '10px' }}>Test Team Description</p>)).toBe(true);
-    expect(wrapper.contains(<Button text="Test Button Text" />)).toBe(true);
+    expect(
+      wrapper.contains(
+        <Button text="Test Button Text" link="https://app.prolaera.com/#/admin/adminProfileId/dashboard" />
+      )
+    ).toBe(true);
   });
 });
 

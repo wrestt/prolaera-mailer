@@ -6,7 +6,9 @@ describe('teamLead Email', () => {
   const logoUrl = 'https://assets.prolaera.com/prolaeraLogo_fullText.png';
   const team = {
     name: 'Test CPA Team',
-    description: 'This team of CPAs handles all of the tax preparation in the firm.'
+    description: 'This team of CPAs handles all of the tax preparation in the firm.',
+    buttonText: 'Test Button Text',
+    buttonLink: 'www.testButtonLink.com'
   };
   it('returns teamLead email html', async () => {
     const emailHtml = await teamLeadBuilder(team, logoUrl);

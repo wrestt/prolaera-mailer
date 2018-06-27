@@ -5,7 +5,6 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
   style={
     Object {
       "backgroundColor": "white",
-      "border": "1px solid lightgray",
       "borderRadius": "5px",
       "display": "block",
       "fontFamily": "Arial, sans-serif",

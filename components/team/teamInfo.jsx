@@ -4,7 +4,7 @@ import Button from '../../components/button';
 
 class teamInfo extends React.Component {
   render() {
-    const { name = '', description = '', buttonProps } = this.props;
+    const { name = '', description = '', buttonText, buttonLink } = this.props;
 
     return (
       <div
@@ -33,7 +33,11 @@ class teamInfo extends React.Component {
           </Item>
           <Item align="left">
             <p>More information about your team can be found by navigating to the Prolaera website.</p>
-            {buttonProps ? <Button text={buttonProps} /> : <span className="buttonSpan" />}
+            {buttonLink ? (
+              <Button text={buttonText} link={'https://app.prolaera.com/#/admin/' + buttonLink + '/dashboard'} />
+            ) : (
+              <span className="buttonSpan" />
+            )}
           </Item>
         </Box>
       </div>

@@ -12,7 +12,8 @@ const track = {
   name: 'Test Track Name',
   author: 'Test Track Author',
   description: 'Test Track Description',
-  buttonProps: 'Test Button Text'
+  buttonText: 'Test Button Text',
+  buttonLink: 'www.testButtonLink.com'
 };
 
 describe('TrackInfo component', () => {
@@ -35,7 +36,7 @@ describe('TrackInfo component', () => {
     ).toBe(true);
 
     expect(wrapper.contains(<p style={{ marginTop: '10px' }}>Test Track Description</p>)).toBe(true);
-    expect(wrapper.contains(<Button text="Test Button Text" />)).toBe(true);
+    expect(wrapper.contains(<Button text="Test Button Text" link="www.testButtonLink.com" />)).toBe(true);
   });
 });
 

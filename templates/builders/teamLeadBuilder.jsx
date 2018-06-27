@@ -9,12 +9,12 @@ import css from '../templateCSS.js';
 const teamLeadBuilder = async (completeTeam, imageUrl) => {
   try {
     const Header = await builderHeader(imageUrl);
-    const buttonText = 'Log In';
+    const adminProfileId = 'adminProfileId';
     return renderEmail(
       <Email title="You've been added as a team leader" headCSS={css}>
         <Header />
         <SubHeader subText={'New team'} header={'Leader'} />
-        <TeamInfo {...completeTeam} buttonProps={buttonText} />
+        <TeamInfo {...completeTeam} buttonText={'View Team'} buttonLink={adminProfileId} />
         <Footer />
       </Email>
     );

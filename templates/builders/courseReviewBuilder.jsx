@@ -13,7 +13,12 @@ const courseReviewBuilder = async (completeCourse, imageUrl) => {
       <Email title="New course review on Prolaera" headCSS={css}>
         <Header />
         <SubHeader subText={'New course'} header={'Review'} />
-        <CourseInfo {...completeCourse} />
+        <CourseInfo
+          {...completeCourse}
+          buttonText={'Review Course'}
+          buttonLink={completeCourse.course_id}
+          adminProfileId={'1234admin1234'}
+        />
         <Footer />
       </Email>
     );
