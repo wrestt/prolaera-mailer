@@ -17,6 +17,7 @@ const event = {
   delivery_end_date: '2018-06-15T04:24:00.000Z',
   delivery_location: 'The White House, 1600 Pennsylvania Avenue Northwest, Washington, DC, USA',
   delivery_method: 1,
+  event_id: 'd342572d-e149-48fa-83c5-e2730bbb1b76',
   hours: [
     {
       credits: 12,
@@ -85,9 +86,9 @@ describe('EventInfo Component', () => {
     expect(
       wrapper.contains(
         <ul>
-          <li style={{ padding: '5px' }}>Auditing - 12 Hour(s)</li>
-          <li style={{ padding: '5px' }}>Uncategorized - 4 Hour(s)</li>
-          <li style={{ padding: '5px' }}>Other - 0.1 Hour(s)</li>
+          <li style={{ padding: '5px', marginTop: '0px' }}>Auditing - 12 Hour(s)</li>
+          <li style={{ padding: '5px', marginTop: '0px' }}>Uncategorized - 4 Hour(s)</li>
+          <li style={{ padding: '5px', marginTop: '0px' }}>Other - 0.1 Hour(s)</li>
         </ul>
       )
     ).toBe(true);

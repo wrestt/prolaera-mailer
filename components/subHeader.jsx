@@ -3,7 +3,7 @@ import { Box, Item } from 'react-html-email';
 
 class SubHeader extends React.Component {
   render() {
-    const { subText = '', header } = this.props;
+    const { subText = '', header = '', message = '' } = this.props;
 
     return (
       <div
@@ -32,6 +32,11 @@ class SubHeader extends React.Component {
               <tr>
                 <td>
                   <h2 style={{ fontSize: '35px', marginTop: '0px', marginBottom: '5px' }}>{header}</h2>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>{message}</p>
                 </td>
               </tr>
             </table>

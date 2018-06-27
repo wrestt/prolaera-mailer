@@ -47,17 +47,17 @@ describe('Header component tests', () => {
 
   it('checks default Header html', async () => {
     const wrapper = shallow(<Header />);
-    expect(wrapper.contains(<a href="https://app.prolaera.com"> prolaera.com → </a>)).toBe(true);
+    expect(wrapper.contains(<a href="https://app.prolaera.com">prolaera.com</a>)).toBe(true);
   });
 
   it('checks custom link text in Header html', async () => {
     const wrapper = shallow(<Header text={'View My Compliance'} />);
-    expect(wrapper.contains(<a href="https://app.prolaera.com"> View My Compliance → </a>)).toBe(true);
+    expect(wrapper.contains(<a href="https://app.prolaera.com">View My Compliance</a>)).toBe(true);
   });
 
   it('checks custom link url in Header html', async () => {
     const wrapper = shallow(<Header text={'View My Compliance'} link={'https://www.google.com/'} />);
-    expect(wrapper.contains(<a href="https://www.google.com/"> View My Compliance → </a>)).toBe(true);
+    expect(wrapper.contains(<a href="https://www.google.com/">View My Compliance</a>)).toBe(true);
   });
 });
 

@@ -17,7 +17,7 @@ describe('courseAssigned Email', () => {
     expect(courseAssignedJson).toMatchSnapshot();
   });
 
-  it.skip('writes an html file', async () => {
+  it('writes an html file', async () => {
     const email = await courseAssignedBuilder(course, logoUrl);
     const saved = await writeFile(email, 'courseAssignedTest.html');
     expect(saved).toEqual(true);
