@@ -13,13 +13,11 @@ class teamInfo extends React.Component {
           marginLeft: 'auto',
           marginRight: 'auto',
           textAlign: 'center',
-          border: '1px solid lightgray',
-          borderRadius: '5px',
           width: '500px',
           padding: '20px',
           fontFamily: 'Arial, sans-serif',
           marginBottom: '20px',
-          boxShadow: '1px 1px 8px darkgray'
+          backgroundColor: 'white'
         }}
       >
         <Box className="teamInfo" align="center" width="500px">

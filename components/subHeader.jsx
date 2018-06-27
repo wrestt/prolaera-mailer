@@ -16,9 +16,8 @@ class SubHeader extends React.Component {
           marginBottom: '20px',
           maxWidth: '500px',
           fontFamily: 'Arial, sans-serif',
-          border: '1px solid lightgray',
           borderRadius: '5px',
-          boxShadow: '1px 1px 8px darkgray'
+          backgroundColor: 'white'
         }}
       >
         <Box className="subHeader" align="center" width="100%">

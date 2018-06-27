@@ -24,12 +24,11 @@ class CourseCertificate extends React.Component {
           marginRight: 'auto',
           marginBottom: '20px',
           textAlign: 'center',
-          border: '1px solid lightgray',
           borderRadius: '5px',
           maxWidth: '500px',
           padding: '20px',
           fontFamily: 'Arial, sans-serif',
-          boxShadow: '1px 1px 8px darkgray'
+          backgroundColor: 'white'
         }}
       >
         <Box align="center" width="100%">

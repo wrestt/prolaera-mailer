@@ -12,13 +12,12 @@ class GenericInfo extends React.Component {
           marginLeft: 'auto',
           marginRight: 'auto',
           textAlign: 'left',
-          border: '1px solid lightgray',
           borderRadius: '5px',
           maxWidth: '500px',
           padding: '20px',
           fontFamily: 'Arial, sans-serif',
-          boxShadow: '1px 1px 8px darkgray',
-          marginBottom: '20px'
+          marginBottom: '20px',
+          backgroundColor: 'white'
         }}
       >
         <Box align="center" width="100%">
