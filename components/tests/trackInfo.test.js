@@ -13,7 +13,8 @@ const track = {
   author: 'Test Track Author',
   description: 'Test Track Description',
   buttonText: 'Test Button Text',
-  buttonLink: 'www.testButtonLink.com'
+  profileId: 'testProfileId',
+  trackId: 'testTrackId'
 };
 
 describe('TrackInfo component', () => {
@@ -36,7 +37,14 @@ describe('TrackInfo component', () => {
     ).toBe(true);
 
     expect(wrapper.contains(<p style={{ marginTop: '10px' }}>Test Track Description</p>)).toBe(true);
-    expect(wrapper.contains(<Button text="Test Button Text" link="www.testButtonLink.com" />)).toBe(true);
+    expect(
+      wrapper.contains(
+        <Button
+          text="Test Button Text"
+          link="https://app.prolaera.com/#/users/testProfileId/learning/track?track=testTrackId"
+        />
+      )
+    ).toBe(true);
   });
 });
 

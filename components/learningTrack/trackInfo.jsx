@@ -4,7 +4,7 @@ import Button from '../../components/button';
 
 class TrackInfo extends React.Component {
   render() {
-    const { name = '', author = '', description = '', buttonText, buttonLink } = this.props;
+    const { name = '', author = '', description = '', buttonText, profileId, trackId } = this.props;
 
     return (
       <div
@@ -37,7 +37,14 @@ class TrackInfo extends React.Component {
           </Item>
           <Item align="left">
             <p>More information about this track can be found by navigating to the Prolaera website.</p>
-            {buttonText ? <Button text={buttonText} link={buttonLink} /> : <span className="buttonSpan" />}
+            {profileId ? (
+              <Button
+                text={buttonText}
+                link={'https://app.prolaera.com/#/users/' + profileId + '/learning/track?track=' + trackId}
+              />
+            ) : (
+              <span className="buttonSpan" />
+            )}
           </Item>
         </Box>
       </div>

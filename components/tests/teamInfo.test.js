@@ -12,7 +12,7 @@ const team = {
   name: 'Test Team Name',
   description: 'Test Team Description',
   buttonText: 'Test Button Text',
-  buttonLink: 'www.testButtonLink.com'
+  buttonLink: 'testButtonLink'
 };
 
 describe('TeamInfo component', () => {
@@ -28,7 +28,7 @@ describe('TeamInfo component', () => {
     expect(wrapper.contains(<p style={{ marginTop: '10px' }}>Test Team Description</p>)).toBe(true);
     expect(
       wrapper.contains(
-        <Button text="Test Button Text" link="https://app.prolaera.com/#/admin/adminProfileId/dashboard" />
+        <Button text="Test Button Text" link="https://app.prolaera.com/#/admin/testButtonLink/dashboard" />
       )
     ).toBe(true);
   });
