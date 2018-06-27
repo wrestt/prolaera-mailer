@@ -2,6 +2,7 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import Button from '../../components/button';
 import GenericInfo from '../../components/generic/GenericInfo';
 import writeFile from '../../lib/writeFileHelper';
 import firmInviteBuilder from '../builders/firmInviteBuilder';
@@ -19,7 +20,12 @@ const bodyText = (
     </ol>
   </div>
 );
-const footerText = <p>That's it! You're ready to explore the new tools and resources you have access to.</p>;
+const footerText = (
+  <div>
+    <p>That's it! You're ready to explore the new tools and resources you have access to.</p>
+    <Button text={'Create Your Account'} link={'https://app.prolaera.com/#/users/' + user.email} />
+  </div>
+);
 
 describe('Firm Invite component', () => {
   it('creates and checks snapshot of FirmInvite component html', async () => {
