@@ -23,24 +23,22 @@ class TrackInfo extends React.Component {
         }}
       >
         <Box className="trackInfo" align="center" width="500px">
-          <Item align="left">
-            <p style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px', marginBottom: '5px' }}>
-              You have been assigned a new learning track.
-            </p>
-            <h3>
-              Name: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>{name}</span>
-            </h3>
-            <h3>
-              Author: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>{author}</span>
-            </h3>
-            <h3>Description:</h3>
-            <p style={{ fontSize: '18px', fontWeight: 'normal' }}>{description}</p>
+          <Item>
+            <h3 style={{ marginTop: '0px' }}>Learning Track Information:</h3>
           </Item>
           <Item align="left">
-            <p style={{ fontSize: '18px', fontWeight: 'normal' }}>
-              More information about this track can be found by navigating to the Prolaera website.
-            </p>
-            {buttonProps ? <Button text={buttonProps} /> : <span />}
+            <h4 style={{ marginTop: '0px' }}>
+              Name: <span style={{ fontWeight: 'normal' }}>{name}</span>
+            </h4>
+            <h4>
+              Author: <span style={{ fontWeight: 'normal' }}>{author}</span>
+            </h4>
+            <h4 style={{ marginBottom: '0px' }}>Description:</h4>
+            <p style={{ marginTop: '10px' }}>{description}</p>
+          </Item>
+          <Item align="left">
+            <p>More information about this track can be found by navigating to the Prolaera website.</p>
+            {buttonProps ? <Button text={buttonProps} /> : <span className="buttonSpan" />}
           </Item>
         </Box>
       </div>

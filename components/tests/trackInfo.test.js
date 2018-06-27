@@ -20,23 +20,21 @@ describe('TrackInfo component', () => {
     const wrapper = shallow(<TrackInfo {...track} />);
     expect(
       wrapper.contains(
-        <h3>
-          Name: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>Test Track Name</span>
-        </h3>
+        <h4 style={{ marginTop: '0px' }}>
+          Name: <span style={{ fontWeight: 'normal' }}>Test Track Name</span>
+        </h4>
       )
     ).toBe(true);
 
     expect(
       wrapper.contains(
-        <h3>
-          Author: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>Test Track Author</span>
-        </h3>
+        <h4>
+          Author: <span style={{ fontWeight: 'normal' }}>Test Track Author</span>
+        </h4>
       )
     ).toBe(true);
 
-    expect(wrapper.contains(<p style={{ fontSize: '18px', fontWeight: 'normal' }}>Test Track Description</p>)).toBe(
-      true
-    );
+    expect(wrapper.contains(<p style={{ marginTop: '10px' }}>Test Track Description</p>)).toBe(true);
     expect(wrapper.contains(<Button text="Test Button Text" />)).toBe(true);
   });
 });
@@ -44,6 +42,6 @@ describe('TrackInfo component', () => {
 describe('TrackInfo button', () => {
   it('checks conditional rendering', async () => {
     const wrapper = shallow(<TrackInfo />);
-    expect(wrapper.contains(<span />)).toBe(true);
+    expect(wrapper.contains(<span className="buttonSpan" />)).toBe(true);
   });
 });

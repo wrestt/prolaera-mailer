@@ -24,7 +24,7 @@ class teamInfo extends React.Component {
       >
         <Box className="teamInfo" align="center" width="500px">
           <Item align="center">
-            <h3>Team Information:</h3>
+            <h3 style={{ marginTop: '0px' }}>Team Information:</h3>
           </Item>
           <Item align="left">
             <h4 style={{ marginTop: '0px' }}>
