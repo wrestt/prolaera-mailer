@@ -10,7 +10,7 @@ class Button extends React.Component {
         style={{ maxWidth: '100%', textAlign: 'center', padding: '20px 0px 20px 0px' }}
       >
         <a
-          href="#"
+          href={link}
           style={{
             width: '200px',
             backgroundColor: '#72C02C',

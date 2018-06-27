@@ -17,6 +17,7 @@ const event = {
   delivery_end_date: '2018-06-15T04:24:00.000Z',
   delivery_location: 'The White House, 1600 Pennsylvania Avenue Northwest, Washington, DC, USA',
   delivery_method: 1,
+  event_id: 'd342572d-e149-48fa-83c5-e2730bbb1b76',
   hours: [
     {
       credits: 12,
@@ -84,7 +85,7 @@ describe('EventInfo Component', () => {
 
     expect(
       wrapper.contains(
-        <ul>
+        <ul style={{ marginTop: '10px' }}>
           <li style={{ padding: '5px' }}>Auditing - 12 Hour(s)</li>
           <li style={{ padding: '5px' }}>Uncategorized - 4 Hour(s)</li>
           <li style={{ padding: '5px' }}>Other - 0.1 Hour(s)</li>
@@ -125,12 +126,18 @@ describe('EventInfo Component', () => {
     ).toBe(true);
 
     expect(
-      wrapper.contains(<div dangerouslySetInnerHTML={setInnerHtml('<div><u>None needed.&nbsp;</u></div>')} />)
+      wrapper.contains(
+        <div
+          className="innerHtmlStyles"
+          dangerouslySetInnerHTML={setInnerHtml('<div><u>None needed.&nbsp;</u></div>')}
+        />
+      )
     ).toBe(true);
 
     expect(
       wrapper.contains(
         <div
+          className="innerHtmlStyles"
           dangerouslySetInnerHTML={setInnerHtml(
             '<ul><li>Familiarity with fraud detection methods</li><li>Deep-seated hatred for fraud</li><li>Love of avoiding fraud</li><li>Two hundred thousand dollars</li></ul>'
           )}
@@ -141,6 +148,7 @@ describe('EventInfo Component', () => {
     expect(
       wrapper.contains(
         <div
+          className="innerHtmlStyles"
           dangerouslySetInnerHTML={setInnerHtml(
             '<ul><li>Objective 1</li><li>Objective 2</li><li>Objective 3</li><li>Objective 3 + 1</li></ul>'
           )}
@@ -150,13 +158,12 @@ describe('EventInfo Component', () => {
 
     expect(
       wrapper.contains(
-        <span style={{ fontWeight: 'normal' }}>
-          <div
-            dangerouslySetInnerHTML={setInnerHtml(
-              '<p><b>This course is about</b>&nbsp;detecting fraud. On top of that, this course is also about many other things. Here is a list of some of the things that will be covered in this course.&nbsp;</p><ul><li>Stuff</li><li>Things</li><li>Topics</li></ul><p>Please bring a pen and paper, and laptop. If you dont have any of those, tough luck. < /p><div><span style="background-color: rgb(85, 98, 113); color: rgb(123, 136, 152); font-family: &quot;Mercury SSm A&quot;, &quot;Mercury SSm B&quot;, Georgia, Times, &quot;Times New Roman&quot;, &quot;Microsoft YaHei New&quot;, &quot;Microsoft Yahei&quot;, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, serif; font-size: 1.1875em;"><br></span > < /div>'
-            )}
-          />
-        </span>
+        <div
+          className="innerHtmlStyles"
+          dangerouslySetInnerHTML={setInnerHtml(
+            '<p><b>This course is about</b>&nbsp;detecting fraud. On top of that, this course is also about many other things. Here is a list of some of the things that will be covered in this course.&nbsp;</p><ul><li>Stuff</li><li>Things</li><li>Topics</li></ul><p>Please bring a pen and paper, and laptop. If you dont have any of those, tough luck. < /p><div><span style="background-color: rgb(85, 98, 113); color: rgb(123, 136, 152); font-family: &quot;Mercury SSm A&quot;, &quot;Mercury SSm B&quot;, Georgia, Times, &quot;Times New Roman&quot;, &quot;Microsoft YaHei New&quot;, &quot;Microsoft Yahei&quot;, 微软雅黑, 宋体, SimSun, STXihei, 华文细黑, serif; font-size: 1.1875em;"><br></span > < /div>'
+          )}
+        />
       )
     ).toBe(true);
   });

@@ -5,6 +5,8 @@ import { Box, Image, Item } from 'react-html-email';
 class Header extends React.Component {
   render() {
     const {
+      event_id,
+      course_id,
       link = 'https://app.prolaera.com',
       text = 'prolaera.com',
       url = 'https://assets.prolaera.com/prolaeraLogo_fullText.png',
@@ -24,7 +26,21 @@ class Header extends React.Component {
                 <Image className="headerLogo" alt="logo" src={url} width={resizedWidth} height={resizedHeight} />
               </td>
               <td width="252px" style={{ textAlign: 'center' }}>
-                <a href={link}> {text} → </a>
+                <div>
+                  {event_id && course_id ? (
+                    <a href={'https://app.prolaera.com/#/events/' + `${event_id}`}>View Event</a>
+                  ) : (
+                    <div />
+                  )}{' '}
+                </div>
+                <div>
+                  {!event_id && course_id ? (
+                    <a href={'https://app.prolaera.com/#/courses/' + `${course_id}`}>View Course</a>
+                  ) : (
+                    <div />
+                  )}{' '}
+                </div>
+                <div>{!event_id && !course_id ? <a href={link}>{text}</a> : <div />} </div>
               </td>
             </tr>
           </table>

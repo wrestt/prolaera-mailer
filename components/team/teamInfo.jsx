@@ -23,21 +23,19 @@ class teamInfo extends React.Component {
         }}
       >
         <Box className="teamInfo" align="center" width="500px">
-          <Item align="left">
-            <p style={{ fontSize: '18px', fontWeight: 'normal', marginTop: '5px', marginBottom: '5px' }}>
-              You have been added to a team as team leader.
-            </p>
-            <h3>
-              Name: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>{name}</span>
-            </h3>
-            <h3>Description:</h3>
-            <p style={{ fontSize: '18px', fontWeight: 'normal' }}>{description}</p>
+          <Item align="center">
+            <h3>Team Information:</h3>
           </Item>
           <Item align="left">
-            <p style={{ fontSize: '18px', fontWeight: 'normal' }}>
-              More information about your team can be found by navigating to the Prolaera website.
-            </p>
-            {buttonProps ? <Button text={buttonProps} /> : <span />}
+            <h4 style={{ marginTop: '0px' }}>
+              Name: <span style={{ fontWeight: 'normal' }}>{name}</span>
+            </h4>
+            <h4 style={{ marginBottom: '0px' }}>Description:</h4>
+            <p style={{ marginTop: '10px' }}>{description}</p>
+          </Item>
+          <Item align="left">
+            <p>More information about your team can be found by navigating to the Prolaera website.</p>
+            {buttonProps ? <Button text={buttonProps} /> : <span className="buttonSpan" />}
           </Item>
         </Box>
       </div>

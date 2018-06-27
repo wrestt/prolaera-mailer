@@ -59,13 +59,22 @@ exports[`Header component tests creates and checks snapshot of Header html 1`] =
               }
               width="252px"
             >
-              <a
-                href="https://app.prolaera.com"
-              >
+              <div>
+                <div />
                  
-                prolaera.com
-                 → 
-              </a>
+              </div>
+              <div>
+                <div />
+                 
+              </div>
+              <div>
+                <a
+                  href="https://app.prolaera.com"
+                >
+                  prolaera.com
+                </a>
+                 
+              </div>
             </td>
           </tr>
         </table>
@@ -134,13 +143,22 @@ exports[`buildHeader image resizing tests resizes image successfully KRS logo 1`
               }
               width="252px"
             >
-              <a
-                href="https://app.prolaera.com"
-              >
+              <div>
+                <div />
                  
-                prolaera.com
-                 → 
-              </a>
+              </div>
+              <div>
+                <div />
+                 
+              </div>
+              <div>
+                <a
+                  href="https://app.prolaera.com"
+                >
+                  prolaera.com
+                </a>
+                 
+              </div>
             </td>
           </tr>
         </table>
@@ -209,13 +227,22 @@ exports[`buildHeader image resizing tests resizes image successfully NHHco Logo 
               }
               width="252px"
             >
-              <a
-                href="https://app.prolaera.com"
-              >
+              <div>
+                <div />
                  
-                prolaera.com
-                 → 
-              </a>
+              </div>
+              <div>
+                <div />
+                 
+              </div>
+              <div>
+                <a
+                  href="https://app.prolaera.com"
+                >
+                  prolaera.com
+                </a>
+                 
+              </div>
             </td>
           </tr>
         </table>
@@ -284,13 +311,22 @@ exports[`buildHeader image resizing tests resizes image successfully a-lign logo
               }
               width="252px"
             >
-              <a
-                href="https://app.prolaera.com"
-              >
+              <div>
+                <div />
                  
-                prolaera.com
-                 → 
-              </a>
+              </div>
+              <div>
+                <div />
+                 
+              </div>
+              <div>
+                <a
+                  href="https://app.prolaera.com"
+                >
+                  prolaera.com
+                </a>
+                 
+              </div>
             </td>
           </tr>
         </table>

@@ -20,7 +20,7 @@ describe('teamLead Email', () => {
     expect(teamLeadJson).toMatchSnapshot();
   });
 
-  it.skip('writes an html file', async () => {
+  it('writes an html file', async () => {
     const email = await teamLeadBuilder(team, logoUrl);
     const saved = await writeFile(email, 'teamLeadTest.html');
     expect(saved).toEqual(true);

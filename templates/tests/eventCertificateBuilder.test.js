@@ -13,7 +13,7 @@ describe('eventCertificateBuilder', () => {
     expect(registrationJson).toMatchSnapshot();
   });
 
-  it.skip('writes an HTML file', async () => {
+  it('writes an HTML file', async () => {
     const email = await eventCertificateEmail(event, user, logoUrl);
     const saved = await writeFile(email, 'eventCertificateTest.html');
     expect(saved).toEqual(true);

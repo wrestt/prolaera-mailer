@@ -19,15 +19,13 @@ describe('TeamInfo component', () => {
     const wrapper = shallow(<TeamInfo {...team} />);
     expect(
       wrapper.contains(
-        <h3>
-          Name: <span style={{ fontSize: '18px', fontWeight: 'normal' }}>Test Team Name</span>
-        </h3>
+        <h4 style={{ marginTop: '0px' }}>
+          Name: <span style={{ fontWeight: 'normal' }}>Test Team Name</span>
+        </h4>
       )
     ).toBe(true);
 
-    expect(wrapper.contains(<p style={{ fontSize: '18px', fontWeight: 'normal' }}>Test Team Description</p>)).toBe(
-      true
-    );
+    expect(wrapper.contains(<p style={{ marginTop: '10px' }}>Test Team Description</p>)).toBe(true);
     expect(wrapper.contains(<Button text="Test Button Text" />)).toBe(true);
   });
 });
@@ -35,6 +33,6 @@ describe('TeamInfo component', () => {
 describe('TeamInfo button', () => {
   it('checks conditional rendering', async () => {
     const wrapper = shallow(<TeamInfo />);
-    expect(wrapper.contains(<span />)).toBe(true);
+    expect(wrapper.contains(<span className="buttonSpan" />)).toBe(true);
   });
 });
