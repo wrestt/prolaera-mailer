@@ -1,4 +1,4 @@
-import React from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React from 'react';
 import { renderEmail } from 'react-html-email';
 import Email from 'react-html-email/lib/components/Email';
 import CourseCertificate from '../../components/certificate/courseCertificate';

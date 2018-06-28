@@ -1,4 +1,4 @@
-import React from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React from 'react';
 import { Email, renderEmail } from 'react-html-email';
 import ActivityInfo from '../../components/activity/activityInfo';
 import Footer from '../../components/footer';

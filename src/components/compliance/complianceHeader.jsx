@@ -1,4 +1,4 @@
-import React from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React from 'react';
 import { CycleDates, PrettyDate } from '../../helpers/dateHelpers';
 
 class ComplianceHeader extends React.Component {

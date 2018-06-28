@@ -1,5 +1,5 @@
-import React from '../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
-import { Box, Image, Item, A } from 'react-html-email';
+import React from 'react';
+import { A, Box, Image, Item } from 'react-html-email';
 
 const FooterText = {
   fontFamily: 'Helvetica',

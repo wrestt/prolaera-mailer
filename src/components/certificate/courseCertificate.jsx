@@ -1,7 +1,7 @@
-import React from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/react';
+import React from 'react';
 import { Box, Item } from 'react-html-email';
-import Button from '../button';
 import deliveryHelper from '../../helpers/deliveryHelper';
+import Button from '../button';
 
 class CourseCertificate extends React.Component {
   render() {
