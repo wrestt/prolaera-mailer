@@ -7,8 +7,11 @@ class ActivityInfo extends React.Component {
     const {
       name = '',
       author = '',
+      profile_uid,
+      activity_id,
       header = 'You have been assigned to a new Activity:',
-      buttonText = 'View Details'
+      buttonText = 'View Details',
+      button1Link = 'https://app.prolaera.com/#/users/' + `${profile_uid}` + '/activities' + `${activity_id}`
     } = this.props;
 
     return (
@@ -48,7 +51,7 @@ class ActivityInfo extends React.Component {
             </div>
           </Item>
           <Item>
-            <Button text={buttonText} />
+            <Button text={buttonText} link={button1Link} />
           </Item>
         </Box>
       </div>

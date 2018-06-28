@@ -13,7 +13,8 @@ Enzyme.configure({
 const activity = {
   name: 'Eloquent Javascript',
   author: 'Teagan Wrestt',
-  buttonText: "I'm a button!"
+  buttonText: "I'm a button!",
+  button1Link: '#'
 };
 
 describe('ActivityInfo component', () => {
@@ -54,7 +55,7 @@ describe('ActivityInfo component', () => {
     expect(
       wrapper.contains(
         <Item>
-          <Button text={"I'm a button!"} />
+          <Button text={"I'm a button!"} link="#" />
         </Item>
       )
     ).toBe(true);

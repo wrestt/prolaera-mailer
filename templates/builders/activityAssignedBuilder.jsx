@@ -6,14 +6,14 @@ import buildHeader from '../../components/header';
 import SubHeader from '../../components/SubHeader';
 import css from '../templateCSS';
 
-const activityAssignedEmail = async (activity, imageUrl) => {
+const activityAssignedEmail = async (activity, user, imageUrl) => {
   try {
     const Header = await buildHeader(imageUrl);
     return renderEmail(
       <Email title="You have been Assigned" headCSS={css}>
         <Header />
         <SubHeader subText="You have been" header="Assigned" />
-        <ActivityInfo {...activity} />
+        <ActivityInfo {...user} {...activity} />
         <Footer />
       </Email>
     );
