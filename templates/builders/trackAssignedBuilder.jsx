@@ -9,16 +9,16 @@ import css from '../templateCSS.js';
 const trackAssignedBuilder = async (completeTrack, imageUrl) => {
   try {
     const Header = await builderHeader(imageUrl);
+    const profileId = 'testProfileId';
+    const trackId = 'testTrackId';
     return renderEmail(
       <Email title="You've been assigned a new learning track" headCSS={css}>
-        <Header />
-        <SubHeader subText={'New track'} header={'Assigned'} />
-        <TrackInfo
-          {...completeTrack}
-          buttonText={'View Track'}
-          profileId={'userProfileId'}
-          trackId={'learningTrackId'}
+        <Header
+          text={'View Track'}
+          link={'https://app.prolaera.com/#/users/' + profileId + '/learning/track?track=' + trackId}
         />
+        <SubHeader subText={'New track'} header={'Assigned'} message={'You have been assigned a new learning track.'} />
+        <TrackInfo {...completeTrack} buttonText={'View Track'} profileId={profileId} trackId={trackId} />
         <Footer />
       </Email>
     );

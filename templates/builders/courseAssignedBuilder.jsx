@@ -11,8 +11,12 @@ const courseAssignedBuilder = async (completeCourse, imageUrl) => {
     const Header = await builderHeader(imageUrl);
     return renderEmail(
       <Email title={"You've been assigned a new course"} headCSS={css}>
-        <Header {...completeCourse} />
-        <SubHeader subText={'New course'} header={'Assigned'} />
+        <Header
+          {...completeCourse}
+          text={'View Course'}
+          link={'https://app.prolaera.com/#/courses' + completeCourse.course_id}
+        />
+        <SubHeader subText={'New course'} header={'Assigned'} message={'You have been assigned a new course.'} />
         <CourseInfo {...completeCourse} buttonText={'View Course'} buttonLink={completeCourse.course_id} />
         <Footer />
       </Email>
