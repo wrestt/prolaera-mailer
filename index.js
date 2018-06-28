@@ -1,15 +1,64 @@
+import activityAssignedEmail from './templates/builders/activityAssignedBuilder';
+import courseApprovedBuilder from './templates/builders/courseApprovedBuilder';
+import courseAssignedBuilder from './templates/builders/courseAssignedBuilder';
+import courseCertificateBuilder from './templates/builders/courseCertificateBuilder';
+import courseReviewBuilder from './templates/builders/courseReviewBuilder';
+import eventCertificateBuilder from './templates/builders/eventCertificateBuilder';
+import eventInvitationBuilder from './templates/builders/eventInvitationBuilder';
+import eventRegistrationBuilder from './templates/builders/eventRegistrationBuilder';
+import firmInviteBuilder from './templates/builders/firmInviteBuilder';
+import trackAssignedBuilder from './templates/builders/trackAssignedBuilder';
 import userComplaince from './templates/builders/userCompliance';
 
-const handler = async (event, context) => {
+const engine = async event => {
   const { body } = event;
   switch (body.template) {
     case 'userComplaince':
       const email = await userComplaince(body.completeCompliance, body.imageUrl);
-      return context.succed(email);
+      return email;
+
+    case 'activityAssigned':
+      const email = await activityAssignedEmail(body.activity, body.user, body.imageUrl);
+      return email;
+
+    case 'courseApproved':
+      const email = await courseApprovedBuilder(body.course, body.imageUrl);
+      return email;
+
+    case 'courseAssigned':
+      const email = await courseAssignedBuilder(body.course, body.imageUrl);
+      return email;
+
+    case 'courseCertificate':
+      const email = await courseCertificateBuilder(body.course, body.user, body.certificate, body.imageUrl);
+      return email;
+
+    case 'courseReview':
+      const email = await courseReviewBuilder(body.course, body.imageUrl);
+      return email;
+
+    case 'eventCertificate':
+      const email = await eventCertificateBuilder(body.event, body.user, body.certificate, body.imageUrl);
+      return email;
+
+    case 'eventInvitation':
+      const email = await eventInvitationBuilder(body.event, body.imageUrl);
+      return email;
+
+    case 'eventRegistration':
+      const email = await eventRegistrationBuilder(body.event, body.imageUrl);
+      return email;
+
+    case 'firmInvite':
+      const email = await firmInviteBuilder(body.user, body.company, body.imageUrl);
+      return email;
+
+    case 'trackAssigned':
+      const email = await trackAssignedBuilder(body.track, body.imageUrl);
+      return email;
     default:
-      context.fail('Invaild Template');
-      break;
+      throw new Error('Not a valid template');
   }
 };
 
-export default handler;
+export default engine;
