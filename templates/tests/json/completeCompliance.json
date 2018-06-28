@@ -2183,7 +2183,8 @@
         "expiration_date": "2020-03-28T22:24:54.586Z",
         "reg_id": "aga_cgfm",
         "cycle_date": "2020-03-28T22:24:54.586Z",
-        "applied": { "hours": 7.5, "total": 7.5 },
+        "applied": { "hours": 4, "total": 4 },
+        "actual": { "hours": 7.5, "total": 7.5 },
         "start": "2018-03-29T07:00:00.000Z",
         "date": "2020-03-28T22:24:54.586Z"
       },
@@ -2192,7 +2193,8 @@
         "expiration_date": "2018-03-28T22:24:54.586Z",
         "reg_id": "aga_cgfm",
         "cycle_date": "2018-03-28T22:24:54.586Z",
-        "applied": { "hours": 1214.5, "total": 1214.5 },
+        "applied": { "hours": 1100, "total": 1100 },
+        "actual": { "hours": 1214.5, "total": 1214.5 },
         "start": "2016-03-29T07:00:00.000Z",
         "date": "2018-03-28T22:24:54.586Z"
       },
@@ -2201,7 +2203,8 @@
         "expiration_date": "2016-03-28T22:24:54.586Z",
         "reg_id": "aga_cgfm",
         "cycle_date": "2016-03-28T22:24:54.586Z",
-        "applied": { "hours": 2, "total": 2 },
+        "applied": { "hours": 1.5, "total": 1.5 },
+        "actual": { "hours": 2, "total": 2 },
         "start": "2014-03-29T07:00:00.000Z",
         "date": "2016-03-28T22:24:54.586Z"
       },
@@ -2210,7 +2213,8 @@
         "expiration_date": "2014-03-28T22:24:54.586Z",
         "reg_id": "aga_cgfm",
         "cycle_date": "2014-03-28T22:24:54.586Z",
-        "applied": { "hours": 2, "total": 2 },
+        "applied": { "hours": 0, "total": 0 },
+        "actual": { "hours": 2, "total": 2 },
         "start": "2012-03-29T07:00:00.000Z",
         "date": "2014-03-28T22:24:54.586Z"
       }
@@ -2221,7 +2225,8 @@
         "expiration_date": "2021-03-29T15:45:22.626Z",
         "reg_id": "aicpa_cpa",
         "cycle_date": "2021-03-29T15:45:22.626Z",
-        "applied": { "hours": 7.5, "total": 7.5 },
+        "applied": { "hours": 4.5, "total": 4.5 },
+        "actual": { "hours": 7.5, "total": 7.5 },
         "start": "2018-03-30T07:00:00.000Z",
         "date": "2021-03-29T15:45:22.626Z"
       },
@@ -2230,7 +2235,8 @@
         "expiration_date": "2018-03-29T15:45:22.626Z",
         "reg_id": "aicpa_cpa",
         "cycle_date": "2018-03-29T15:45:22.626Z",
-        "applied": { "hours": 1215.5, "total": 1215.5 },
+        "applied": { "hours": 955, "total": 955 },
+        "actual": { "hours": 1215.5, "total": 1215.5 },
         "start": "2015-03-30T07:00:00.000Z",
         "date": "2018-03-29T15:45:22.626Z"
       },
@@ -2239,7 +2245,8 @@
         "expiration_date": "2015-03-29T15:45:22.626Z",
         "reg_id": "aicpa_cpa",
         "cycle_date": "2015-03-29T15:45:22.626Z",
-        "applied": { "hours": 2, "total": 2 },
+        "applied": { "hours": 1, "total": 1 },
+        "actual": { "hours": 2, "total": 2 },
         "start": "2012-03-30T07:00:00.000Z",
         "date": "2015-03-29T15:45:22.626Z"
       }
@@ -2250,7 +2257,8 @@
         "expiration_date": "2018-12-31T08:00:00.000Z",
         "reg_id": "aicpa_cpa_abv",
         "cycle_date": "2018-12-31T08:00:00.000Z",
-        "applied": { "businessValuation": 5, "total": 5 },
+        "applied": { "businessValuation": 4, "total": 4 },
+        "actual": { "businessValuation": 5, "total": 5 },
         "start": "2018-01-01T08:00:00.000Z",
         "date": "2018-12-31T08:00:00.000Z"
       },
@@ -2259,7 +2267,8 @@
         "expiration_date": "2017-12-31T08:00:00.000Z",
         "reg_id": "aicpa_cpa_abv",
         "cycle_date": "2017-12-31T08:00:00.000Z",
-        "applied": { "businessValuation": 11, "total": 11 },
+        "applied": { "businessValuation": 6, "total": 6 },
+        "actual": { "businessValuation": 11, "total": 11 },
         "start": "2017-01-01T08:00:00.000Z",
         "date": "2017-12-31T08:00:00.000Z"
       },
@@ -2269,6 +2278,7 @@
         "reg_id": "aicpa_cpa_abv",
         "cycle_date": "2016-12-31T08:00:00.000Z",
         "applied": { "businessValuation": 3, "total": 3 },
+        "actual": { "businessValuation": 3, "total": 3 },
         "start": "2016-01-01T08:00:00.000Z",
         "date": "2016-12-31T08:00:00.000Z"
       },
@@ -2278,6 +2288,7 @@
         "reg_id": "aicpa_cpa_abv",
         "cycle_date": "2015-12-31T08:00:00.000Z",
         "applied": { "businessValuation": 0, "total": 0 },
+        "actual": { "businessValuation": 0, "total": 0 },
         "start": "2015-01-01T08:00:00.000Z",
         "date": "2015-12-31T08:00:00.000Z"
       }
@@ -2289,6 +2300,7 @@
         "reg_id": "aicpa_cpa_ebpaqc",
         "cycle_date": "2021-03-29T16:02:23.909Z",
         "applied": { "total": 0, "employee_benefit": 0 },
+        "actual": { "total": 0, "employee_benefit": 0 },
         "start": "2018-03-30T07:00:00.000Z",
         "date": "2021-03-29T16:02:23.909Z"
       },
@@ -2297,7 +2309,8 @@
         "expiration_date": "2018-03-29T16:02:23.909Z",
         "reg_id": "aicpa_cpa_ebpaqc",
         "cycle_date": "2018-03-29T16:02:23.909Z",
-        "applied": { "total": 11, "employee_benefit": 11 },
+        "applied": { "total": 7, "employee_benefit": 7 },
+        "actual": { "total": 11, "employee_benefit": 11 },
         "start": "2015-03-30T07:00:00.000Z",
         "date": "2018-03-29T16:02:23.909Z"
       },
@@ -2307,6 +2320,7 @@
         "reg_id": "aicpa_cpa_ebpaqc",
         "cycle_date": "2015-03-29T16:02:23.909Z",
         "applied": { "total": 0, "employee_benefit": 0 },
+        "actual": { "total": 0, "employee_benefit": 0 },
         "start": "2012-03-30T07:00:00.000Z",
         "date": "2015-03-29T16:02:23.909Z"
       }
@@ -2317,7 +2331,8 @@
         "expiration_date": "2018-12-31T08:00:00.000Z",
         "reg_id": "ca_cpa",
         "cycle_date": "2018-12-31T08:00:00.000Z",
-        "applied": { "tech": 1162, "nontech": 7.5, "total": 1169.5, "ethics_general": 0, "regulatoryReview": 0 },
+        "applied": { "tech": 1160, "nontech": 0, "total": 1164, "ethics_general": 4, "regulatoryReview": 0 },
+        "actual": { "tech": 1162, "nontech": 3.5, "total": 1169.5, "ethics_general": 4, "regulatoryReview": 0 },
         "span": {
           "regulatoryReview": {
             "total": 0,
@@ -2334,7 +2349,8 @@
         "expiration_date": "2018-12-31T08:00:00.000Z",
         "reg_id": "ea_cpa",
         "cycle_date": "2020-12-31T08:00:00.000Z",
-        "applied": { "federal_taxes": 5, "ethics_general": 0, "total": 5 },
+        "applied": { "federal_taxes": 2, "ethics_general": 1, "total": 3 },
+        "actual": { "federal_taxes": 5, "ethics_general": 2, "total": 7 },
         "start": "2018-01-01T08:00:00.000Z",
         "date": "2020-12-31T08:00:00.000Z"
       },
@@ -2343,7 +2359,8 @@
         "expiration_date": "2018-12-31T08:00:00.000Z",
         "reg_id": "ea_cpa",
         "cycle_date": "2017-12-31T08:00:00.000Z",
-        "applied": { "federal_taxes": 1023, "ethics_general": 1, "total": 1024 },
+        "applied": { "federal_taxes": 1000, "ethics_general": 1, "total": 1001 },
+        "actual": { "federal_taxes": 1023, "ethics_general": 1, "total": 1024 },
         "start": "2015-01-01T08:00:00.000Z",
         "date": "2017-12-31T08:00:00.000Z"
       },
@@ -2353,6 +2370,7 @@
         "reg_id": "ea_cpa",
         "cycle_date": "2014-12-31T08:00:00.000Z",
         "applied": { "federal_taxes": 0, "ethics_general": 0, "total": 0 },
+        "actual": { "federal_taxes": 0, "ethics_general": 0, "total": 0 },
         "start": "2012-01-01T08:00:00.000Z",
         "date": "2014-12-31T08:00:00.000Z"
       }
@@ -2363,7 +2381,8 @@
         "expiration_date": "2019-04-01T07:00:00.000Z",
         "reg_id": "firm_1001",
         "cycle_date": "2019-04-01T07:00:00.000Z",
-        "applied": { "hours": 5, "total": 5 },
+        "applied": { "hours": 1, "total": 1 },
+        "actual": { "hours": 5, "total": 5 },
         "start": "2018-04-02T07:00:00.000Z",
         "date": "2019-04-01T07:00:00.000Z"
       },
@@ -2372,7 +2391,8 @@
         "expiration_date": "2018-04-01T07:00:00.000Z",
         "reg_id": "firm_1001",
         "cycle_date": "2018-04-01T07:00:00.000Z",
-        "applied": { "hours": 1162.5, "total": 1162.5 },
+        "applied": { "hours": 800.5, "total": 800.5 },
+        "actual": { "hours": 1162.5, "total": 1162.5 },
         "start": "2017-04-02T07:00:00.000Z",
         "date": "2018-04-01T07:00:00.000Z"
       },
@@ -2382,6 +2402,7 @@
         "reg_id": "firm_1001",
         "cycle_date": "2017-04-01T07:00:00.000Z",
         "applied": { "hours": 54.5, "total": 54.5 },
+        "actual": { "hours": 54.5, "total": 54.5 },
         "start": "2016-04-02T07:00:00.000Z",
         "date": "2017-04-01T07:00:00.000Z"
       },
@@ -2391,6 +2412,7 @@
         "reg_id": "firm_1001",
         "cycle_date": "2016-04-01T07:00:00.000Z",
         "applied": { "hours": 2, "total": 2 },
+        "actual": { "hours": 2, "total": 2 },
         "start": "2015-04-02T07:00:00.000Z",
         "date": "2016-04-01T07:00:00.000Z"
       },
@@ -2399,7 +2421,8 @@
         "expiration_date": "2014-04-01T07:00:00.000Z",
         "reg_id": "firm_1001",
         "cycle_date": "2014-04-01T07:00:00.000Z",
-        "applied": { "hours": 2, "total": 2 },
+        "applied": { "hours": 1, "total": 1 },
+        "actual": { "hours": 2, "total": 2 },
         "start": "2013-04-02T07:00:00.000Z",
         "date": "2014-04-01T07:00:00.000Z"
       }

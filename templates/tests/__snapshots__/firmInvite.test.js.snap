@@ -59,9 +59,39 @@ exports[`Firm Invite component creates and checks snapshot of FirmInvite compone
       <tr>
         <td>
           <div>
-            <p>
-              That's it! You're ready to explore the new tools and resources you have access to.
-            </p>
+            <div>
+              <p>
+                That's it! You're ready to explore the new tools and resources you have access to.
+              </p>
+              <div
+                align="center"
+                className="customButton"
+                style={
+                  Object {
+                    "maxWidth": "100%",
+                    "padding": "20px 0px 20px 0px",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                <a
+                  href="https://app.prolaera.com/#/users/test@email.com"
+                  style={
+                    Object {
+                      "backgroundColor": "#72C02C",
+                      "borderRadius": "10px",
+                      "boxShadow": "1px 1px 8px darkgray",
+                      "color": "white",
+                      "padding": "14px 14px 14px 14px",
+                      "textDecoration": "none",
+                      "width": "200px",
+                    }
+                  }
+                >
+                  Create Your Account
+                </a>
+              </div>
+            </div>
           </div>
         </td>
       </tr>

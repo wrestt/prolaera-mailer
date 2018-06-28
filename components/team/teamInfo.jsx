@@ -2,9 +2,9 @@ import React from 'react';
 import { Box, Item } from 'react-html-email';
 import Button from '../../components/button';
 
-class TrackInfo extends React.Component {
+class teamInfo extends React.Component {
   render() {
-    const { name = '', author = '', description = '', buttonText, profileId, trackId } = this.props;
+    const { name = '', description = '', buttonText, buttonLink } = this.props;
 
     return (
       <div
@@ -13,7 +13,6 @@ class TrackInfo extends React.Component {
           marginLeft: 'auto',
           marginRight: 'auto',
           textAlign: 'center',
-          borderRadius: '5px',
           width: '500px',
           padding: '20px',
           fontFamily: 'Arial, sans-serif',
@@ -21,27 +20,21 @@ class TrackInfo extends React.Component {
           backgroundColor: 'white'
         }}
       >
-        <Box className="trackInfo" align="center" width="500px">
-          <Item>
-            <h3 style={{ marginTop: '0px' }}>Learning Track Information:</h3>
+        <Box className="teamInfo" align="center" width="500px">
+          <Item align="center">
+            <h3 style={{ marginTop: '0px' }}>Team Information:</h3>
           </Item>
           <Item align="left">
             <h4 style={{ marginTop: '0px' }}>
               Name: <span style={{ fontWeight: 'normal' }}>{name}</span>
             </h4>
-            <h4>
-              Author: <span style={{ fontWeight: 'normal' }}>{author}</span>
-            </h4>
             <h4 style={{ marginBottom: '0px' }}>Description:</h4>
             <p style={{ marginTop: '10px' }}>{description}</p>
           </Item>
           <Item align="left">
-            <p>More information about this track can be found by navigating to the Prolaera website.</p>
-            {profileId ? (
-              <Button
-                text={buttonText}
-                link={'https://app.prolaera.com/#/users/' + profileId + '/learning/track?track=' + trackId}
-              />
+            <p>More information about your team can be found by navigating to the Prolaera website.</p>
+            {buttonLink ? (
+              <Button text={buttonText} link={'https://app.prolaera.com/#/admin/' + buttonLink + '/dashboard'} />
             ) : (
               <span className="buttonSpan" />
             )}
@@ -52,4 +45,4 @@ class TrackInfo extends React.Component {
   }
 }
 
-export default TrackInfo;
+export default teamInfo;

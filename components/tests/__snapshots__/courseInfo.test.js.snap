@@ -243,9 +243,34 @@ exports[`CourseInfo component custom input tests creates and checks a snapshot o
           align="left"
         >
           <div>
-            <span
-              className="buttonSpan"
-            />
+            <div
+              align="center"
+              className="customButton"
+              style={
+                Object {
+                  "maxWidth": "100%",
+                  "padding": "20px 0px 20px 0px",
+                  "textAlign": "center",
+                }
+              }
+            >
+              <a
+                href="https://app.prolaera.com/#/admin/testAdminProfileId/testButtonLink/review"
+                style={
+                  Object {
+                    "backgroundColor": "#72C02C",
+                    "borderRadius": "10px",
+                    "boxShadow": "1px 1px 8px darkgray",
+                    "color": "white",
+                    "padding": "14px 14px 14px 14px",
+                    "textDecoration": "none",
+                    "width": "200px",
+                  }
+                }
+              >
+                Test Button Text
+              </a>
+            </div>
           </div>
         </td>
       </tr>

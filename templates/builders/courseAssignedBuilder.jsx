@@ -13,7 +13,7 @@ const courseAssignedBuilder = async (completeCourse, imageUrl) => {
       <Email title={"You've been assigned a new course"} headCSS={css}>
         <Header {...completeCourse} />
         <SubHeader subText={'New course'} header={'Assigned'} />
-        <CourseInfo {...completeCourse} buttonProps={'Log In'} />
+        <CourseInfo {...completeCourse} buttonText={'View Course'} buttonLink={completeCourse.course_id} />
         <Footer />
       </Email>
     );

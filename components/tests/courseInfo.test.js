@@ -26,9 +26,11 @@ const course = {
   prerequisites: '<p>Tax Prep 101</p>',
   summary: '<p>This course is the second installation of Tax Prep focused on general tax planning.</p>',
   header: 'Your course Tax Preparation 101 is ready for review',
-  footer: 'Log in below'
+  footer: 'Log in below',
+  buttonText: 'Test Button Text',
+  adminProfileId: 'testAdminProfileId',
+  buttonLink: 'testButtonLink'
 };
-const buttonText = 'Log In';
 
 describe('CourseInfo component custom input tests', () => {
   it('creates and checks a snapshot of CourseInfo html', async () => {
@@ -38,7 +40,7 @@ describe('CourseInfo component custom input tests', () => {
   });
 
   it('checks all custom inputs', async () => {
-    const wrapper = shallow(<CourseInfo {...course} buttonProps={buttonText} />);
+    const wrapper = shallow(<CourseInfo {...course} />);
     expect(wrapper.contains(<em>Tax Preparation 102 (Group-Live)</em>)).toBe(true);
     expect(
       wrapper.contains(
@@ -113,6 +115,13 @@ describe('CourseInfo component custom input tests', () => {
         />
       )
     ).toBe(true);
-    expect(wrapper.contains(<Button text={'Log In'} />)).toBe(true);
+    expect(
+      wrapper.contains(
+        <Button
+          text={'Test Button Text'}
+          link={'https://app.prolaera.com/#/admin/testAdminProfileId/testButtonLink/review'}
+        />
+      )
+    ).toBe(true);
   });
 });

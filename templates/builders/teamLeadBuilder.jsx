@@ -1,19 +1,20 @@
 import React from 'react';
 import { Email, renderEmail } from 'react-html-email';
-import CourseInfo from '../../components/course/courseInfo';
 import Footer from '../../components/footer';
 import builderHeader from '../../components/header';
 import SubHeader from '../../components/subHeader';
+import TeamInfo from '../../components/team/teamInfo';
 import css from '../templateCSS.js';
 
-const courseApprovedBuilder = async (completeCourse, imageUrl) => {
+const teamLeadBuilder = async (completeTeam, imageUrl) => {
   try {
     const Header = await builderHeader(imageUrl);
+    const adminProfileId = 'adminProfileId';
     return renderEmail(
-      <Email title={`${completeCourse.name}` + ' has been approved'} headCSS={css}>
-        <Header text=" " />
-        <SubHeader subText={'Your course has been'} header={'Approved'} />
-        <CourseInfo {...completeCourse} />
+      <Email title="You've been added as a team leader" headCSS={css}>
+        <Header />
+        <SubHeader subText={'New team'} header={'Leader'} />
+        <TeamInfo {...completeTeam} buttonText={'View Team'} buttonLink={adminProfileId} />
         <Footer />
       </Email>
     );
@@ -22,4 +23,4 @@ const courseApprovedBuilder = async (completeCourse, imageUrl) => {
   }
 };
 
-export default courseApprovedBuilder;
+export default teamLeadBuilder;
