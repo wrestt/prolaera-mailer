@@ -8,14 +8,14 @@ import eventInvitationBuilder from './templates/builders/eventInvitationBuilder'
 import eventRegistrationBuilder from './templates/builders/eventRegistrationBuilder';
 import firmInviteBuilder from './templates/builders/firmInviteBuilder';
 import trackAssignedBuilder from './templates/builders/trackAssignedBuilder';
-import userComplaince from './templates/builders/userCompliance';
+import userCompliance from './templates/builders/userCompliance';
 
 const engine = async event => {
   const { body } = event;
   let email;
   switch (body.template) {
-    case 'userComplaince':
-      email = await userComplaince(body.completeCompliance, body.imageUrl);
+    case 'userCompliance':
+      email = await userCompliance(body.completeCompliance, body.imageUrl);
       return email;
 
     case 'activityAssigned':
@@ -57,6 +57,11 @@ const engine = async event => {
     case 'trackAssigned':
       email = await trackAssignedBuilder(body.track, body.imageUrl);
       return email;
+
+    case 'teamLeaderAssigned':
+      email = await teamLeadBuilder(body.track, body.imageUrl);
+      return email;
+
     default:
       throw new Error('Not a valid template');
   }
