@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "archived": false,
+  "company_id": 8,
+  "created_by": "189f6298-30eb-465e-90f8-4588b59e318f",
+  "description": "A team for testing",
+  "id": "01506737-1ac9-46a0-a95d-0254c73a3c95",
+  "leaders": ["189f6298-30eb-465e-90f8-4588b59e318f"],
+  "name": "Test Team",
+  "updates": [
+    {
+      "profile_uid": "189f6298-30eb-465e-90f8-4588b59e318f",
+      "stage": "dev",
+      "time": 1529618184062
+    },
+    {
+      "profile_uid": "189f6298-30eb-465e-90f8-4588b59e318f",
+      "stage": "dev",
+      "time": 1529618188460
+    },
+    {
+      "profile_uid": "189f6298-30eb-465e-90f8-4588b59e318f",
+      "stage": "dev",
+      "time": 1529618266465
+    }
+  ]
+}

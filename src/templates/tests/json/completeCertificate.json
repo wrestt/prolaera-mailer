@@ -1,0 +1,55 @@
+{
+  "activity_id": "16907990",
+  "approved": true,
+  "cert": "Meeting SEC Disclosure Requirements: Compensation Discussion & Analysis",
+  "cert_id": "0002bd45-0575-4856-b09e-59c8c54c5e20",
+  "company_id": 57,
+  "course_id": "554620",
+  "date": "2017-06-26T08:00:00.000Z",
+  "delivery": "Self-Study",
+  "delivery_uid": 0,
+  "email": "pfrancy@kmco.com",
+  "first": "Paul",
+  "hours": [
+    {
+      "category_id": "uncategorized",
+      "credits": 3,
+      "subject_area": "Imported"
+    }
+  ],
+  "hours_basic": {
+    "pcaob_cpa": [
+      {
+        "category": "hours",
+        "credits": 3
+      }
+    ],
+    "yellowbook_24": [
+      {
+        "category": "yellowbook",
+        "credits": 0
+      }
+    ],
+    "yellowbook_80": [
+      {
+        "category": "yellowbook",
+        "credits": 0
+      },
+      {
+        "category": "proficiency",
+        "credits": 3
+      }
+    ]
+  },
+  "last": "Francy",
+  "owner": 57,
+  "pdf":
+    "https://files.prolaera.com.s3-us-west-2.amazonaws.com/companies/57/users/0d0f34ac-7ce3-41a4-9231-5cf8b52a5ed5/certificates/0002bd45-0575-4856-b09e-59c8c54c5e20.pdf",
+  "pdf_uploaded": false,
+  "profile_uid": "0d0f34ac-7ce3-41a4-9231-5cf8b52a5ed5",
+  "sponsor": "Becker Professional Education",
+  "sponsors": {
+    "name": "Becker Professional Education"
+  },
+  "updates": []
+}

@@ -1,14 +1,16 @@
 {
-  "name": "prolaeraEmailTemplates",
+  "name": "@prolaera/prolaeraemailtemplates",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "author": "Chris Hansen",
   "license": "MIT",
   "scripts": {
-    "precommit": "./node_modules/.bin/pretty-quick --staged",
-    "test": "node_modules/.bin/jest --runInBand"
+    "build": "babel src -d lib",
+    "precommit": "pretty-quick src --staged",
+    "test": "jest src --runInBand"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "dompurify": "^1.0.4",
     "jsdom": "^11.11.0",
     "moment": "^2.22.2",
@@ -18,7 +20,10 @@
     "react-html-email": "^3.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.0.0",
     "babel-jest": "^23.0.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.3.0",
@@ -28,5 +33,17 @@
     "prettier": "^1.13.4",
     "pretty-quick": "^1.6.0",
     "react-test-renderer": "^16.4.0"
-  }
+  },
+  "description": "Email service for prolaera.com",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillontitcomb/prolaera-mailer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dillontitcomb/prolaera-mailer/issues"
+  },
+  "homepage": "https://github.com/dillontitcomb/prolaera-mailer#readme"
 }
